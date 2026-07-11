@@ -97,3 +97,22 @@
 .profile-text {
     flex: 1; /* This tells the text block to fill all remaining width */
 }
+
+#greeting-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* This prevents the h1 from jumping around if text wraps */
+    min-height: 1.5em; 
+}
+
+.cursor-dot {
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    pointer-events: none;
+    transition: transform 0.1s;
+    z-index: 9999;
+}
