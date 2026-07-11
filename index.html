@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raktim's Site</title>
+    <style>
+        /* === LIGHT MODE (Default) === */
+        :root {
+            --bg-color: #ffffff; /* White background */
+            --text-color: #111111; /* Black text */
+            --link-color: #DC143C; /* Crimson bright red */
+            --nav-line: #cccccc; /* Light gray line under menu */
+        }
+
+        /* === DARK MODE === */
+        [data-theme="dark"] {
+            --bg-color: #111111; /* Minimalist dark background */
+            --text-color: #ffffff; /* White text */
+            --link-color: #8B0000; /* Blackish maroon red */
+            --nav-line: #444444; /* Dark gray line under menu */
+        }
+
+        /* === MAIN PAGE STYLE === */
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: "Courier New", Courier, monospace; /* Typewriter font */
+            max-width: 700px; /* Keeps everything centered and readable */
+            margin: 40px auto;
+            padding: 0 20px;
+            transition: background-color 0.4s, color 0.4s; /* Smooth fade when toggling themes */
+        }
+
+        /* === NAVIGATION BAR === */
+        nav {
+            display: flex; /* This puts items in a horizontal row */
+            justify-content: center; /* Centers the menu */
+            gap: 25px; /* Adds space between your links */
+            border-bottom: 1px solid var(--nav-line);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+
+        /* === LINKS === */
+        a {
+            color: var(--link-color);
+            text-decoration: none; /* Removes the default underline */
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline; /* Underlines when you hover */
+        }
+
+        /* === THEME BUTTON === */
+        #theme-btn {
+            background: none;
+            border: 1px solid var(--text-color);
+            color: var(--text-color);
+            padding: 5px 15px;
+            cursor: pointer;
+            font-family: inherit;
+            float: right; /* Puts the button in the top right */
+            margin-bottom: 20px;
+        }
+        
+        #theme-btn:hover {
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="theme-btn" onclick="toggleTheme()">🌓 Switch Theme</button>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="coursework.html">Coursework</a>
+        <a href="notes.html">Notes</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1>Hi, I'm Raktim.</h1>
+    
+    <p>Welcome to my corner of the internet. This site is currently under construction, brick by brick.</p>
+
+    <p>[ Picture goes here ]</p>
+
+    <script>
+        function toggleTheme() {
+            const body = document.documentElement;
+            if (body.getAttribute('data-theme') === 'dark') {
+                body.removeAttribute('data-theme');
+            } else {
+                body.setAttribute('data-theme', 'dark');
+            }
+        }
+    </script>
+</body>
+</html>
