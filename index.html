@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raktim Debnath</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <style>
         /* === DARK MODE (Default) === */
         :root {
@@ -97,7 +98,10 @@
 </head>
 <body>
 
-    <button id="theme-btn" onclick="toggleTheme()">🌓 Switch Theme</button>
+        <!-- Replace your old button with this one -->
+    <button id="theme-btn" onclick="toggleTheme()" title="Switch Theme">
+    <span id="theme-icon" class="material-symbols-outlined">light_mode</span>
+    </button>
 
     <nav>
         <a href="index.html">Home</a>
@@ -117,13 +121,17 @@
 
     <script>
         function toggleTheme() {
-            const body = document.documentElement;
-            if (body.getAttribute('data-theme') === 'light') {
-                body.removeAttribute('data-theme');
-            } else {
-                body.setAttribute('data-theme', 'light');
-            }
-        }
+    const body = document.documentElement;
+    const themeIcon = document.getElementById('theme-icon'); // Grabs the icon span
+    
+    if (body.getAttribute('data-theme') === 'light') {
+        body.removeAttribute('data-theme');
+        themeIcon.innerText = 'light_mode'; // Shows the stock Android Sun
+    } else {
+        body.setAttribute('data-theme', 'light');
+        themeIcon.innerText = 'dark_mode'; // Shows the stock Android Moon
+    }
+    }
     </script>
 </body>
 </html>
