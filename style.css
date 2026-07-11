@@ -76,3 +76,20 @@
         .material-symbols-outlined {
             vertical-align: middle;
         }
+
+/* Add this to the bottom of your style.css */
+.profile-pic {
+    max-width: 250px !important; 
+    width: 100% !important;      
+    height: auto !important;     
+    border-radius: 4px;
+    border: 2px solid var(--nav-line); 
+    display: block;              
+}
+
+.profile-container {
+    display: flex; 
+    align-items: center; 
+    gap: 30px; 
+    margin-top: 20px;
+}
