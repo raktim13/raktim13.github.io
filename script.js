@@ -39,3 +39,23 @@ document.addEventListener("DOMContentLoaded", function() {
             .catch(error => console.error('Error loading menu:', error));
     }
 });
+
+// 3. Daenerys Easter Egg
+const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight'];
+let konamiIndex = 0;
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === konamiCode[konamiIndex]) {
+        konamiIndex++;
+        if (konamiIndex === konamiCode.length) {
+            document.getElementById('daenerys-drogon-easter-egg').style.display = 'flex';
+            konamiIndex = 0;
+        }
+    } else {
+        konamiIndex = 0;
+    }
+});
+
+function closeDragon() {
+    document.getElementById('daenerys-drogon-easter-egg').style.display = 'none';
+}
