@@ -93,3 +93,7 @@
     gap: 30px; 
     margin-top: 20px;
 }
+
+.profile-text {
+    flex: 1; /* This tells the text block to fill all remaining width */
+}
