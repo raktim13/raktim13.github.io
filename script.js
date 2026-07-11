@@ -41,30 +41,30 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // 3. TIME
-document.addEventListener("DOMContentLoaded", function() {
-    const greetingText = document.getElementById('greeting-text');
-    const greetingIcon = document.getElementById('greeting-icon');
+//document.addEventListener("DOMContentLoaded", function() {
+  //  const greetingText = document.getElementById('greeting-text');
+    //const greetingIcon = document.getElementById('greeting-icon');
 
-    if (greetingText && greetingIcon) {
-        const hour = new Date().getHours();
+    //if (greetingText && greetingIcon) {
+      //  const hour = new Date().getHours();
         
-        if (hour >= 5 && hour < 12) {
-            greetingText.innerText = "Good morning!";
-            greetingIcon.innerText = "sunny"; // Material Icon
-        } else if (hour >= 12 && hour < 17) {
-            greetingText.innerText = "Good afternoon!";
-            greetingIcon.innerText = "flare";
-        } else if (hour >= 17 && hour < 20) {
-            greetingText.innerText = "Good evening!";
-            greetingIcon.innerText = "wb_twilight"; // Sunset look
-        } else {
-            greetingText.innerText = "Hey there, fellow night owl!";
-            greetingIcon.innerText = "bedtime"; // Moon/Night look
-        }
-    }
+        //if (hour >= 5 && hour < 12) {
+          //  greetingText.innerText = "Good morning!";
+            //greetingIcon.innerText = "sunny"; // Material Icon
+        //} else if (hour >= 12 && hour < 17) {
+          //  greetingText.innerText = "Good afternoon!";
+           // greetingIcon.innerText = "flare";
+        //} else if (hour >= 17 && hour < 20) {
+          //  greetingText.innerText = "Good evening!";
+            //greetingIcon.innerText = "wb_twilight"; // Sunset look
+        //} else {
+          //  greetingText.innerText = "Hey there, fellow night owl!";
+            //greetingIcon.innerText = "bedtime"; // Moon/Night look
+        //}
+    //}
     
     // ... your existing fetch menu code ...
-});
+//});
 
 
 // 4. CURSOR TRAIL
