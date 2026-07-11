@@ -3,98 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raktim Debnath</title>
+    <title>My Notes</title>
+
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-    <style>
-        /* === DARK MODE (Default) === */
-        :root {
-            --bg-color: #111111;
-            --text-color: #ffffff;
-            --link-color: #8B0000;
-            --nav-line: #444444;
-        }
-
-        /* === LIGHT MODE === */
-        [data-theme="light"] {
-            --bg-color: #ffffff;
-            --text-color: #111111;
-            --link-color: #DC143C;
-            --nav-line: #cccccc;
-        }
-
-        /* === MAIN PAGE STYLE === */
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: "Courier New", Courier, monospace; 
-            max-width: 700px; 
-            margin: 40px auto;
-            padding: 0 20px;
-            transition: background-color 0.4s, color 0.4s; 
-        }
-
-        /* === NAVIGATION BAR === */
-        nav {
-            display: flex; 
-            justify-content: center; 
-            gap: 25px; 
-            border-bottom: 1px solid var(--nav-line);
-            padding-bottom: 20px;
-            margin-bottom: 40px;
-            font-size: 1.1em;
-        }
-
-        a {
-            color: var(--link-color);
-            text-decoration: none; 
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline; 
-        }
-
-        /* === THEME BUTTON === */
-        #theme-btn {
-            background: none;
-            border: none;
-            color: var(--text-color);
-            cursor: pointer;
-            float: right; 
-            margin-bottom: 20px;
-            padding: 0;
-            transition: transform 0.2s ease; 
-        }
-        
-        #theme-btn:hover {
-            transform: scale(1.15); 
-        }
-
-        /* === PROFILE LAYOUT === */
-        .profile-container {
-            display: flex; 
-            align-items: center; 
-            gap: 30px; 
-            margin-top: 20px;
-        }
-
-        .profile-pic {
-            max-width: 250px; /* Stops the image from getting too massive */
-            width: auto;      /* Relies on your file's natural width */
-            height: auto;     /* Locks in the exact, original aspect ratio */
-            border-radius: 4px;
-            flex-shrink: 0; 
-            border: 2px solid var(--nav-line); 
-        }
-
-        /* Mobile stacking rule */
-        @media (max-width: 500px) {
-            .profile-container {
-                flex-direction: column;
-                text-align: center;
-            }
-        }
-    </style>
+    
 </head>
 <body>
 
@@ -119,19 +32,6 @@
         </div>
     </div>
 
-    <script>
-        function toggleTheme() {
-    const body = document.documentElement;
-    const themeIcon = document.getElementById('theme-icon'); // Grabs the icon span
-    
-    if (body.getAttribute('data-theme') === 'light') {
-        body.removeAttribute('data-theme');
-        themeIcon.innerText = 'light_mode'; // Shows the stock Android Sun
-    } else {
-        body.setAttribute('data-theme', 'light');
-        themeIcon.innerText = 'dark_mode'; // Shows the stock Android Moon
-    }
-    }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
