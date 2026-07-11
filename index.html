@@ -7,51 +7,50 @@
     <style>
         /* === LIGHT MODE (Default) === */
         :root {
-            --bg-color: #ffffff; /* White background */
-            --text-color: #111111; /* Black text */
-            --link-color: #DC143C; /* Crimson bright red */
-            --nav-line: #cccccc; /* Light gray line under menu */
+            --bg-color: #ffffff;
+            --text-color: #111111;
+            --link-color: #DC143C;
+            --nav-line: #cccccc;
         }
 
         /* === DARK MODE === */
         [data-theme="dark"] {
-            --bg-color: #111111; /* Minimalist dark background */
-            --text-color: #ffffff; /* White text */
-            --link-color: #8B0000; /* Blackish maroon red */
-            --nav-line: #444444; /* Dark gray line under menu */
+            --bg-color: #111111;
+            --text-color: #ffffff;
+            --link-color: #8B0000;
+            --nav-line: #444444;
         }
 
         /* === MAIN PAGE STYLE === */
         body {
             background-color: var(--bg-color);
             color: var(--text-color);
-            font-family: "Courier New", Courier, monospace; /* Typewriter font */
-            max-width: 700px; /* Keeps everything centered and readable */
+            font-family: "Courier New", Courier, monospace; 
+            max-width: 700px; 
             margin: 40px auto;
             padding: 0 20px;
-            transition: background-color 0.4s, color 0.4s; /* Smooth fade when toggling themes */
+            transition: background-color 0.4s, color 0.4s; 
         }
 
         /* === NAVIGATION BAR === */
         nav {
-            display: flex; /* This puts items in a horizontal row */
-            justify-content: center; /* Centers the menu */
-            gap: 25px; /* Adds space between your links */
+            display: flex; 
+            justify-content: center; 
+            gap: 25px; 
             border-bottom: 1px solid var(--nav-line);
             padding-bottom: 20px;
             margin-bottom: 40px;
             font-size: 1.1em;
         }
 
-        /* === LINKS === */
         a {
             color: var(--link-color);
-            text-decoration: none; /* Removes the default underline */
+            text-decoration: none; 
             font-weight: bold;
         }
 
         a:hover {
-            text-decoration: underline; /* Underlines when you hover */
+            text-decoration: underline; 
         }
 
         /* === THEME BUTTON === */
@@ -62,12 +61,29 @@
             padding: 5px 15px;
             cursor: pointer;
             font-family: inherit;
-            float: right; /* Puts the button in the top right */
+            float: right; 
             margin-bottom: 20px;
         }
         
         #theme-btn:hover {
             opacity: 0.7;
+        }
+
+        /* === PROFILE LAYOUT === */
+        .profile-container {
+            display: flex; /* This is the magic rule that puts things side-by-side */
+            align-items: center; 
+            gap: 30px; 
+            margin-top: 20px;
+        }
+
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            flex-shrink: 0; 
+            border: 2px solid var(--nav-line); 
         }
     </style>
 </head>
@@ -83,11 +99,14 @@
         <a href="contact.html">Contact</a>
     </nav>
 
-    <h1>Hi, I'm Raktim.</h1>
-    
-    <p>Welcome to my corner of the internet. This site is currently under construction, brick by brick.</p>
-
-    <p>[ Picture goes here ]</p>
+    <div class="profile-container">
+        <img src="website pic.jpeg" alt="Raktim" class="profile-pic">
+        
+        <div class="profile-text">
+            <h1>Hi, I'm Raktim.</h1>
+            <p>Welcome to my corner of the internet. This site is currently under construction, brick by brick.</p>
+        </div>
+    </div>
 
     <script>
         function toggleTheme() {
