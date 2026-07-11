@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raktim Debnath</title>
     <style>
-        /* === LIGHT MODE (Default) === */
+        /* === DARK MODE (Default) === */
         :root {
-            --bg-color: #ffffff;
-            --text-color: #111111;
-            --link-color: #DC143C;
-            --nav-line: #cccccc;
-        }
-
-        /* === DARK MODE === */
-        [data-theme="dark"] {
             --bg-color: #111111;
             --text-color: #ffffff;
             --link-color: #8B0000;
             --nav-line: #444444;
+        }
+
+        /* === LIGHT MODE === */
+        [data-theme="light"] {
+            --bg-color: #ffffff;
+            --text-color: #111111;
+            --link-color: #DC143C;
+            --nav-line: #cccccc;
         }
 
         /* === MAIN PAGE STYLE === */
@@ -71,19 +71,27 @@
 
         /* === PROFILE LAYOUT === */
         .profile-container {
-            display: flex; /* This is the magic rule that puts things side-by-side */
+            display: flex; 
             align-items: center; 
             gap: 30px; 
             margin-top: 20px;
         }
 
         .profile-pic {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
+            max-width: 250px; /* Stops the image from getting too massive */
+            width: auto;      /* Relies on your file's natural width */
+            height: auto;     /* Locks in the exact, original aspect ratio */
+            border-radius: 4px;
             flex-shrink: 0; 
             border: 2px solid var(--nav-line); 
+        }
+
+        /* Mobile stacking rule */
+        @media (max-width: 500px) {
+            .profile-container {
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
 </head>
@@ -94,27 +102,26 @@
     <nav>
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
-        <a href="coursework.html">Coursework</a>
         <a href="notes.html">Notes</a>
         <a href="contact.html">Contact</a>
     </nav>
 
     <div class="profile-container">
-        <img src="website pic.jpeg" alt="Raktim" class="profile-pic">
+        <img src="website pic.jpg" alt="Raktim" class="profile-pic">
         
         <div class="profile-text">
             <h1>Hi, I'm Raktim.</h1>
-            <p>Welcome to my corner of the internet. This site is currently under construction, brick by brick.</p>
+            <p>Welcome to my corner of the internet. This site is currently under construction, building it brick by brick.</p>
         </div>
     </div>
 
     <script>
         function toggleTheme() {
             const body = document.documentElement;
-            if (body.getAttribute('data-theme') === 'dark') {
+            if (body.getAttribute('data-theme') === 'light') {
                 body.removeAttribute('data-theme');
             } else {
-                body.setAttribute('data-theme', 'dark');
+                body.setAttribute('data-theme', 'light');
             }
         }
     </script>
