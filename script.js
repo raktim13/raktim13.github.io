@@ -65,3 +65,19 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // ... your existing fetch menu code ...
 });
+
+
+// 4. CURSOR TRAIL
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. Cursor Dot Logic
+    const dot = document.createElement('div');
+    dot.className = 'cursor-dot';
+    document.body.appendChild(dot);
+
+    window.addEventListener('mousemove', (e) => {
+        dot.style.left = e.clientX + 'px';
+        dot.style.top = e.clientY + 'px';
+    });
+
+    // ... rest of your code ...
+});
