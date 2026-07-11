@@ -1,5 +1,4 @@
-<style>
-        :root {
+:root {
             --bg-color: #111111;
             --text-color: #ffffff;
             --link-color: #8B0000;
@@ -77,4 +76,3 @@
         .material-symbols-outlined {
             vertical-align: middle;
         }
-    </style>
