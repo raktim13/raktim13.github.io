@@ -100,19 +100,23 @@
 
 #greeting-container {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    /* This prevents the h1 from jumping around if text wraps */
-    min-height: 1.5em; 
+    align-items: center; /* Keeps the icon aligned with the text */
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+#greeting-icon {
+    font-size: 2.5rem; /* Matches your H1 size */
+    flex-shrink: 0;   /* Prevents the icon from squishing */
 }
 
 .cursor-dot {
     position: fixed;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     background-color: var(--text-color);
     border-radius: 50%;
-    pointer-events: none;
-    transition: transform 0.1s;
-    z-index: 9999;
+    pointer-events: none; /* Crucial: lets you click through the dot */
+    z-index: 9999;        /* Forces it to be on top of everything */
+    opacity: 0.5;
 }
