@@ -1,21 +1,34 @@
+// --- 0. THEME MEMORY CHECK (Run immediately when page loads) ---
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+}
+
 // 1. THEME TOGGLE LOGIC
 function toggleTheme() {
     const body = document.documentElement;
     const themeIcon = document.getElementById('theme-icon');
     
+    // Toggle the theme
     if (body.getAttribute('data-theme') === 'light') {
         body.removeAttribute('data-theme');
-        themeIcon.innerText = 'light_mode'; 
+        localStorage.setItem('theme', 'dark'); // Save choice
+        if (themeIcon) themeIcon.innerText = 'light_mode'; 
     } else {
         body.setAttribute('data-theme', 'light');
-        themeIcon.innerText = 'dark_mode'; 
+        localStorage.setItem('theme', 'light'); // Save choice
+        if (themeIcon) themeIcon.innerText = 'dark_mode'; 
     }
 }
 
 // 2. NAVIGATION MENU LOADER
-// This waits until the HTML is fully loaded, then "fetches" the menu
 document.addEventListener("DOMContentLoaded", function() {
-    // Only try to fetch the menu if the placeholder actually exists on the page
+    // Update the icon correctly based on the current theme
+    const themeIcon = document.getElementById('theme-icon');
+    if (themeIcon) {
+        themeIcon.innerText = (localStorage.getItem('theme') === 'light') ? 'dark_mode' : 'light_mode';
+    }
+
     const navPlaceholder = document.getElementById('nav-placeholder');
     if (navPlaceholder) {
         fetch('menu.html')
