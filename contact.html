@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    
+    <style>
+        :root {
+            --bg-color: #111111;
+            --text-color: #ffffff;
+            --link-color: #8B0000;
+            --nav-line: #444444;
+        }
+
+        [data-theme="light"] {
+            --bg-color: #ffffff;
+            --text-color: #111111;
+            --link-color: #DC143C;
+            --nav-line: #cccccc;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: "Courier New", Courier, monospace; 
+            max-width: 700px; 
+            margin: 40px auto;
+            padding: 0 20px;
+            transition: background-color 0.4s, color 0.4s; 
+            line-height: 1.6;
+        }
+
+        nav {
+            display: flex; 
+            justify-content: center; 
+            gap: 25px; 
+            border-bottom: 1px solid var(--nav-line);
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+
+        a {
+            color: var(--link-color);
+            text-decoration: none; 
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline; 
+        }
+
+        #theme-btn {
+            background: none;
+            border: none;
+            color: var(--text-color);
+            cursor: pointer;
+            float: right; 
+            margin-bottom: 20px;
+            padding: 0;
+            transition: transform 0.2s ease; 
+        }
+        
+        #theme-btn:hover {
+            transform: scale(1.15); 
+        }
+        
+        .contact-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .contact-list li {
+            margin-bottom: 15px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <button id="theme-btn" onclick="toggleTheme()" title="Switch Theme">
+        <span id="theme-icon" class="material-symbols-outlined">light_mode</span>
+    </button>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="notes.html">Notes</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <h1>Contact</h1>
+    
+    <p>Feel free to reach out if you'd like to chat about coursework, research, or just to connect!</p>
+
+    <ul class="contact-list">
+        <li>📧 Email: just look at the moon and think of me, i will come haunt you in your dreams </li>
+        <li>🐙 GitHub: <a href="https://github.com/raktim13" target="_blank">github.com/raktim13</a></li>
+        '<li>🔗 LinkedIn: Coming soon. </li>'
+    </ul>
+
+    <script>
+        function toggleTheme() {
+            const body = document.documentElement;
+            const themeIcon = document.getElementById('theme-icon');
+            
+            if (body.getAttribute('data-theme') === 'light') {
+                body.removeAttribute('data-theme');
+                themeIcon.innerText = 'light_mode'; 
+            } else {
+                body.setAttribute('data-theme', 'light');
+                themeIcon.innerText = 'dark_mode'; 
+            }
+        }
+    </script>
+</body>
+</html>
