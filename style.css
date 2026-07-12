@@ -135,3 +135,22 @@
         font-variation-settings .15s ease;
 }
 
+.folder-icon,
+.file-icon{
+    font-variation-settings: 'FILL' 1;
+}
+
+.folder-summary:hover .folder-icon,
+.file-link:hover .file-icon{
+
+    font-variation-settings:'FILL' 0;
+}
+
+details[open] > summary .folder-icon{
+    font-variation-settings:'FILL' 0;
+}
+
+details[open] > summary:hover .folder-icon{
+    font-variation-settings:'FILL' 1;
+}
+
