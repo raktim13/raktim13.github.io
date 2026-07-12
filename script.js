@@ -78,7 +78,7 @@ function generateTree(data) {
                             folder
                         </span>
 
-                        <span>${key}</span>
+                        <span class="folder-name">${key}</span>
                     </summary>
                 </details>`;
 
