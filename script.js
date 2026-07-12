@@ -195,7 +195,7 @@ ${book.title} — ${book.author}
 </div>
 `;
 
-card.appendChild(subtree);
+card.querySelector(".course-body").appendChild(subtree);
 
 details.appendChild(card);
             }
