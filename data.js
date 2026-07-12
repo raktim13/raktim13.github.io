@@ -62,6 +62,9 @@ const myNotes = {
                             },
 
                         "assignment 1": "mmath/sem 4/algebraic geometry/alg_geo_assignment_1.pdf",
+                        "assignment 2": "mmath/sem 4/algebraic geometry/alg_geo_assignment_2.pdf",
+                        "assignment 3": "mmath/sem 4/algebraic geometry/alg_geo_assignment_3.pdf",
+                        "assignment 4": "mmath/sem 4/algebraic geometry/alg_geo_assignment_4.pdf",
             },
             "Partial Differential Equations": {},
             "Rational Homotopy Theory": {},
