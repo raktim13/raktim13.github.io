@@ -224,31 +224,6 @@ details[open] > summary .folder-name{
     color:var(--text-color);
 }
 
-.book-icon{
-    flex-shrink:0;
-}
-
-.book-list{
-    display:flex;
-    flex-direction:column;
-    gap:4px;
-}
-
-.book-list a{
-    color:inherit;
-    text-decoration:none;
-}
-
-.book-list a:hover{
-    color:var(--link-color);
-    text-decoration:underline;
-}
-
-.course-divider{
-    border-top:1px solid var(--nav-line);
-    margin:14px 0 10px;
-}
-
 .course-divider{
     border-top: 1px solid var(--nav-line);
     margin: 14px 0 10px;
@@ -281,6 +256,27 @@ details[open] > summary .folder-name{
     color:var(--link-color);
     text-decoration:underline;
     transform:translateX(2px);
+}
+
+.course-meta{
+    opacity:0;
+    transform:translateY(-4px);
+
+    animation:metaFade 260ms cubic-bezier(.22,1,.36,1) forwards;
+}
+
+@keyframes metaFade{
+
+    from{
+        opacity:0;
+        transform:translateY(-4px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
 }
 
 
