@@ -204,8 +204,8 @@
 }
 
 .folder-contents > .tree-item{
-    opacity: 0;
-    transform: translateX(-6px);
+    opacity: 1;
+    transform: translateX(0);
 }
 
 .folder-contents > .tree-item.show{
@@ -342,6 +342,38 @@ details[open] > summary .folder-name{
     border-top:1px solid var(--course-border);
 
     margin:0 18px;
+}
+
+/* Assignments inside course cards */
+
+.course-body .file-link{
+    color: inherit;
+    text-decoration: none;
+}
+
+.course-body .file-icon{
+    color: inherit;
+}
+
+.course-body .file-name{
+    color: inherit;
+}
+
+.course-body .file-link:hover .file-icon,
+.course-body .file-link:hover .file-name{
+    color: var(--link-color);
+}
+
+.course-body .file-link:hover .file-name::after{
+    width: 100%;
+}
+
+.course-body .file-link:hover .file-icon{
+    transform: translateX(1px);
+}
+
+.course-body .file-link:hover .file-name{
+    transform: translateX(2px);
 }
 
 
