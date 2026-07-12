@@ -226,34 +226,44 @@ details[open] > summary .folder-name{
 
 .course-meta{
 
-    background: var(--course-card);
+    background:var(--course-card);
 
-    border: 1px solid var(--course-border);
+    color:var(--course-meta-text);
 
-    border-radius: 14px;
+    border:1px solid var(--course-border);
 
-    overflow: hidden;
+    border-radius:14px;
 
-    margin: 10px 0 14px;
+    overflow:hidden;
 
-    opacity: 0;
-    transform: translateY(-4px);
+    margin:10px 0 14px;
 
-    animation: metaFade 260ms cubic-bezier(.22,1,.36,1) forwards;
+    animation:metaFade 160ms cubic-bezier(.22,1,.36,1) forwards;
 }
 
-@keyframes metaFade{
+.course-header{
 
-    from{
-        opacity:0;
-        transform:translateY(-4px);
-    }
+    background:var(--course-meta-bg);
 
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
+    color:var(--course-meta-text);
 
+    padding:18px;
+}
+
+.course-title{
+
+    font-size:1.18em;
+
+    font-weight:bold;
+
+    margin-bottom:14px;
+}
+
+.course-body{
+
+    padding:18px;
+
+    color:var(--text-color);
 }
 
 /* =========================
