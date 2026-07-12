@@ -31,12 +31,10 @@ const myNotes = {
         },
         "Sem 4": {
             "Algebraic Geometry": {
-                "Assignment 1": "assignment1_ag.pdf"
             },
             "Partial Differential Equations": {},
             "Rational Homotopy Theory": {},
             "Symplectic Geometry": {
-                "Assignment 1": "assignment1_sg.pdf"
             },
             "Teichmuller Theory": {}
         }
