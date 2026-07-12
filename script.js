@@ -158,10 +158,25 @@ function generateTree(data) {
         </div>
 
         <div class="course-books">
-            ${meta.books.map(book=>`
-                <div>📚 <a href="${book.url}" target="_blank">${book.title} — ${book.author}</a></div>
-            `).join("")}
+
+    ${meta.books.map((book,index)=>`
+
+        <div class="book-row">
+
+            ${index===0
+                ? `<span class="book-prefix">📚</span>`
+                : `<span class="book-prefix"></span>`
+            }
+
+            <a href="${book.url}" target="_blank">
+                ${book.title} — ${book.author}
+            </a>
+
         </div>
+
+    `).join("")}
+
+</div>
 
         <hr>
     `;
@@ -201,3 +216,14 @@ document.addEventListener("DOMContentLoaded", () => {
         notesContainer.appendChild(generateTree(myNotes));
     }
 });
+
+
+
+
+
+
+
+
+
+
+
