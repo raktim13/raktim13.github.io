@@ -31,7 +31,37 @@ const myNotes = {
         },
         "Sem 4": {
             "Algebraic Geometry": {
-                "assignment 1": "mmath/sem 4/algebraic geometry/alg_geo_assignment_1.pdf",
+                "_meta": {
+                        instructor: "Buddhadeb Hazra",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Spring 2026",
+                        status: "completed",
+
+                        books: [
+                            {
+                                title: "Algebraic Geometry",
+                                author: "Robin Hartshorne",
+                                url: "https://link.springer.com/book/10.1007/978-1-4757-3849-0"
+                            },
+                            {
+                                title: "Basic Algebraic Geometry I: Varieties in Projective Space",
+                                author: "Igor R. Shafarevich",
+                                url: "https://link.springer.com/book/10.1007/978-3-642-37956-7"
+                            },
+                            {
+                                title: "The Red Book of Varieties and Schemes",
+                                author: "David Mumford",
+                                url: "https://link.springer.com/book/10.1007/978-3-540-29316-3"
+                            },
+                            {
+                                title: "Algebraic Curves: An Introduction to Algebraic Geometry",
+                                author: "William Fulton",
+                                url: "https://www.math.lsa.umich.edu/~wfulton/CurveBook.pdf"
+                            }
+                                ]
+                            },
+
+                        "assignment 1": "mmath/sem 4/algebraic geometry/alg_geo_assignment_1.pdf",
             },
             "Partial Differential Equations": {},
             "Rational Homotopy Theory": {},
