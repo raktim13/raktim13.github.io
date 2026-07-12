@@ -108,3 +108,30 @@
     flex: 1; /* This tells the text block to fill all remaining width */
 }
 
+.folder-summary{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
+}
+
+.file-link{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    color:inherit;
+    text-decoration:none;
+}
+
+.folder-icon,
+.file-icon{
+
+    user-select:none;
+
+    transition:
+        color .15s ease,
+        transform .15s ease,
+        font-variation-settings .15s ease;
+}
+
