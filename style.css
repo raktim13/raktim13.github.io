@@ -213,8 +213,8 @@
     transform: translateX(0);
 
     transition:
-        opacity 180ms ease,
-        transform 180ms cubic-bezier(.22,1,.36,1);
+        opacity 130ms ease,
+        transform 130ms cubic-bezier(.22,1,.36,1);
 }
 
 details[open] > summary .folder-icon,
