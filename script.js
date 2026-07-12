@@ -81,10 +81,17 @@ function generateTree(data) {
                         <span>${key}</span>
                     </summary>
                 </details>`;
+
+            const details = li.querySelector("details");
+            const icon = li.querySelector(".folder-icon");
+
+                details.addEventListener("toggle", () => {
+                icon.textContent = details.open ? "folder_open" : "folder";
+                    });
             
             // Only recurse if the object isn't empty
             if (Object.keys(value).length > 0) {
-                li.querySelector('details').appendChild(generateTree(value));
+                details.appendChild(generateTree(value));
             }
             ul.appendChild(li);
         } else {
