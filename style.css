@@ -140,7 +140,7 @@
 .folder-summary:hover .folder-icon,
 .folder-summary:hover span:last-child,
 .file-link:hover .file-icon,
-.file-link:hover span:last-child{
+.file-link:hover .file-name{
 
     color: var(--link-color);
 }
