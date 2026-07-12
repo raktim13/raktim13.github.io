@@ -132,9 +132,31 @@
 }
 .folder-name,
 .file-name{
+    position: relative;
+    display: inline-block;
+
     transition:
         color 160ms ease,
         transform 160ms ease;
+}
+.file-name::after{
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -2px;
+
+    width: 0%;
+
+    height: 1px;
+
+    background: var(--link-color);
+
+    transition: width 180ms ease;
+}
+.file-link:hover .file-name::after{
+    width: 100%;
 }
 
 .folder-summary:hover .folder-icon,
