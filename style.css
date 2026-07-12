@@ -254,7 +254,10 @@ details[open] > summary .folder-name{
     margin:14px 0 10px;
 }
 
-
+.course-divider{
+    border-top: 1px solid var(--nav-line);
+    margin: 14px 0 10px;
+}
 
 
 
