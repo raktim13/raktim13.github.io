@@ -98,7 +98,7 @@ function generateTree(data) {
                     icon.textContent = details.open ? "folder_open" : "folder";
                     icon.classList.remove("clicking");
 
-                        const children = details.querySelectorAll(":scope > .folder-contents > .tree-item");
+                        const children = details.querySelectorAll(".folder-contents > .tree-item");
 
                         if(details.open){
 
