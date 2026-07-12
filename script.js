@@ -87,7 +87,17 @@ function generateTree(data) {
             const icon = li.querySelector(".folder-icon");
 
                 details.addEventListener("toggle", () => {
-                icon.textContent = details.open ? "folder_open" : "folder";
+
+                    icon.classList.add("clicking");
+
+                    setTimeout(() => {
+
+                    icon.textContent = details.open ? "folder_open" : "folder";
+
+                    icon.classList.remove("clicking");
+
+                    }, 70);
+
                     });
             
             // Only recurse if the object isn't empty
