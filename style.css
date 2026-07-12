@@ -28,6 +28,7 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             font-family: "Courier New", Courier, monospace; 
+            font-weight: bold;
             max-width: 700px; 
             margin: 40px auto;
             padding: 0 20px;
@@ -317,7 +318,8 @@ details[open] > summary .folder-name{
 
     text-decoration:none;
 
-    font-weight:normal;
+    font-weight:bold
+            ;
 
     transition:
         color 160ms ease,
