@@ -70,8 +70,11 @@ function generateTree(data) {
         const li = document.createElement('li');
         li.classList.add("tree-item");
         const value = data[key];
+        const meta = value?._meta;
 
         if (typeof value === 'object' && value !== null) {
+            const children = {...value};
+            delete children._meta;
             li.innerHTML = `
                 <details>
                     <summary class="folder-summary">
@@ -128,8 +131,8 @@ function generateTree(data) {
             });
             
             // Only recurse if the object isn't empty
-            if (Object.keys(value).length > 0) {
-                const subtree = generateTree(value);
+            if (Object.keys(children).length > 0) {
+                const subtree = generateTree(children);
                 subtree.classList.add("folder-contents");
 
                 details.appendChild(subtree);
