@@ -32,7 +32,7 @@ const myNotes = {
         "Sem 4": {
             "Algebraic Geometry": {
                 "_meta": {
-                        instructor: "Buddhadeb Hazra",
+                        instructor: "Prof. Buddhadeb Hazra",
                         institution: "Indian Statistical Institute, Kolkata",
                         term: "Spring 2026",
                         status: "completed",
@@ -69,6 +69,25 @@ const myNotes = {
             "Partial Differential Equations": {},
             "Rational Homotopy Theory": {},
             "Symplectic Geometry": {
+                "_meta": {
+                        instructor: "Prof. Mahuya Datta",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Spring 2026",
+                        status: "completed",
+
+                        books: [
+                            {
+                            },
+                            {
+                            },
+                                ]
+                            },
+
+                        "assignment 1": "mmath/sem 4/symplectic geometry/symp_geo_assignment_1.pdf",
+                        "assignment 2": "mmath/sem 4/symplectic geometry/symp_geo_assignment_2.pdf",
+                        "assignment 3": "mmath/sem 4/symplectic geometry/symp_geo_assignment_3.pdf",
+                        "assignment 4": "mmath/sem 4/symplectic geometry/symp_geo_assignment_4.pdf",
+                        "assignment 5": "mmath/sem 4/symplectic geometry/symp_geo_assignment_5.pdf",
             },
             "Teichmuller Theory": {}
         }
