@@ -84,6 +84,7 @@ const myNotes = {
                             },
                                 ]
                             },
+                        "No assignments :("
             },
             
             "Rational Homotopy Theory": {
