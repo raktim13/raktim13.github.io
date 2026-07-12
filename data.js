@@ -77,8 +77,14 @@ const myNotes = {
 
                         books: [
                             {
+                                title: "Lectures on Symplectic Geometry",
+                                author: "Ana Cannas da Silva",
+                                url: "https://link.springer.com/book/10.1007/978-3-540-45330-7"
                             },
                             {
+                                title: "An Introduction to Contact Topology",
+                                author: "Hansjörg Geiges",
+                                url: "https://www.cambridge.org/core/books/an-introduction-to-contact-topology/7D70AFC55E756D779C5C1E817E8B9425"
                             },
                                 ]
                             },
