@@ -97,12 +97,16 @@ function generateTree(data) {
         } else {
             li.innerHTML = `
                 <a
-                        href="${value}"
-                        target="_blank"
-                        class="file-link">
-                    <span class="material-symbols-outlined file-icon">
-                        picture_as_pdf
-                    </span> ${key}
+                    href="${value}"
+                    target="_blank"
+                    class="file-link">
+                        <span class="material-symbols-outlined file-icon">
+                            picture_as_pdf
+                        </span>
+
+                        <span class="file-name">
+                            ${key}
+                        </span>
                 </a>`;
             ul.appendChild(li);
         }
