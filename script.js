@@ -68,6 +68,7 @@ function generateTree(data) {
 
     for (const key in data) {
         const li = document.createElement('li');
+        li.classList.add("tree-item");
         const value = data[key];
 
         if (typeof value === 'object' && value !== null) {
