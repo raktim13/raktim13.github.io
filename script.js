@@ -108,7 +108,7 @@ function generateTree(data) {
 
                     setTimeout(()=>{
                         child.classList.add("show");
-                        },index*45);
+                        },260+index*45);
 
                     });
 
@@ -178,7 +178,7 @@ function generateTree(data) {
 
 </div>
 
-        <hr>
+        <div class="course-divider"></div>
     `;
 
     details.appendChild(header);
