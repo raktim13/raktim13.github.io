@@ -214,19 +214,14 @@ details[open] > summary .folder-name{
 
 .course-meta-top{
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    margin:8px 0;
+    justify-content:space-between;
+    gap:20px;
+    margin:10px 0 6px;
 }
-
 .course-meta-inst{
-    margin-bottom:8px;
-}
-
-.course-books{
-    display:flex;
-    gap:10px;
-    margin-bottom:12px;
+    margin-bottom:10px;
+    color:var(--text-color);
 }
 
 .book-icon{
@@ -259,7 +254,34 @@ details[open] > summary .folder-name{
     margin: 14px 0 10px;
 }
 
+.course-books{
+    margin-bottom:12px;
+}
 
+.book-row{
+    display:grid;
+    grid-template-columns:22px 1fr;
+    align-items:start;
+    margin:5px 0;
+}
+
+.book-prefix{
+    width:22px;
+}
+
+.book-row a{
+    color:var(--text-color);
+    text-decoration:none;
+    transition:
+        color 160ms ease,
+        transform 160ms ease;
+}
+
+.book-row a:hover{
+    color:var(--link-color);
+    text-decoration:underline;
+    transform:translateX(2px);
+}
 
 
 
