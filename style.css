@@ -130,7 +130,7 @@
         color 160ms ease,
         transform 160ms ease;
 }
-.folder-summary span:last-child,
+.folder-name,
 .file-name{
     transition:
         color 160ms ease,
@@ -138,7 +138,7 @@
 }
 
 .folder-summary:hover .folder-icon,
-.folder-summary:hover span:last-child,
+.folder-summary:hover .folder-name,
 .file-link:hover .file-icon,
 .file-link:hover .file-name{
 
@@ -150,7 +150,7 @@
     transform: translateX(1px);
 }
 
-.folder-summary:hover span:last-child,
+.folder-summary:hover .folder-name,
 .file-link:hover .file-name{
     transform: translateX(2px);
 }
