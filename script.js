@@ -198,9 +198,19 @@ ${book.title} — ${book.author}
 card.querySelector(".course-body").appendChild(subtree);
 
 details.appendChild(card);
-            }
-            ul.appendChild(li);
-        } else {
+
+}
+else{
+
+    details.appendChild(subtree);
+
+}
+
+}   // closes: if (Object.keys(children).length > 0)
+
+ul.appendChild(li);
+
+} else {
             li.innerHTML = `
                 <a
                     href="${value}"
