@@ -64,34 +64,41 @@ function closeDragon() {
 // 4. Notes repository 
 function generateTree(data) {
     const ul = document.createElement('ul');
+    ul.className = "directory-list"; // Ensures your CSS styles apply
 
     for (const key in data) {
         const li = document.createElement('li');
         const value = data[key];
 
-        if (typeof value === 'object' && !Array.isArray(value)) {
-            // It's a folder
+        if (typeof value === 'object' && value !== null) {
             li.innerHTML = `
                 <details>
-                    <summary>
-                        <span class="material-symbols-outlined">folder</span> ${key}
+                    <summary style="cursor:pointer; display:flex; align-items:center; gap:8px;">
+                        <span class="material-icons-two-tone">folder</span> ${key}
                     </summary>
                 </details>`;
-            li.querySelector('details').appendChild(generateTree(value));
+            
+            // Only recurse if the object isn't empty
+            if (Object.keys(value).length > 0) {
+                li.querySelector('details').appendChild(generateTree(value));
+            }
+            ul.appendChild(li);
         } else {
-            // It's a file: link it to the file name you will upload
             li.innerHTML = `
                 <a href="${value}" target="_blank" style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:8px;">
-                    <span class="material-symbols-outlined">picture_as_pdf</span> ${key}
+                    <span class="material-icons-two-tone">picture_as_pdf</span> ${key}
                 </a>`;
+            ul.appendChild(li);
         }
-        ul.appendChild(li);
     }
     return ul;
 }
 
 // Ensure the page is loaded before running
 document.addEventListener("DOMContentLoaded", () => {
-    const container = document.getElementById('nav-placeholder');
-    container.appendChild(generateTree(myNotes));
+    // Target the NEW notes container only
+    const notesContainer = document.getElementById('notes-tree-container');
+    if (notesContainer && typeof myNotes !== 'undefined') {
+        notesContainer.appendChild(generateTree(myNotes));
+    }
 });
