@@ -135,7 +135,42 @@ function generateTree(data) {
                 const subtree = generateTree(children);
                 subtree.classList.add("folder-contents");
 
-                details.appendChild(subtree);
+                if(meta){
+
+    const header = document.createElement("div");
+    header.className = "course-meta";
+
+    header.innerHTML = `
+        <div class="course-meta-top">
+            <span>👤 ${meta.instructor}</span>
+            <span>🌸 ${meta.term}</span>
+            <span>${
+                meta.status==="completed"
+                    ? "🟢 Completed"
+                    : meta.status==="ongoing"
+                    ? "🟡 Ongoing"
+                    : "⚪ Planned"
+            }</span>
+        </div>
+
+        <div class="course-meta-inst">
+            🏛 ${meta.institution}
+        </div>
+
+        <div class="course-books">
+            ${meta.books.map(book=>`
+                <div>📚 <a href="${book.url}" target="_blank">${book.title} — ${book.author}</a></div>
+            `).join("")}
+        </div>
+
+        <hr>
+    `;
+
+    details.appendChild(header);
+
+}
+
+details.appendChild(subtree);
             }
             ul.appendChild(li);
         } else {
