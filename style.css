@@ -60,14 +60,27 @@
         
         /* Directory specific styling */
         .directory-list {
-            list-style-type: none; 
+            list-style-type: none;
             padding-left: 0;
-        }
-        
-        .directory-list > li {
-            margin-bottom: 15px; /* Spaces out your main folders */
-            font-size: 1.2em;
-        }
+            }
+        #notes-tree-container ul {
+            list-style: none;
+            padding-left: 20px; /* This creates the indentation */
+            margin: 5px 0;
+            }
+
+        #notes-tree-container li {
+            margin: 5px 0;
+            }
+
+            /* Force consistent sizing */
+        summary, .directory-list a {
+            font-size: 1.0em;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 0;
+            }
 
         /* Adjusts the Android icons to sit nicely with the text */
         .material-symbols-outlined {
