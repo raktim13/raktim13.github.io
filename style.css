@@ -4,10 +4,10 @@
             --link-color: #DC143C;
             --nav-line: #444444;
             --active-folder-color: #B01030;
-            --course-card: #1d1a17;
-            --course-border: #5b4b3b;
-            --course-meta-bg: #4b2428;
-            --course-meta-text: #f7efe6;
+            --course-card: #f5efe3;
+            --course-border: #d8c8b0;
+            --course-meta-bg: #d9b6b1;
+            --course-meta-text: #311111;
         }
 
         [data-theme="light"] {
@@ -16,10 +16,10 @@
             --link-color: #8B0000;
             --nav-line: #cccccc;
             --active-folder-color: #6F0000;
-            --course-card: #f5efe3;
-            --course-border: #d8c8b0;
-            --course-meta-bg: #d9b6b1;
-            --course-meta-text: #311111;
+            --course-card: #1d1a17;
+            --course-border: #5b4b3b;
+            --course-meta-bg: #4b2428;
+            --course-meta-text: #f7efe6;
         }
 
         body {
