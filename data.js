@@ -31,6 +31,7 @@ const myNotes = {
         },
         "Sem 4": {
             "Algebraic Geometry": {
+                "assignment 1": "mmath/sem 4/algebraic geometry/alg_geo_assignment_1.pdf",
             },
             "Partial Differential Equations": {},
             "Rational Homotopy Theory": {},
