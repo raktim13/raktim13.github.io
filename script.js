@@ -137,55 +137,67 @@ function generateTree(data) {
 
                 if(meta){
 
-    const header = document.createElement("div");
-    header.className = "course-meta";
+   const card = document.createElement("div");
+card.className = "course-meta";
 
-    header.innerHTML = `
-        <div class="course-meta-top">
-            <span>👤 ${meta.instructor}</span>
-            <span>🌸 ${meta.term}</span>
-            <span>${
-                meta.status==="completed"
-                    ? "🟢 Completed"
-                    : meta.status==="ongoing"
-                    ? "🟡 Ongoing"
-                    : "⚪ Planned"
-            }</span>
-        </div>
+card.innerHTML = `
 
-        <div class="course-meta-inst">
-            🏛 ${meta.institution}
-        </div>
+<div class="course-header">
 
-        <div class="course-books">
+    <div class="course-title">
+        ${key}
+    </div>
 
-    ${meta.books.map((book,index)=>`
+    <div class="course-meta-top">
+        <span>👤 ${meta.instructor}</span>
 
-        <div class="book-row">
+        <span>🌸 ${meta.term}</span>
 
-            ${index===0
-                ? `<span class="book-prefix">📚</span>`
-                : `<span class="book-prefix"></span>`
-            }
+        <span>${
+            meta.status==="completed"
+            ? "🟢 Completed"
+            : meta.status==="ongoing"
+            ? "🟡 Ongoing"
+            : "⚪ Planned"
+        }</span>
+    </div>
 
-            <a href="${book.url}" target="_blank">
-                ${book.title} — ${book.author}
-            </a>
-
-        </div>
-
-    `).join("")}
+    <div class="course-meta-inst">
+        🏛 ${meta.institution}
+    </div>
 
 </div>
 
-        <div class="course-divider"></div>
-    `;
+<div class="course-body">
 
-    details.appendChild(header);
+<div class="course-books">
 
-}
+${meta.books.map((book,index)=>`
 
-details.appendChild(subtree);
+<div class="book-row">
+
+${index===0
+? `<span class="book-prefix">📚</span>`
+: `<span class="book-prefix"></span>`}
+
+<a href="${book.url}" target="_blank">
+${book.title} — ${book.author}
+</a>
+
+</div>
+
+`).join("")}
+
+</div>
+
+<div class="course-divider"></div>
+
+</div>
+`;
+
+card.appendChild(subtree);
+
+details.appendChild(card);
             }
             ul.appendChild(li);
         } else {
