@@ -66,8 +66,48 @@ const myNotes = {
                         "assignment 3": "mmath/sem 4/algebraic geometry/alg_geo_assignment_3.pdf",
                         "assignment 4": "mmath/sem 4/algebraic geometry/alg_geo_assignment_4.pdf",
             },
-            "Partial Differential Equations": {},
-            "Rational Homotopy Theory": {},
+            
+            "Partial Differential Equations": {
+                "_meta": {
+                        instructor: "Prof. Debanjan Nandi",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Spring 2026",
+                        status: "completed",
+
+                        books: [
+                            {
+                               
+                            },
+                            {
+                                
+                            },
+                                ]
+                            },
+            },
+            
+            "Rational Homotopy Theory": {
+                "_meta": {
+                        instructor: "Prof. Soumyadip Thandar",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Spring 2026",
+                        status: "completed",
+
+                        books: [
+                            {
+                                
+                            },
+                            {
+                                
+                            },
+                                ]
+                            },
+
+                        "assignment 1-4": "mmath/sem 4/rational homotopy theory/rht_assignment_1_2_3_4.pdf",
+                        "assignment 5": "mmath/sem 4/rational homotopy theory/rht_assignment_5.pdf",
+                        "assignment 6": "mmath/sem 4/rational homotopy theory/rht_assignment_6.pdf",
+                        "last assignment": "mmath/sem 4/rational homotopy theory/rht_last_assignment.pdf",
+            },
+            
             "Symplectic Geometry": {
                 "_meta": {
                         instructor: "Prof. Mahuya Datta",
@@ -95,7 +135,29 @@ const myNotes = {
                         "assignment 4": "mmath/sem 4/symplectic geometry/symp_geo_assignment_4.pdf",
                         "assignment 5": "mmath/sem 4/symplectic geometry/symp_geo_assignment_5.pdf",
             },
-            "Teichmuller Theory": {}
+            
+            "Teichmuller Theory": {
+                "_meta": {
+                        instructor: "Prof. Kingshook Biswas",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Spring 2026",
+                        status: "completed",
+
+                        books: [
+                            {
+                                
+                            },
+                            {
+                                
+                            },
+                                ]
+                            },
+
+                        "assignment 1": "mmath/sem 4/teichmuller theory/teich_assignment_1.pdf",
+                        "assignment 2": "mmath/sem 4/teichmuller theory/teich_assignment_2.pdf",
+                        "assignment 3": "mmath/sem 4/teichmuller theory/teich_assignment_3.pdf",
+                        
+            }
         }
     },
     "JRF": {}
