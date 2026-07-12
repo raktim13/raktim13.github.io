@@ -93,16 +93,40 @@ function generateTree(data) {
                     setTimeout(() => {
 
                     icon.textContent = details.open ? "folder_open" : "folder";
-
                     icon.classList.remove("clicking");
 
-                    }, 70);
+                        const children = details.querySelectorAll(":scope > .folder-contents > .tree-item");
+
+                        if(details.open){
+
+                        children.forEach((child,index)=>{
+
+                        child.classList.remove("show");
+
+                    setTimeout(()=>{
+                        child.classList.add("show");
+                        },index*30);
 
                     });
+
+                }else{
+
+                        children.forEach(child=>{
+                        child.classList.remove("show");
+                    });
+
+                    }
+
+                },70);
+
+            });
             
             // Only recurse if the object isn't empty
             if (Object.keys(value).length > 0) {
-                details.appendChild(generateTree(value));
+                const subtree = generateTree(value);
+                subtree.classList.add("folder-contents");
+
+                details.appendChild(subtree);
             }
             ul.appendChild(li);
         } else {
