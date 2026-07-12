@@ -4,6 +4,10 @@
             --link-color: #DC143C;
             --nav-line: #444444;
             --active-folder-color: #B01030;
+            --course-card: #1d1a17;
+            --course-border: #5b4b3b;
+            --course-meta-bg: #4b2428;
+            --course-meta-text: #f7efe6;
         }
 
         [data-theme="light"] {
@@ -12,6 +16,10 @@
             --link-color: #8B0000;
             --nav-line: #cccccc;
             --active-folder-color: #6F0000;
+            --course-card: #f5efe3;
+            --course-border: #d8c8b0;
+            --course-meta-bg: #d9b6b1;
+            --course-meta-text: #311111;
         }
 
         body {
@@ -212,57 +220,26 @@ details[open] > summary .folder-name{
     color: var(--active-folder-color);
 }
 
-.course-meta-top{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:20px;
-    margin:10px 0 6px;
-}
-.course-meta-inst{
-    margin-bottom:10px;
-    color:var(--text-color);
-}
-
-.course-divider{
-    border-top: 1px solid var(--nav-line);
-    margin: 14px 0 10px;
-}
-
-.course-books{
-    margin-bottom:12px;
-}
-
-.book-row{
-    display:grid;
-    grid-template-columns:22px 1fr;
-    align-items:start;
-    margin:5px 0;
-}
-
-.book-prefix{
-    width:22px;
-}
-
-.book-row a{
-    color:var(--text-color);
-    text-decoration:none;
-    transition:
-        color 160ms ease,
-        transform 160ms ease;
-}
-
-.book-row a:hover{
-    color:var(--link-color);
-    text-decoration:underline;
-    transform:translateX(2px);
-}
+/* =========================
+   COURSE CARD
+========================= */
 
 .course-meta{
-    opacity:0;
-    transform:translateY(-4px);
 
-    animation:metaFade 260ms cubic-bezier(.22,1,.36,1) forwards;
+    background: var(--course-card);
+
+    border: 1px solid var(--course-border);
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    margin: 10px 0 14px;
+
+    opacity: 0;
+    transform: translateY(-4px);
+
+    animation: metaFade 260ms cubic-bezier(.22,1,.36,1) forwards;
 }
 
 @keyframes metaFade{
@@ -278,6 +255,95 @@ details[open] > summary .folder-name{
     }
 
 }
+
+/* =========================
+   METADATA HEADER
+========================= */
+
+.course-meta-top{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    gap:20px;
+
+    padding:14px 18px;
+
+    background:var(--course-meta-bg);
+
+    color:var(--course-meta-text);
+
+    font-weight:bold;
+}
+
+.course-meta-inst{
+
+    padding:14px 18px 8px;
+
+    color:inherit;
+}
+
+/* =========================
+   BOOKS
+========================= */
+
+.course-books{
+
+    padding:0 18px 14px;
+}
+
+.book-row{
+
+    display:grid;
+
+    grid-template-columns:22px 1fr;
+
+    gap:8px;
+
+    margin:6px 0;
+
+    align-items:start;
+}
+
+.book-prefix{
+
+    width:22px;
+}
+
+.book-row a{
+
+    color:var(--text-color);
+
+    text-decoration:none;
+
+    font-weight:normal;
+
+    transition:
+        color 160ms ease,
+        transform 160ms ease;
+}
+
+.book-row a:hover{
+
+    color:var(--link-color);
+
+    text-decoration:underline;
+
+    transform:translateX(2px);
+}
+
+/* =========================
+   DIVIDER
+========================= */
+
+.course-divider{
+
+    border-top:1px solid var(--course-border);
+
+    margin:0 18px;
+}
+
 
 
 
