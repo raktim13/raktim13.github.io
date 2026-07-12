@@ -278,20 +278,12 @@ details[open] > summary .folder-name{
 
     gap:20px;
 
-    padding:14px 18px;
-
-    background:var(--course-meta-bg);
-
-    color:var(--course-meta-text);
-
     font-weight:bold;
 }
 
 .course-meta-inst{
 
-    padding:14px 18px 8px;
-
-    color:inherit;
+    margin-top:12px;
 }
 
 /* =========================
@@ -300,7 +292,7 @@ details[open] > summary .folder-name{
 
 .course-books{
 
-    padding:0 18px 14px;
+    padding:0 0 14px;
 }
 
 .book-row{
