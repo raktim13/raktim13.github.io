@@ -167,5 +167,17 @@
         transform 70ms ease;
 }
 
+.folder-contents > .tree-item{
+    opacity: 0;
+    transform: translateX(-6px);
+}
 
+.folder-contents > .tree-item.show{
+    opacity: 1;
+    transform: translateX(0);
+
+    transition:
+        opacity 180ms ease,
+        transform 180ms cubic-bezier(.22,1,.36,1);
+}
 
