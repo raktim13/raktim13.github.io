@@ -59,3 +59,39 @@ document.addEventListener('keydown', (e) => {
 function closeDragon() {
     document.getElementById('daenerys-drogon-easter-egg').style.display = 'none';
 }
+
+
+// 4. Notes repository 
+function generateTree(data) {
+    const ul = document.createElement('ul');
+
+    for (const key in data) {
+        const li = document.createElement('li');
+        const value = data[key];
+
+        if (typeof value === 'object' && !Array.isArray(value)) {
+            // It's a folder
+            li.innerHTML = `
+                <details>
+                    <summary>
+                        <span class="material-symbols-outlined">folder</span> ${key}
+                    </summary>
+                </details>`;
+            li.querySelector('details').appendChild(generateTree(value));
+        } else {
+            // It's a file: link it to the file name you will upload
+            li.innerHTML = `
+                <a href="${value}" target="_blank" style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:8px;">
+                    <span class="material-symbols-outlined">picture_as_pdf</span> ${key}
+                </a>`;
+        }
+        ul.appendChild(li);
+    }
+    return ul;
+}
+
+// Ensure the page is loaded before running
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById('nav-placeholder');
+    container.appendChild(generateTree(myNotes));
+});
