@@ -160,5 +160,12 @@
     transform: translateX(0);
 }
 
+.folder-icon.clicking{
+    transform: scale(0.82);
+
+    transition:
+        transform 70ms ease;
+}
+
 
 
