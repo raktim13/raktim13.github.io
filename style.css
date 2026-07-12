@@ -131,7 +131,7 @@
         transform 160ms ease;
 }
 .folder-summary span:last-child,
-.file-link span:last-child{
+.file-name{
     transition:
         color 160ms ease,
         transform 160ms ease;
@@ -151,7 +151,7 @@
 }
 
 .folder-summary:hover span:last-child,
-.file-link:hover span:last-child{
+.file-link:hover .file-name{
     transform: translateX(2px);
 }
 
