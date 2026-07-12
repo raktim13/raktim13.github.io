@@ -111,11 +111,17 @@ function generateTree(data) {
 
                 }else{
 
-                        children.forEach(child=>{
-                        child.classList.remove("show");
+                    [...children].reverse().forEach((child,index)=>{
+
+                    setTimeout(()=>{
+
+                    child.classList.remove("show");
+
+                    },index*45);
+
                     });
 
-                    }
+                }
 
                 },70);
 
