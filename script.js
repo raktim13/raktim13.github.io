@@ -108,7 +108,7 @@ function generateTree(data) {
 
                     setTimeout(()=>{
                         child.classList.add("show");
-                        },130+index*45);
+                        },85+index*45);
 
                     });
 
@@ -126,7 +126,7 @@ function generateTree(data) {
 
                 }
 
-                },70);
+                },45);
 
             });
             
