@@ -74,7 +74,7 @@ function generateTree(data) {
             li.innerHTML = `
                 <details>
                     <summary style="cursor:pointer; display:flex; align-items:center; gap:8px;">
-                        <span class="material-icons-two-tone">folder</span> ${key}
+                        <span class="material-symbols-outlined">folder</span> ${key}
                     </summary>
                 </details>`;
             
@@ -86,7 +86,7 @@ function generateTree(data) {
         } else {
             li.innerHTML = `
                 <a href="${value}" target="_blank" style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:8px;">
-                    <span class="material-icons-two-tone">picture_as_pdf</span> ${key}
+                    <span class="material-symbols-outlined">picture_as_pdf</span> ${key}
                 </a>`;
             ul.appendChild(li);
         }
