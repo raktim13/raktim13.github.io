@@ -126,13 +126,16 @@
 
 .folder-icon,
 .file-icon{
-
-    user-select:none;
+    user-select: none;
+    display: inline-block;
 
     transition:
-        color .15s ease,
-        transform .15s ease,
-        font-variation-settings .15s ease;
+        transform 140ms ease,
+        color 140ms ease;
+}
+.folder-summary:hover .folder-icon,
+.file-link:hover .file-icon{
+    transform: scale(0.88);
 }
 
 .folder-icon,
