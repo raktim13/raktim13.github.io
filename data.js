@@ -76,7 +76,8 @@ const myNotes = {
 
                         books: [
                             {
-                               
+                               title: "Partial Differential Equations",
+                               author: "Lawrence Evans",
                             },
                             {
                                 
