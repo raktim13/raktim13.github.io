@@ -108,7 +108,3 @@
     flex: 1; /* This tells the text block to fill all remaining width */
 }
 
-.no-border {
-    border-bottom: none !important;
-    margin-bottom: 20px !important; /* Adjust this to tighten the space */
-}
