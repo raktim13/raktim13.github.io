@@ -484,11 +484,11 @@ details[open] > summary .folder-name{
 
     position:relative;
 
-    display:inline-block;
+    display:inline;
 
-    padding:0 .18em;
+    padding:0;
 
-    margin:0 .04em;
+    margin:0;
 }
 
 .match-text{
