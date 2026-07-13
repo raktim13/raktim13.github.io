@@ -334,18 +334,86 @@ function filterTree(data,query){
 
 }
 
+const easterEggs = {
+
+    "meaning of life":
+        "Let's not get ahead of ourselves. I've got five more years to do philosophy.",
+
+    "epsilon":
+        "Please specify δ.",
+
+    "axiom of choice":
+        "Results may be nonconstructive.",
+
+    "azor ahai":
+        "Did you mean <strong>The Princess That Was Promised</strong>?",
+
+    "dracarys":
+        "<strong>Dracarys.</strong><br><em>Fire and Blood.</em>",
+
+    "winter":
+        "Winter is coming.",
+
+    "valar morghulis":
+        "Valar dohaeris.",
+
+    "hodor":
+        "Hodor.",
+
+    "exam":
+        "I couldn't find any exams. Are you sure that's a bad thing?",
+
+    "undefined":
+        "Sounds like JavaScript.",
+
+    "404":
+        "The theorem you're looking for appears to be independent of ZFC.",
+
+    "raktim":
+        "Archive curator located.",
+
+    "github":
+        "Please don't look at the commit history.",
+
+    "todo":
+        "There are always more notes to write."
+
+};
 function renderTree(data){
 
-    const notesContainer = document.getElementById("notes-tree-container");
+    const notesContainer =
+        document.getElementById("notes-tree-container");
+
+    const search =
+        document.getElementById("notes-search");
+
+    const message =
+        document.getElementById("search-message");
 
     const searching =
-        document.getElementById("notes-search")?.value.trim() !== "";
+        search?.value.trim() !== "";
 
     notesContainer.innerHTML = "";
 
     notesContainer.appendChild(
         generateTree(data, searching)
     );
+
+    message.innerHTML = "";
+
+    if(searching){
+
+        if(Object.keys(data).length===0){
+
+            const q=search.value.trim().toLowerCase();
+
+            message.innerHTML=
+                easterEggs[q] ??
+                "Nothing found.";
+
+        }
+
+    }
 
 }
 // Ensure the page is loaded before running
