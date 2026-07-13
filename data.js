@@ -22,7 +22,18 @@ const myNotes = {
                         term: "Autumn 2024",
                         status: "completed",
 
-                    books: []
+                    books: [
+                        {
+                            title: "Abstract Algebra",
+                            author: "David S. Dummit and Richard M. Foote",
+                            url: "https://www.wiley.com/en-us/Abstract+Algebra%2C+3rd+Edition-p-9780471433347"
+                        },
+                        {
+                            title: "Algebra",
+                            author: "Michael Artin",
+                            url: "https://www.pearson.com/en-us/subject-catalog/p/algebra/P200000003085"
+                        }
+                    ]
                             },
 
                                 "assignment 1": "mmath/sem 1/algebra i/alg_i_assignment_1.pdf",
@@ -65,7 +76,13 @@ const myNotes = {
                         term: "Autumn 2024",
                         status: "completed",
 
-                    books: []
+                    books: [
+                        {
+                            title: "Linear Algebra",
+                            author: "Kenneth Hoffman and Ray Kunze",
+                            url: "https://www.pearson.com/en-us/subject-catalog/p/linear-algebra/P200000003388"
+                        }
+                    ]
                             },
 
                                 "No assignments :(": null,
@@ -97,7 +114,13 @@ const myNotes = {
                         term: "Autumn 2024",
                         status: "completed",
 
-                    books: []
+                    books: [
+                        {
+                            title: "Topology",
+                            author: "James R. Munkres",
+                            url: "https://www.pearson.com/en-us/subject-catalog/p/topology/P200000003607"
+                        }
+                    ]
                             },
 
                                 "assignment": "mmath/sem 1/topology i/topo_i_assignment.pdf",
@@ -145,7 +168,18 @@ const myNotes = {
                         term: "Spring 2025",
                         status: "completed",
 
-                    books: []
+                    books: [
+                        {
+                            title: "Functions of One Complex Variable I",
+                            author: "John B. Conway",
+                            url: "https://link.springer.com/book/10.1007/978-1-4612-6318-1"
+                        },
+                        {
+                            title: "Complex Analysis",
+                            author: "Elias M. Stein and Rami Shakarchi",
+                            url: "https://press.princeton.edu/books/hardcover/9780691113852/complex-analysis"
+                        }
+                    ]
                             },
 
                                 "Coming soon :)": null,
@@ -161,7 +195,13 @@ const myNotes = {
                         term: "Spring 2025",
                         status: "completed",
 
-                    books: []
+                    books: [
+                        {
+                            title: "Functional Analysis",
+                            author: "Walter Rudin",
+                            url: "https://www.mheducation.com/highered/product/functional-analysis-rudin/M9780070542365.html"
+                        }
+                    ]
                             },
 
                                 "Coming soon :)": null,
@@ -177,7 +217,23 @@ const myNotes = {
                         term: "Spring 2025",
                         status: "completed",
 
-                    books: []
+                    books: [
+                        {
+                            title: "Elementary Number Theory",
+                            author: "David M. Burton",
+                            url: "https://www.mheducation.com/highered/product/elementary-number-theory-burton/M9780073383149.html"
+                        },
+                        {
+                            title: "An Introduction to Number Theory",
+                            author: "Ivan Niven, Herbert Zuckerman and Hugh Montgomery",
+                            url: "https://www.wiley.com/en-us/An+Introduction+to+the+Theory+of+Numbers%2C+5th+Edition-p-9780471625469"
+                        },
+                        {
+                            title: "Introduction to Analytic Number Theory",
+                            author: "Tom M. Apostol",
+                            url: "https://link.springer.com/book/10.1007/978-1-4757-5579-4"
+                        }
+                    ]
                             },
 
                                 "assignment 1": "mmath/sem 2/number theory/nt_assignment_1.pdf",
@@ -199,7 +255,28 @@ const myNotes = {
                         term: "Spring 2025",
                         status: "completed",
 
-                    books: []
+                    books: [
+                        {
+                            title: "Algebraic Topology",
+                            author: "Allen Hatcher",
+                            url: "https://pi.math.cornell.edu/~hatcher/AT/ATpage.html"
+                        },
+                        {
+                            title: "Elements of Algebraic Topology",
+                            author: "James R. Munkres",
+                            url: "https://www.crcpress.com/Elements-of-Algebraic-Topology/Munkres/p/book/9780201627282"
+                        },
+                        {
+                            title: "Algebraic Topology",
+                            author: "Edwin H. Spanier",
+                            url: "https://link.springer.com/book/10.1007/978-1-4684-9322-1"
+                        },
+                        {
+                            title: "A Concise Course in Algebraic Topology",
+                            author: "J. P. May",
+                            url: "https://press.uchicago.edu/ucp/books/book/chicago/C/bo3639842.html"
+                        }
+                    ]
                             },
 
                                 "assignment 1": "mmath/sem 2/topology ii/topo2_assignment_1.pdf",
@@ -220,7 +297,23 @@ const myNotes = {
                         term: "Autumn 2025",
                         status: "completed",
 
-                    books: []
+                    books: [
+                        {
+                            title: "Introduction to Commutative Algebra",
+                            author: "Michael F. Atiyah and Ian G. Macdonald",
+                            url: "https://www.routledge.com/Introduction-to-Commutative-Algebra/Atiyah-Macdonald/p/book/9780201407518"
+                        },
+                        {
+                            title: "Commutative Algebra",
+                            author: "Hideyuki Matsumura",
+                            url: "https://bookstore.ams.org/chel-56"
+                        },
+                        {
+                            title: "Commutative Ring Theory",
+                            author: "Hideyuki Matsumura",
+                            url: "https://www.cambridge.org/core/books/commutative-ring-theory/947561E5E852E09920C46B6A3F0A35A1"
+                        }
+                    ]
                             },
 
                                 "Coming soon :)": null,
@@ -236,7 +329,28 @@ const myNotes = {
                         term: "Autumn 2025",
                         status: "completed",
 
-                    books: []
+                    books: [
+                        {
+                            title: "Differential Geometry of Curves and Surfaces",
+                            author: "Manfredo P. do Carmo",
+                            url: "https://store.doverpublications.com/products/9780486806990"
+                        },
+                        {
+                            title: "Introduction to Smooth Manifolds",
+                            author: "John M. Lee",
+                            url: "https://link.springer.com/book/10.1007/978-1-4419-9982-5"
+                        },
+                        {
+                            title: "Riemannian Manifolds: An Introduction to Curvature",
+                            author: "John M. Lee",
+                            url: "https://link.springer.com/book/10.1007/b98852"
+                        },
+                        {
+                            title: "Introduction to Differentiable Manifolds",
+                            author: "John M. Lee",
+                            url: "https://link.springer.com/book/10.1007/978-1-4419-7399-3"
+                        }
+                ]
                             },
 
                                 "assignment 1": "mmath/sem 3/differential geometry i/diff_geo_assignment_1.pdf",
@@ -253,7 +367,13 @@ const myNotes = {
                         term: "Autumn 2025",
                         status: "completed",
 
-                    books: []
+                    books: [
+                        {
+                            title: "Probability: Theory and Examples",
+                            author: "Rick Durrett",
+                            url: "https://services.math.duke.edu/~rtd/PTE/PTE5_011119.pdf"
+                        }
+                    ]
                             },
 
                                 "assignment 1": "mmath/sem 3/probability theory/prob_assignment_1.pdf",
@@ -275,7 +395,23 @@ const myNotes = {
                         term: "Autumn 2025",
                         status: "completed",
 
-                    books: []
+                    books: [
+                        {
+                            title: "Complex Analysis",
+                            author: "Lars V. Ahlfors",
+                            url: "https://bookstore.ams.org/chel-14"
+                        },
+                        {
+                            title: "Riemann Surfaces",
+                            author: "Hershel M. Farkas and Irwin Kra",
+                            url: "https://link.springer.com/book/10.1007/978-1-4612-2034-3"
+                        },
+                        {
+                            title: "Lectures on Riemann Surfaces",
+                            author: "Otto Forster",
+                            url: "https://link.springer.com/book/10.1007/978-1-4612-5963-4"
+                        }
+                    ]
                             },
 
                                 "assignment 1": "mmath/sem 3/riemann surfaces/riemann_assignment1.pdf",
@@ -294,7 +430,18 @@ const myNotes = {
                         term: "Autumn 2025",
                         status: "completed",
 
-                    books: []
+                    books: [
+                        {
+                            title: "Algebraic Topology",
+                            author: "Allen Hatcher",
+                            url: "https://pi.math.cornell.edu/~hatcher/AT/ATpage.html"
+                        },
+                        {
+                            title: "Characteristic Classes",
+                            author: "John Milnor and James D. Stasheff",
+                            url: "https://bookstore.ams.org/chel-76"
+                        }
+                    ]
                             },
 
                                 "exercise 1": "mmath/sem 3/topology iii/topo3_exer1.pdf",
@@ -339,6 +486,11 @@ const myNotes = {
                                 title: "Algebraic Curves: An Introduction to Algebraic Geometry",
                                 author: "William Fulton",
                                 url: "https://www.math.lsa.umich.edu/~wfulton/CurveBook.pdf"
+                            },
+                            {
+                                title: "Algebraic Geometry: A First Course",
+                                author: "Joe Harris",
+                                url: "https://link.springer.com/book/10.1007/978-1-4757-2189-8"
                             }
                                 ]
                             },
@@ -378,7 +530,18 @@ const myNotes = {
                         institution: "Indian Statistical Institute, Kolkata",
                         term: "Spring 2026",
                         status: "completed",
-                    books:[                    ]
+                    books:[
+                        {
+                            title: "Rational Homotopy Theory",
+                            author: "Yves Félix, Stephen Halperin and Jean-Claude Thomas",
+                            url: "https://link.springer.com/book/10.1007/978-1-4613-0105-9"
+                        },
+                        {
+                            title: "Rational Homotopy Theory and Differential Forms",
+                            author: "Phillip Griffiths and John Morgan",
+                            url: "https://link.springer.com/book/10.1007/978-1-4613-8130-3"
+                        }
+                    ]
                         
                             },
 
@@ -424,7 +587,13 @@ const myNotes = {
                         institution: "Indian Statistical Institute, Kolkata",
                         term: "Spring 2026",
                         status: "completed",
-                    books:[                    ]
+                    books:[
+                        {
+                            title: "Lectures on Quasiconformal Mappings",
+                            author: "Lars V. Ahlfors",
+                            url: "https://bookstore.ams.org/ulect-38"
+                        }
+                    ]
                         
                             },
 
@@ -440,5 +609,9 @@ const myNotes = {
 
 
     
-"JRF": {}
+"JRF": {
+
+    "Sem 1": {},
+    "Sem 2": {}
+}
 };
