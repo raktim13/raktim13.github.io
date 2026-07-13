@@ -251,9 +251,7 @@ breadcrumb.innerHTML =
     </span>
 
     <span class="typewriter"
-          data-text="${
-                 meta.term.startsWith("Autumn") ? "🍁" : "🌸"
-            } ${meta.term}"
+         data-text="${meta.term.toLowerCase().includes('autumn') ? '🍂' : '🌸'} ${meta.term}"
     </span>
 
     <span class="typewriter"
