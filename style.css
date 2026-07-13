@@ -607,6 +607,24 @@ details[open] > summary .folder-name{
     color:var(--link-color);
 }
 
+/* =========================
+   TREE FADE
+========================= */
+
+#notes-tree-container{
+
+    transition:
+        opacity 120ms ease,
+        transform 120ms ease;
+}
+
+#notes-tree-container.tree-fading{
+
+    opacity:.35;
+
+    transform:translateY(2px);
+}
+
 
 
 
