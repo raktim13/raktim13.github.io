@@ -17,8 +17,7 @@ const myNotes = {
                         term: "Autumn 2024",
                         status: "completed",
 
-                    books: [
-                            ]
+                    books: []
                             },
 
                                 "Coming soon :)": null
@@ -32,8 +31,7 @@ const myNotes = {
                         term: "Autumn 2024",
                         status: "completed",
 
-                    books: [
-                            ]
+                    books: []
                             },
 
                                 "Coming soon :)": null
@@ -47,8 +45,7 @@ const myNotes = {
                         term: "Autumn 2024",
                         status: "completed",
 
-                    books: [
-                            ]
+                    books: []
                             },
 
                                 "No assignments :(": null
@@ -63,8 +60,7 @@ const myNotes = {
                         term: "Autumn 2024",
                         status: "completed",
 
-                    books: [
-                            ]
+                    books: []
                             },
 
                                 "Coming soon :)": null
@@ -78,8 +74,7 @@ const myNotes = {
                         term: "Autumn 2024",
                         status: "completed",
 
-                    books: [
-                            ]
+                    books: []
                             },
 
                                 "Coming soon :)": null
@@ -96,8 +91,7 @@ const myNotes = {
                         term: "Spring 2025",
                         status: "completed",
 
-                    books: [
-                            ]
+                    books: []
                             },
 
                                 "Coming soon :)": null
@@ -111,8 +105,7 @@ const myNotes = {
                         term: "Spring 2025",
                         status: "completed",
 
-                    books: [
-                            ]
+                    books: []
                             },
 
                                 "Coming soon :)": null
@@ -126,8 +119,7 @@ const myNotes = {
                         term: "Spring 2025",
                         status: "completed",
 
-                    books: [
-                            ]
+                    books: []
                             },
 
                                 "Coming soon :)": null
@@ -141,8 +133,7 @@ const myNotes = {
                         term: "Spring 2025",
                         status: "completed",
 
-                    books: [
-                            ]
+                    books: []
                             },
 
                                 "Coming soon :)": null
@@ -155,8 +146,7 @@ const myNotes = {
                         term: "Spring 2025",
                         status: "completed",
 
-                    books: [
-                            ]
+                    books: []
                             },
 
                                 "Coming soon :)": null
@@ -173,8 +163,7 @@ const myNotes = {
                         term: "Autumn 2025",
                         status: "completed",
 
-                    books: [
-                            ]
+                    books: []
                             },
 
                                 "Coming soon :)": null
@@ -188,8 +177,7 @@ const myNotes = {
                         term: "Autumn 2025",
                         status: "completed",
 
-                    books: [
-                            ]
+                    books: []
                             },
 
                                 "Coming soon :)": null
@@ -203,8 +191,7 @@ const myNotes = {
                         term: "Autumn 2025",
                         status: "completed",
 
-                    books: [
-                            ]
+                    books: []
                             },
 
                                 "Coming soon :)": null
@@ -218,8 +205,7 @@ const myNotes = {
                         term: "Autumn 2025",
                         status: "completed",
 
-                    books: [
-                            ]
+                    books: []
                             },
 
                                 "Coming soon :)": null
@@ -233,8 +219,7 @@ const myNotes = {
                         term: "Autumn 2025",
                         status: "completed",
 
-                    books: [
-                            ]
+                    books: []
                             },
 
                                 "Coming soon :)": null
