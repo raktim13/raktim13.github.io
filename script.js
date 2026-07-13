@@ -62,7 +62,7 @@ function closeDragon() {
 
 
 // 4. Notes repository 
-function generateTree(data) {
+function generateTree(data, searching = false) {
     const ul = document.createElement('ul');
     ul.className = "directory-list"; // Ensures your CSS styles apply
 
@@ -88,6 +88,10 @@ function generateTree(data) {
 
             const details = li.querySelector("details");
             const icon = li.querySelector(".folder-icon");
+            if (searching) {
+                details.open = true;
+                icon.textContent = "folder_open";
+                            }
 
                 details.addEventListener("toggle", () => {
 
@@ -132,7 +136,7 @@ function generateTree(data) {
             
             // Only recurse if the object isn't empty
             if (Object.keys(children).length > 0) {
-                const subtree = generateTree(children);
+                const subtree = generateTree(children, searching);
                 subtree.classList.add("folder-contents");
 
                 if(meta){
@@ -307,12 +311,16 @@ function renderTree(data){
 
     const notesContainer = document.getElementById("notes-tree-container");
 
-    notesContainer.innerHTML="";
+    const searching =
+        document.getElementById("notes-search")?.value.trim() !== "";
 
-    notesContainer.appendChild(generateTree(data));
+    notesContainer.innerHTML = "";
+
+    notesContainer.appendChild(
+        generateTree(data, searching)
+    );
 
 }
-
 // Ensure the page is loaded before running
 document.addEventListener("DOMContentLoaded",()=>{
 
