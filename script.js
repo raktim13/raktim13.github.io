@@ -140,11 +140,13 @@ ${highlight(key)}
 
     preview.className="folder-preview";
 
-    preview.innerHTML=`
+    preview.innerHTML = `
 
-${meta.term} • ${meta.institution}<br>
+<div><strong>Term:</strong> ${meta.term}</div>
 
-${meta.instructor}
+<div><strong>Institution:</strong> ${meta.institution}</div>
+
+<div><strong>Instructor:</strong> ${meta.instructor}</div>
 
 `;
 
