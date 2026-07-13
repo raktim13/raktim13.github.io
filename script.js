@@ -230,6 +230,28 @@ else{
 
 }
 
+if (!subtree && meta) {
+
+    const empty = document.createElement("div");
+
+    empty.className = "empty-folder";
+
+    empty.innerHTML = `
+
+        <div class="empty-symbol">∅</div>
+
+        <div class="empty-text">
+
+            The empty set is still a set.
+
+        </div>
+
+    `;
+
+    card.querySelector(".course-body").appendChild(empty);
+
+}
+
 }   // closes: if (Object.keys(children).length > 0)
 
 ul.appendChild(li);
