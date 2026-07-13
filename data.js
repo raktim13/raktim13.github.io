@@ -79,7 +79,7 @@ const myNotes = {
 
                                 "Coming soon :)": null
                     },
-            }
+            },
             
     
         "Sem 2": {
@@ -152,7 +152,7 @@ const myNotes = {
 
                                 "Coming soon :)": null
                     },
-            }
+            },
 
 
         "Sem 3": {
@@ -225,7 +225,7 @@ const myNotes = {
 
                                 "Coming soon :)": null
                     },
-            }
+            },
     
         "Sem 4": {
             "Algebraic Geometry": {
