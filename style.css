@@ -581,6 +581,28 @@ details[open] > summary .folder-name{
     font-size:.92rem;
 }
 
+/* =========================
+   BREADCRUMBS
+========================= */
+
+.breadcrumb{
+
+    font-size:.82rem;
+
+    color:#8a8a8a;
+
+    margin:0 0 10px;
+
+    letter-spacing:.02em;
+
+    user-select:none;
+}
+
+.breadcrumb span{
+
+    color:var(--link-color);
+}
+
 
 
 
