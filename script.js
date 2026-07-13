@@ -69,9 +69,30 @@ function highlight(text){
     const escaped = query.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
 
     return text.replace(
-        new RegExp(`(${escaped})`, "ig"),
-        `<span class="search-match">$1</span>`
-    );
+    new RegExp(`(${escaped})`, "ig"),
+    `
+<span class="search-match">
+
+    <span class="match-text">$1</span>
+
+    <svg
+        class="marching-border"
+        preserveAspectRatio="none"
+        viewBox="0 0 100 100">
+
+        <rect
+            x="2"
+            y="2"
+            width="96"
+            height="96"
+            rx="8"
+            ry="8"/>
+
+    </svg>
+
+</span>
+`
+);
 }
 
 // 4. Notes repository 
