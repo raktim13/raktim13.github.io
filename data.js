@@ -22,7 +22,7 @@ const myNotes = {
 
                                 "Coming soon :)": null
                     },
-            },
+            
         
             "Analysis of Several Variables": {
                 "_meta": {
@@ -36,7 +36,7 @@ const myNotes = {
 
                                 "Coming soon :)": null
                     },
-            },
+            
             
             "Linear Algebra": {
                 "_meta": {
@@ -51,7 +51,7 @@ const myNotes = {
                                 "No assignments :(": null
                     },
             
-            },
+            
         
             "Measure Theory": {
                 "_meta": {
@@ -65,7 +65,7 @@ const myNotes = {
 
                                 "Coming soon :)": null
                     },
-            },
+            
 
             "Topology I": {
                 "_meta": {
@@ -80,7 +80,7 @@ const myNotes = {
                                 "Coming soon :)": null
                     },
             }
-        },
+            
     
         "Sem 2": {
             
@@ -96,7 +96,7 @@ const myNotes = {
 
                                 "Coming soon :)": null
                     },
-            },
+            
             
             "Complex Analysis": {
                 "_meta": {
@@ -110,7 +110,7 @@ const myNotes = {
 
                                 "Coming soon :)": null
                     },
-            },
+            
             
             "Functional Analysis": {
                 "_meta": {
@@ -124,7 +124,7 @@ const myNotes = {
 
                                 "Coming soon :)": null
                     },
-            },
+            
     
             "Number Theory": {
                 "_meta": {
@@ -137,7 +137,8 @@ const myNotes = {
                             },
 
                                 "Coming soon :)": null
-                    },},
+                    },
+    
 
             "Topology II": {
                 "_meta": {
@@ -152,7 +153,7 @@ const myNotes = {
                                 "Coming soon :)": null
                     },
             }
-        },
+
 
         "Sem 3": {
             
@@ -168,7 +169,7 @@ const myNotes = {
 
                                 "Coming soon :)": null
                     },
-            },
+            
 
             "Differential Geometry I": {
                 "_meta": {
@@ -182,7 +183,7 @@ const myNotes = {
 
                                 "Coming soon :)": null
                     },
-            },
+            
 
             "Probability Theory": {
                 "_meta": {
@@ -196,7 +197,7 @@ const myNotes = {
 
                                 "Coming soon :)": null
                     },
-            },
+            
 
             "Riemann Surfaces": {
                 "_meta": {
@@ -210,7 +211,7 @@ const myNotes = {
 
                                 "Coming soon :)": null
                     },
-            },
+            
 
             "Topology III": {
                 "_meta": {
@@ -225,7 +226,7 @@ const myNotes = {
                                 "Coming soon :)": null
                     },
             }
-        },
+    
         "Sem 4": {
             "Algebraic Geometry": {
                 "_meta": {
