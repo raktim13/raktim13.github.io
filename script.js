@@ -337,7 +337,7 @@ function filterTree(data,query){
 const easterEggs = {
 
     "meaning of life":
-        "Let's not get ahead of ourselves. I've got five more years to do philosophy.",
+        "Let's not get ahead of ourselves. I've got five fucking years ahead of me to do philosophy.",
 
     "epsilon":
         "Please specify δ.",
@@ -346,7 +346,7 @@ const easterEggs = {
         "Results may be nonconstructive.",
 
     "azor ahai":
-        "Did you mean <strong>The Princess That Was Promised</strong>?",
+        "Did you mean <strong>The Princess That Was Promised</strong> aka Daenerys Stormborn?",
 
     "dracarys":
         "<strong>Dracarys.</strong><br><em>Fire and Blood.</em>",
@@ -356,12 +356,6 @@ const easterEggs = {
 
     "valar morghulis":
         "Valar dohaeris.",
-
-    "hodor":
-        "Hodor.",
-
-    "exam":
-        "I couldn't find any exams. Are you sure that's a bad thing?",
 
     "undefined":
         "Sounds like JavaScript.",
