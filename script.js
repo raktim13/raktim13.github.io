@@ -60,6 +60,19 @@ function closeDragon() {
     document.getElementById('daenerys-drogon-easter-egg').style.display = 'none';
 }
 
+function highlight(text){
+
+    const query = document.getElementById("notes-search")?.value.trim();
+
+    if(!query) return text;
+
+    const escaped = query.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+
+    return text.replace(
+        new RegExp(`(${escaped})`, "ig"),
+        `<span class="search-match">$1</span>`
+    );
+}
 
 // 4. Notes repository 
 function generateTree(data, searching = false) {
@@ -82,7 +95,7 @@ function generateTree(data, searching = false) {
                             folder
                         </span>
 
-                        <span class="folder-name">${key}</span>
+                        <span class="folder-name">${highlight(key)}</span>
                     </summary>
                 </details>`;
 
@@ -154,11 +167,11 @@ function generateTree(data, searching = false) {
                 <div class="course-header">
 
                 <div class="course-title">
-                    ${key}
-            </div>
+                    ${highlight(key)}
+                </div>
 
             <div class="course-meta-top">
-        <span>👤 ${meta.instructor}</span>
+        <span>👤 ${highlight(meta.instructor)}</span>
 
         <span>🌸 ${meta.term}</span>
 
@@ -172,7 +185,7 @@ function generateTree(data, searching = false) {
     </div>
 
     <div class="course-meta-inst">
-        🏛 ${meta.institution}
+        🏛 ${highlight(meta.institution)}
     </div>
 
 </div>
@@ -190,7 +203,7 @@ ${index===0
 : `<span class="book-prefix"></span>`}
 
 <a href="${book.url}" target="_blank">
-${book.title} — ${book.author}
+${highlight(book.title)} — ${highlight(book.author)}
 </a>
 
 </div>
@@ -232,7 +245,7 @@ ul.appendChild(li);
                         </span>
 
                         <span class="file-name">
-                            ${key}
+                            ${highlight(key)}
                         </span>
                 </a>`;
             ul.appendChild(li);
