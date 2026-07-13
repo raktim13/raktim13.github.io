@@ -266,13 +266,20 @@ function filterTree(data,query){
 
         const value=data[key];
 
-        if(typeof value!=="object" || value===null){
+        if (typeof value !== "object" || value === null) {
 
-            if(key.toLowerCase().includes(query))
-                filtered[key]=value;
+    const fileName = key.toLowerCase();
+    const filePath = String(value).toLowerCase();
 
-            continue;
-        }
+    if (
+        fileName.includes(query) ||
+        filePath.includes(query)
+    ) {
+        filtered[key] = value;
+    }
+
+    continue;
+}
 
         const meta=value._meta;
 
