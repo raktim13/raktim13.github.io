@@ -93,14 +93,7 @@ const myNotes = {
                         term: "Spring 2026",
                         status: "completed",
 
-                        books: [
-                            {
-                                
-                            },
-                            {
-                                
-                            },
-                                ]
+                        
                             },
 
                         "assignment 1-4": "mmath/sem 4/rational homotopy theory/rht_assignment_1_2_3_4.pdf",
@@ -144,14 +137,7 @@ const myNotes = {
                         term: "Spring 2026",
                         status: "completed",
 
-                        books: [
-                            {
-                                
-                            },
-                            {
-                                
-                            },
-                                ]
+                        
                             },
 
                         "assignment 1": "mmath/sem 4/teichmuller theory/teich_assignment_1.pdf",
