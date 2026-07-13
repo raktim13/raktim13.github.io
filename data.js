@@ -9,25 +9,237 @@ const myNotes = {
     },
     "MMath": {
         "Sem 1": {
-            "Algebra I": {},
-            "Analysis of Several Variables": {},
-            "Linear Algebra": {},
-            "Measure Theory": {},
-            "Topology I": {}
+            
+            "Algebra I": {
+                "_meta": {
+                        instructor: "Prof. Mrinal Kanti Das",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Autumn 2024",
+                        status: "completed",
+
+                    books: [
+                            ]
+                            },
+
+                                "Coming soon :)": null
+                    },
+            },
+        
+            "Analysis of Several Variables": {
+                "_meta": {
+                        instructor: "Prof. Jyotishman Bhowmik",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Autumn 2024",
+                        status: "completed",
+
+                    books: [
+                            ]
+                            },
+
+                                "Coming soon :)": null
+                    },
+            },
+            
+            "Linear Algebra": {
+                "_meta": {
+                        instructor: "Prof. Shamindra Ghosh",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Autumn 2024",
+                        status: "completed",
+
+                    books: [
+                            ]
+                            },
+
+                                "No assignments :(": null
+                    },
+            
+            },
+        
+            "Measure Theory": {
+                "_meta": {
+                        instructor: "Prof. Amites Dasgupta",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Autumn 2024",
+                        status: "completed",
+
+                    books: [
+                            ]
+                            },
+
+                                "Coming soon :)": null
+                    },
+            },
+
+            "Topology I": {
+                "_meta": {
+                        instructor: "Prof. Samik Basu",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Autumn 2024",
+                        status: "completed",
+
+                    books: [
+                            ]
+                            },
+
+                                "Coming soon :)": null
+                    },
+            }
         },
+    
         "Sem 2": {
-            "Algebra II": {},
-            "Complex Analysis": {},
-            "Functional Analysis": {},
-            "Number Theory": {},
-            "Topology II": {}
+            
+            "Algebra II": {
+                "_meta": {
+                        instructor: "Prof. Utsav Chowdhury",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Spring 2025",
+                        status: "completed",
+
+                    books: [
+                            ]
+                            },
+
+                                "Coming soon :)": null
+                    },
+            },
+            
+            "Complex Analysis": {
+                "_meta": {
+                        instructor: "Prof. Rudra P. Sarkar",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Spring 2025",
+                        status: "completed",
+
+                    books: [
+                            ]
+                            },
+
+                                "Coming soon :)": null
+                    },
+            },
+            
+            "Functional Analysis": {
+                "_meta": {
+                        instructor: "Prof. Partha Sarathi Ghosh",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Spring 2025",
+                        status: "completed",
+
+                    books: [
+                            ]
+                            },
+
+                                "Coming soon :)": null
+                    },
+            },
+    
+            "Number Theory": {
+                "_meta": {
+                        instructor: "Prof. Satadal Ganguly",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Spring 2025",
+                        status: "completed",
+
+                    books: [
+                            ]
+                            },
+
+                                "Coming soon :)": null
+                    },},
+
+            "Topology II": {
+                "_meta": {
+                        instructor: "Prof. Samik Basu",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Spring 2025",
+                        status: "completed",
+
+                    books: [
+                            ]
+                            },
+
+                                "Coming soon :)": null
+                    },
+            }
         },
+
         "Sem 3": {
-            "Commutative Algebra I": {},
-            "Differential Geometry I": {},
-            "Probability Theory": {},
-            "Riemann Surfaces": {},
-            "Topology III": {}
+            
+            "Commutative Algebra I": {
+                "_meta": {
+                        instructor: "Prof. Neena Gupta",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Autumn 2025",
+                        status: "completed",
+
+                    books: [
+                            ]
+                            },
+
+                                "Coming soon :)": null
+                    },
+            },
+
+            "Differential Geometry I": {
+                "_meta": {
+                        instructor: "Prof. Debashis Goswami",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Autumn 2025",
+                        status: "completed",
+
+                    books: [
+                            ]
+                            },
+
+                                "Coming soon :)": null
+                    },
+            },
+
+            "Probability Theory": {
+                "_meta": {
+                        instructor: "Prof. Debnanjan Nandi",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Autumn 2025",
+                        status: "completed",
+
+                    books: [
+                            ]
+                            },
+
+                                "Coming soon :)": null
+                    },
+            },
+
+            "Riemann Surfaces": {
+                "_meta": {
+                        instructor: "Prof. Kingshook Biswas",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Autumn 2025",
+                        status: "completed",
+
+                    books: [
+                            ]
+                            },
+
+                                "Coming soon :)": null
+                    },
+            },
+
+            "Topology III": {
+                "_meta": {
+                        instructor: "Prof. Samik Basu",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Autumn 2025",
+                        status: "completed",
+
+                    books: [
+                            ]
+                            },
+
+                                "Coming soon :)": null
+                    },
+            }
         },
         "Sem 4": {
             "Algebraic Geometry": {
@@ -83,7 +295,7 @@ const myNotes = {
                             ]
                             },
 
-                                "No assignments yet :(": null
+                                "No assignments :(": null
                     },
             
             "Rational Homotopy Theory": {
