@@ -230,14 +230,114 @@ ul.appendChild(li);
     return ul;
 }
 
-// Ensure the page is loaded before running
-document.addEventListener("DOMContentLoaded", () => {
-    // Target the NEW notes container only
-    const notesContainer = document.getElementById('notes-tree-container');
-    if (notesContainer && typeof myNotes !== 'undefined') {
-        const tree = generateTree(myNotes);
-        notesContainer.appendChild(tree);
+function filterTree(data,query){
+
+    query=query.toLowerCase().trim();
+
+    if(query==="") return data;
+
+    const filtered={};
+
+    for(const key in data){
+
+        const value=data[key];
+
+        if(typeof value!=="object" || value===null){
+
+            if(key.toLowerCase().includes(query))
+                filtered[key]=value;
+
+            continue;
+        }
+
+        const meta=value._meta;
+
+        let metadataMatch=false;
+
+        if(meta){
+
+            metadataMatch=
+                (meta.instructor||"").toLowerCase().includes(query) ||
+                (meta.institution||"").toLowerCase().includes(query) ||
+                (meta.term||"").toLowerCase().includes(query) ||
+                (meta.status||"").toLowerCase().includes(query) ||
+
+                (meta.books||[]).some(book=>
+
+                    (book.title||"").toLowerCase().includes(query) ||
+
+                    (book.author||"").toLowerCase().includes(query)
+
+                );
+        }
+
+        const children={...value};
+
+        delete children._meta;
+
+        const filteredChildren=filterTree(children,query);
+
+        if(
+
+            key.toLowerCase().includes(query) ||
+
+            metadataMatch ||
+
+            Object.keys(filteredChildren).length
+
+        ){
+
+            filtered[key]={
+
+                ...(meta?{_meta:meta}:{}),
+
+                ...filteredChildren
+
+            };
+
+        }
+
     }
+
+    return filtered;
+
+}
+
+function renderTree(data){
+
+    const notesContainer = document.getElementById("notes-tree-container");
+
+    notesContainer.innerHTML="";
+
+    notesContainer.appendChild(generateTree(data));
+
+}
+
+// Ensure the page is loaded before running
+document.addEventListener("DOMContentLoaded",()=>{
+
+    if(typeof myNotes==="undefined") return;
+
+    renderTree(myNotes);
+
+    const search=document.getElementById("notes-search");
+
+search.addEventListener("input",()=>{
+
+    renderTree(
+
+        filterTree(
+
+            myNotes,
+
+            search.value
+
+        )
+
+    );
+
+});
+
 });
 
 
