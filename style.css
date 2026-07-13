@@ -685,6 +685,12 @@ details[open] > summary .folder-name{
 
 }
 
+.course-meta-top span,
+.course-meta-inst{
+
+    min-height:1.2em;
+
+}
 
 
 
