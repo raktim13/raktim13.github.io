@@ -480,6 +480,17 @@ details[open] > summary .folder-name{
     padding-right:48px;
 }
 
+.search-match{
+
+    display:inline-block;
+
+    padding:0 .18em;
+
+    border:2px dashed var(--link-color);
+
+    border-radius:6px;
+}
+
 
 
 
