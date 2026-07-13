@@ -231,14 +231,14 @@ breadcrumb.innerHTML =
 
 <div class="course-header">
 
-    <div class="course-title typewriter">
+    <div class="course-title">
         ${highlight(key)}
     </div>
 
     <div class="course-meta-top">
-        <span class="typewriter">👤 ${highlight(meta.instructor)}</span>
+        <span>👤 ${highlight(meta.instructor)}</span>
 
-        <span class="typewriter">🌸 ${highlight(meta.term)}</span>
+        <span>🌸 ${highlight(meta.term)}</span>
 
         <span>${
             meta.status==="completed"
@@ -249,7 +249,7 @@ breadcrumb.innerHTML =
         }</span>
     </div>
 
-    <div class="course-meta-inst typewriter">
+    <div class="course-meta-inst>
         🏛 ${highlight(meta.institution)}
     </div>
 
@@ -481,50 +481,6 @@ const easterEggs = {
 
 };
 
-function animateTypewriter(){
-
-    console.log("TYPEWRITER CALLED");
-
-    const elements = document.querySelectorAll(".typewriter");
-
-    console.log("Found:", elements.length, "typewriter elements");
-
-    elements.forEach(el=>{
-
-        console.log("Animating:", el);
-
-        const html = el.innerHTML;
-
-        const temp = document.createElement("div");
-        temp.innerHTML = html;
-
-        const text = temp.textContent;
-
-        console.log("Text:", text);
-
-        el.innerHTML = "";
-
-        let i = 0;
-
-        function type(){
-
-            el.textContent = text.slice(0,i);
-
-            i++;
-
-            if(i <= text.length){
-
-                setTimeout(type,80);
-
-            }
-
-        }
-
-        type();
-
-    });
-
-}
 function renderTree(data){
 
     const notesContainer =
@@ -549,13 +505,6 @@ setTimeout(()=>{
         generateTree(data,searching)
     );
 
-    if(!searching){
-
-    console.log("Calling animateTypewriter()");
-
-    animateTypewriter();
-
-}
 
     requestAnimationFrame(()=>{
 
