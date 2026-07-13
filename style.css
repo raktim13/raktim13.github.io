@@ -482,17 +482,128 @@ details[open] > summary .folder-name{
 
 .search-match{
 
-    display:inline;
+    position:relative;
 
-    outline:2px dashed var(--link-color);
+    display:inline-block;
 
-    outline-offset:2px;
+    padding:0 .18em;
 
-    border-radius:4px;
-
-    background:rgba(220,20,60,.08);
+    margin:0 .04em;
 }
 
+.search-match::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-3px;
+
+    border-radius:6px;
+
+    pointer-events:none;
+
+    background:
+
+        repeating-linear-gradient(
+
+            90deg,
+
+            var(--link-color) 0 8px,
+
+            transparent 8px 14px
+
+        ),
+
+        repeating-linear-gradient(
+
+            90deg,
+
+            var(--link-color) 0 8px,
+
+            transparent 8px 14px
+
+        ),
+
+        repeating-linear-gradient(
+
+            0deg,
+
+            var(--link-color) 0 8px,
+
+            transparent 8px 14px
+
+        ),
+
+        repeating-linear-gradient(
+
+            0deg,
+
+            var(--link-color) 0 8px,
+
+            transparent 8px 14px
+
+        );
+
+    background-size:
+
+        calc(100% - 8px) 2px,
+
+        calc(100% - 8px) 2px,
+
+        2px calc(100% - 8px),
+
+        2px calc(100% - 8px);
+
+    background-position:
+
+        top left,
+
+        bottom right,
+
+        left top,
+
+        right bottom;
+
+    background-repeat:no-repeat;
+
+    animation:marchingAnts 1.8s linear infinite;
+}
+
+.search-match:hover::after{
+
+    animation-play-state:paused;
+}
+
+@keyframes marchingAnts{
+
+    from{
+
+        background-position:
+
+            0 0,
+
+            100% 100%,
+
+            0 0,
+
+            100% 100%;
+    }
+
+    to{
+
+        background-position:
+
+            14px 0,
+
+            calc(100% - 14px) 100%,
+
+            0 14px,
+
+            100% calc(100% - 14px);
+    }
+
+}
 
 
 
