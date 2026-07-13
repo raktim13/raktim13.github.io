@@ -170,7 +170,7 @@ function generateTree(data, searching = false) {
 
             
             // Show the course card if there's metadata OR child files
-            if (meta || Object.keys(children).length > 0) {
+            if (true) {
                 let subtree = null;
 
                 if (Object.keys(children).length > 0) {
@@ -178,76 +178,58 @@ function generateTree(data, searching = false) {
                 subtree.classList.add("folder-contents");
                 }
 
-                if(meta){
+                if (meta) {
 
-                    const card = document.createElement("div");
-                    card.className = "course-meta";
+    const card = document.createElement("div");
+    card.className = "course-meta";
 
-                    card.innerHTML = `
+    // KEEP EVERYTHING INSIDE HERE EXACTLY AS IT IS
+    // (don't change the HTML you already have)
 
-                <div class="course-header">
+    if (subtree) {
+        card.querySelector(".course-body").appendChild(subtree);
+    } else {
 
-                <div class="course-title">
-                    ${highlight(key)}
-                </div>
+        const empty = document.createElement("div");
 
-            <div class="course-meta-top">
-        <span>👤 ${highlight(meta.instructor)}</span>
+        empty.className = "empty-folder";
 
-        <span>🌸 ${meta.term}</span>
+        empty.innerHTML = `
+            <div class="empty-symbol">∅</div>
+            <div class="empty-text">
+                The empty set is still a set.
+            </div>
+        `;
 
-        <span>${
-            meta.status==="completed"
-            ? "🟢 Completed"
-            : meta.status==="ongoing"
-            ? "🟡 Ongoing"
-            : "⚪ Planned"
-        }</span>
-    </div>
+        card.querySelector(".course-body").appendChild(empty);
+    }
 
-    <div class="course-meta-inst">
-        🏛 ${highlight(meta.institution)}
-    </div>
-
-</div>
-
-<div class="course-body">
-
-<div class="course-books">
-
-${meta.books.map((book,index)=>`
-
-<div class="book-row">
-
-${index===0
-? `<span class="book-prefix">📚</span>`
-: `<span class="book-prefix"></span>`}
-
-<a href="${book.url}" target="_blank">
-${highlight(book.title)} — ${highlight(book.author)}
-</a>
-
-</div>
-
-`).join("")}
-
-</div>
-
-<div class="course-divider"></div>
-
-</div>
-`;
-
-if (subtree) {
-    card.querySelector(".course-body").appendChild(subtree);
-}
-
-details.appendChild(card);
+    details.appendChild(card);
 
 }
 else{
 
-    details.appendChild(subtree);
+    if(subtree){
+
+        details.appendChild(subtree);
+
+    }
+    else{
+
+        const empty=document.createElement("div");
+
+        empty.className="empty-folder";
+
+        empty.innerHTML=`
+            <div class="empty-symbol">∅</div>
+            <div class="empty-text">
+                The empty set is still a set.
+            </div>
+        `;
+
+        details.appendChild(empty);
+
+    }
 
 }
 
