@@ -186,6 +186,14 @@ function generateTree(data, searching = false, path = []) {
 
     const card = document.createElement("div");
     card.className = "course-meta";
+    const breadcrumb = document.createElement("div");
+
+breadcrumb.className = "breadcrumb";
+
+breadcrumb.innerHTML =
+    [...path, key]
+        .map(p => `<span>${highlight(p)}</span>`)
+        .join(" / ");
 
     card.innerHTML = `
 
@@ -265,7 +273,9 @@ ${highlight(book.title)} — ${highlight(book.author)}
 
     }
 
-    details.appendChild(card);
+    details.appendChild(breadcrumb);
+
+details.appendChild(card);
 
 }
 else{
