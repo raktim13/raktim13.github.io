@@ -239,9 +239,10 @@ breadcrumb.innerHTML =
 
 <div class="course-header">
 
-    <div class="course-title">
-        ${highlight(key)}
-    </div>
+    <div
+    class="course-title typewriter"
+    data-text="${key}">
+</div>
 
     <div class="course-meta-top">
 
