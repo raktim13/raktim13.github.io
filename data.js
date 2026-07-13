@@ -92,7 +92,11 @@ const myNotes = {
                         institution: "Indian Statistical Institute, Kolkata",
                         term: "Spring 2026",
                         status: "completed",
-
+                    books:[
+                        {
+                            titel:"Coming Soon"
+                        }
+                    ]
                         
                             },
 
@@ -136,7 +140,11 @@ const myNotes = {
                         institution: "Indian Statistical Institute, Kolkata",
                         term: "Spring 2026",
                         status: "completed",
-
+                    books:[
+                        {
+                            titel:"Coming Soon"
+                        }
+                    ]
                         
                             },
 
