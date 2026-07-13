@@ -202,7 +202,7 @@ ${highlight(key)}
 
             
             // Show the course card if there's metadata OR child files
-            if (true) {
+ 
                 let subtree = null;
 
                 if (Object.keys(children).length > 0) {
@@ -249,7 +249,7 @@ breadcrumb.innerHTML =
         }</span>
     </div>
 
-    <div class="course-meta-inst>
+    <div class="course-meta-inst">
         🏛 ${highlight(meta.institution)}
     </div>
 
@@ -337,7 +337,7 @@ else{
 }
 
 
-}   // closes: if (Object.keys(children).length > 0)
+   // closes: if (Object.keys(children).length > 0)
 
 ul.appendChild(li);
 
