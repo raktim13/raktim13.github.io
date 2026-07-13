@@ -29,7 +29,7 @@
             color: var(--text-color);
             font-family: "Courier New", Courier, monospace; 
             font-weight: bold;
-            max-width: 700px; 
+            max-width: 850px; 
             margin: 40px auto;
             padding: 0 20px;
             transition: background-color 0.4s, color 0.4s; 
