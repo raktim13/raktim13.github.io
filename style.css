@@ -605,6 +605,35 @@ details[open] > summary .folder-name{
 
 }
 
+/* =========================
+   EMPTY FOLDER
+========================= */
+
+.empty-folder{
+
+    padding:24px 10px;
+
+    text-align:center;
+
+    opacity:.75;
+}
+
+.empty-symbol{
+
+    font-size:2rem;
+
+    color:var(--link-color);
+
+    margin-bottom:8px;
+}
+
+.empty-text{
+
+    font-style:italic;
+
+    font-size:.92rem;
+}
+
 
 
 
