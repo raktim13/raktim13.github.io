@@ -496,21 +496,25 @@ details[open] > summary .folder-name{
     position:relative;
 
     z-index:2;
+
+    padding:0 .15em;
 }
 
 .marching-border{
 
     position:absolute;
 
-    inset:-4px;
+    left:-3px;
 
-    width:calc(100% + 8px);
+    top:-2px;
 
-    height:calc(100% + 8px);
+    width:calc(100% + 6px);
 
-    overflow:visible;
+    height:calc(100% + 4px);
 
     pointer-events:none;
+
+    overflow:visible;
 
     z-index:1;
 }
