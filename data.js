@@ -114,7 +114,7 @@ const myNotes = {
             
             "Functional Analysis": {
                 "_meta": {
-                        instructor: "Prof. Partha Sarathi Ghosh",
+                        instructor: "Prof. Partha Sarathi Chakraborty",
                         institution: "Indian Statistical Institute, Kolkata",
                         term: "Spring 2025",
                         status: "completed",
