@@ -96,7 +96,7 @@ function highlight(text){
 }
 
 // 4. Notes repository 
-function generateTree(data, searching = false) {
+function generateTree(data, searching = false, path = []) {
     const ul = document.createElement('ul');
     ul.className = "directory-list"; // Ensures your CSS styles apply
 
@@ -174,7 +174,11 @@ function generateTree(data, searching = false) {
                 let subtree = null;
 
                 if (Object.keys(children).length > 0) {
-                subtree = generateTree(children, searching);
+                    subtree = generateTree(
+                    children,
+                    searching,
+                    [...path, key]
+                );
                 subtree.classList.add("folder-contents");
                 }
 
@@ -183,11 +187,67 @@ function generateTree(data, searching = false) {
     const card = document.createElement("div");
     card.className = "course-meta";
 
-    // KEEP EVERYTHING INSIDE HERE EXACTLY AS IT IS
-    // (don't change the HTML you already have)
+    card.innerHTML = `
+
+<div class="course-header">
+
+    <div class="course-title">
+        ${highlight(key)}
+    </div>
+
+    <div class="course-meta-top">
+        <span>👤 ${highlight(meta.instructor)}</span>
+
+        <span>🌸 ${highlight(meta.term)}</span>
+
+        <span>${
+            meta.status==="completed"
+            ? "🟢 Completed"
+            : meta.status==="ongoing"
+            ? "🟡 Ongoing"
+            : "⚪ Planned"
+        }</span>
+    </div>
+
+    <div class="course-meta-inst">
+        🏛 ${highlight(meta.institution)}
+    </div>
+
+</div>
+
+<div class="course-body">
+
+<div class="course-books">
+
+${meta.books.map((book,index)=>`
+
+<div class="book-row">
+
+${index===0
+? `<span class="book-prefix">📚</span>`
+: `<span class="book-prefix"></span>`}
+
+<a href="${book.url}" target="_blank">
+
+${highlight(book.title)} — ${highlight(book.author)}
+
+</a>
+
+</div>
+
+`).join("")}
+
+</div>
+
+<div class="course-divider"></div>
+
+</div>
+`;
 
     if (subtree) {
+
         card.querySelector(".course-body").appendChild(subtree);
+
     } else {
 
         const empty = document.createElement("div");
@@ -202,6 +262,7 @@ function generateTree(data, searching = false) {
         `;
 
         card.querySelector(".course-body").appendChild(empty);
+
     }
 
     details.appendChild(card);
@@ -233,27 +294,6 @@ else{
 
 }
 
-if (!subtree && meta) {
-
-    const empty = document.createElement("div");
-
-    empty.className = "empty-folder";
-
-    empty.innerHTML = `
-
-        <div class="empty-symbol">∅</div>
-
-        <div class="empty-text">
-
-            The empty set is still a set.
-
-        </div>
-
-    `;
-
-    card.querySelector(".course-body").appendChild(empty);
-
-}
 
 }   // closes: if (Object.keys(children).length > 0)
 
