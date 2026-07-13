@@ -21,16 +21,26 @@
     <p>Select a folder to view the contents. (More files coming soon! Be patient.)</p>
 
     <div id="notes-search-container">
-    <input
-        type="text"
-        id="notes-search"
-        placeholder="Search books, notes... or whatever really."
-        autocomplete="off">
 
-    <div id="search-message"></div>
-    </div>
+    <div class="search-wrapper">
 
-    <div id="notes-tree-container"></div>
+        <input
+            type="text"
+            id="notes-search"
+            placeholder="Search books, notes... or whatever really."
+            autocomplete="off">
+
+                <span class="material-symbols-outlined search-icon">
+                    search
+                </span>
+
+            </div>
+
+            <div id="search-message"></div>
+
+            </div>
+
+        <div id="notes-tree-container"></div>
 
     <script src="data.js"></script>
     <script src="script.js"></script>
