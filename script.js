@@ -134,6 +134,7 @@ ${highlight(key)}
                 </details>`;
 
             const details = li.querySelector("details");
+            let card = null;
             if(meta){
 
     const preview=document.createElement("div");
@@ -174,14 +175,21 @@ ${highlight(key)}
 
                         children.forEach((child,index)=>{
 
-                        child.classList.remove("show");
+    child.classList.remove("show");
 
-                    setTimeout(()=>{
-                        child.classList.add("show");
-                        },85+index*45);
+    setTimeout(()=>{
+        child.classList.add("show");
+    },85+index*45);
 
-                    });
+});
 
+setTimeout(() => {
+
+    if (details.open && card) {
+        animateCourseCard(card);
+    }
+
+},180);
                 }else{
 
                     [...children].reverse().forEach((child,index)=>{
@@ -216,7 +224,7 @@ ${highlight(key)}
 
                 if (meta) {
 
-    const card = document.createElement("div");
+    card = document.createElement("div");
     card.className = "course-meta";
     const breadcrumb = document.createElement("div");
 
@@ -317,10 +325,6 @@ ${highlight(book.title)} — ${highlight(book.author)}
     details.appendChild(breadcrumb);
 
 details.appendChild(card);
-
-requestAnimationFrame(() => {
-    animateCourseCard(card);
-});
 
 }
 else{
@@ -589,18 +593,26 @@ async function typeElement(element) {
 
         element.textContent += letter;
 
-        await sleep(22);
+        await sleep(25 + Math.random()*20);
 
     }
 
-    element.classList.remove("typing");
+    await sleep(250);
+
+element.classList.remove("typing");
 }
 
 async function animateCourseCard(card) {
 
+    if(card.dataset.typed){
+        return;
+    }
+
+    card.dataset.typed = "true";
+
     const items = card.querySelectorAll(".typewriter");
 
-    for (const item of items) {
+    for(const item of items){
 
         await typeElement(item);
 
