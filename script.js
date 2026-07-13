@@ -236,22 +236,31 @@ breadcrumb.innerHTML =
     </div>
 
     <div class="course-meta-top">
-        <span>👤 ${highlight(meta.instructor)}</span>
 
-        <span>🌸 ${highlight(meta.term)}</span>
+    <span class="typewriter"
+          data-text="👤 ${meta.instructor}">
+    </span>
 
-        <span>${
-            meta.status==="completed"
-            ? "🟢 Completed"
-            : meta.status==="ongoing"
-            ? "🟡 Ongoing"
-            : "⚪ Planned"
-        }</span>
-    </div>
+    <span class="typewriter"
+          data-text="🌸 ${meta.term}">
+    </span>
 
-    <div class="course-meta-inst">
-        🏛 ${highlight(meta.institution)}
-    </div>
+    <span class="typewriter"
+          data-text="${
+                meta.status==="completed"
+                ? "🟢 Completed"
+                : meta.status==="ongoing"
+                ? "🟡 Ongoing"
+                : "⚪ Planned"
+          }">
+    </span>
+
+</div>
+
+<div
+    class="course-meta-inst typewriter"
+    data-text="🏛 ${meta.institution}">
+</div>
 
 </div>
 
@@ -308,6 +317,10 @@ ${highlight(book.title)} — ${highlight(book.author)}
     details.appendChild(breadcrumb);
 
 details.appendChild(card);
+
+requestAnimationFrame(() => {
+    animateCourseCard(card);
+});
 
 }
 else{
@@ -558,6 +571,42 @@ search.addEventListener("input",()=>{
 
 });
 
+
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function typeElement(element) {
+
+    const text = element.dataset.text;
+
+    element.textContent = "";
+
+    element.classList.add("typing");
+
+    for (const letter of text) {
+
+        element.textContent += letter;
+
+        await sleep(22);
+
+    }
+
+    element.classList.remove("typing");
+}
+
+async function animateCourseCard(card) {
+
+    const items = card.querySelectorAll(".typewriter");
+
+    for (const item of items) {
+
+        await typeElement(item);
+
+    }
+
+}
 
 
 
