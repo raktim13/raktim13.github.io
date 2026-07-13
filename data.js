@@ -74,18 +74,17 @@ const myNotes = {
                         term: "Spring 2026",
                         status: "completed",
 
-                        books: [
+                    books: [
                             {
-                               title: "Partial Differential Equations",
-                               author: "Lawrence Evans",
+                                title: "Partial Differential Equations",
+                                author: "Lawrence C. Evans",
+                                link: "https://bookstore.ams.org/gsm-19/"
+                            }
+                            ]
                             },
-                            {
-                                
-                            },
-                                ]
-                            },
-                        "No assignments :("
-            },
+
+                                "No assignments yet :(": null
+                    },
             
             "Rational Homotopy Theory": {
                 "_meta": {
