@@ -483,30 +483,38 @@ const easterEggs = {
 
 function animateTypewriter(){
 
-    document.querySelectorAll(".typewriter").forEach(el=>{
+    console.log("TYPEWRITER CALLED");
 
-        const html=el.innerHTML;
+    const elements = document.querySelectorAll(".typewriter");
 
-        el.style.visibility="visible";
+    console.log("Found:", elements.length, "typewriter elements");
 
-        el.innerHTML="";
+    elements.forEach(el=>{
 
-        const temp=document.createElement("div");
-        temp.innerHTML=html;
+        console.log("Animating:", el);
 
-        const text=temp.textContent;
+        const html = el.innerHTML;
 
-        let i=0;
+        const temp = document.createElement("div");
+        temp.innerHTML = html;
+
+        const text = temp.textContent;
+
+        console.log("Text:", text);
+
+        el.innerHTML = "";
+
+        let i = 0;
 
         function type(){
 
-            el.textContent=text.slice(0,i);
+            el.textContent = text.slice(0,i);
 
             i++;
 
-            if(i<=text.length){
+            if(i <= text.length){
 
-                setTimeout(type,13);
+                setTimeout(type,80);
 
             }
 
@@ -543,9 +551,11 @@ setTimeout(()=>{
 
     if(!searching){
 
-        animateTypewriter();
+    console.log("Calling animateTypewriter()");
 
-    }
+    animateTypewriter();
+
+}
 
     requestAnimationFrame(()=>{
 
