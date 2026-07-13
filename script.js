@@ -231,7 +231,7 @@ breadcrumb.innerHTML =
 
 <div class="course-header">
 
-    <div class="course-title">
+    <div class="course-title typewriter">
         ${highlight(key)}
     </div>
 
@@ -506,7 +506,7 @@ function animateTypewriter(){
 
             if(i<=text.length){
 
-                setTimeout(type,8);
+                setTimeout(type,13);
 
             }
 
