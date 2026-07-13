@@ -419,13 +419,24 @@ details[open] > summary .folder-name{
     color:#888;
 }
 
+#notes-search:hover{
+
+    border-color:var(--link-color);
+
+    transition:
+        border-color 180ms ease,
+        box-shadow 180ms ease,
+        transform 180ms ease;
+}
+
 #notes-search:focus{
 
     border-color:var(--link-color);
 
     box-shadow:0 0 0 2px rgba(220,20,60,.15);
-}
 
+    transform:translateY(-1px);
+}
 #search-message{
 
     margin-top:10px;
