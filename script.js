@@ -133,26 +133,31 @@ function generateTree(data, searching = false) {
                 },45);
 
             });
+
             
-            // Only recurse if the object isn't empty
-            if (Object.keys(children).length > 0) {
-                const subtree = generateTree(children, searching);
+            // Show the course card if there's metadata OR child files
+            if (meta || Object.keys(children).length > 0) {
+                let subtree = null;
+
+                if (Object.keys(children).length > 0) {
+                subtree = generateTree(children, searching);
                 subtree.classList.add("folder-contents");
+                }
 
                 if(meta){
 
-   const card = document.createElement("div");
-card.className = "course-meta";
+                    const card = document.createElement("div");
+                    card.className = "course-meta";
 
-card.innerHTML = `
+                    card.innerHTML = `
 
-<div class="course-header">
+                <div class="course-header">
 
-    <div class="course-title">
-        ${key}
-    </div>
+                <div class="course-title">
+                    ${key}
+            </div>
 
-    <div class="course-meta-top">
+            <div class="course-meta-top">
         <span>👤 ${meta.instructor}</span>
 
         <span>🌸 ${meta.term}</span>
@@ -199,7 +204,9 @@ ${book.title} — ${book.author}
 </div>
 `;
 
-card.querySelector(".course-body").appendChild(subtree);
+if (subtree) {
+    card.querySelector(".course-body").appendChild(subtree);
+}
 
 details.appendChild(card);
 
