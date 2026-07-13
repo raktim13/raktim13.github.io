@@ -78,7 +78,7 @@ const myNotes = {
                             {
                                 title: "Partial Differential Equations",
                                 author: "Lawrence C. Evans",
-                                link: "https://bookstore.ams.org/gsm-19/"
+                                url: "https://bookstore.ams.org/gsm-19/"
                             }
                             ]
                             },
@@ -92,11 +92,7 @@ const myNotes = {
                         institution: "Indian Statistical Institute, Kolkata",
                         term: "Spring 2026",
                         status: "completed",
-                    books:[
-                        {
-                            titel:"Coming Soon"
-                        }
-                    ]
+                    books:[                    ]
                         
                             },
 
@@ -140,11 +136,7 @@ const myNotes = {
                         institution: "Indian Statistical Institute, Kolkata",
                         term: "Spring 2026",
                         status: "completed",
-                    books:[
-                        {
-                            titel:"Coming Soon"
-                        }
-                    ]
+                    books:[                    ]
                         
                             },
 
