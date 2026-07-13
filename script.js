@@ -562,36 +562,6 @@ search.addEventListener("input",()=>{
 
 
 
-setTimeout(() => {
-
-    const el = document.querySelector(".course-title");
-
-    if (!el) return;
-
-    const text = el.textContent;
-
-    el.textContent = "";
-
-    let i = 0;
-
-    function type() {
-
-        el.textContent = text.slice(0, i);
-
-        i++;
-
-        if (i <= text.length) {
-            setTimeout(type, 100);
-        }
-
-    }
-
-    type();
-
-}, 2000);
-
-
-
 
 
 
