@@ -482,13 +482,15 @@ details[open] > summary .folder-name{
 
 .search-match{
 
-    display:inline-block;
+    display:inline;
 
-    padding:0 .18em;
+    outline:2px dashed var(--link-color);
 
-    border:2px dashed var(--link-color);
+    outline-offset:2px;
 
-    border-radius:6px;
+    border-radius:4px;
+
+    background:rgba(220,20,60,.08);
 }
 
 
