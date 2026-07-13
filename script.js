@@ -204,9 +204,9 @@ breadcrumb.innerHTML =
     </div>
 
     <div class="course-meta-top">
-        <span>👤 ${highlight(meta.instructor)}</span>
+        <span class="typewriter">👤 ${highlight(meta.instructor)}</span>
 
-        <span>🌸 ${highlight(meta.term)}</span>
+        <span class="typewriter">🌸 ${highlight(meta.term)}</span>
 
         <span>${
             meta.status==="completed"
@@ -217,7 +217,7 @@ breadcrumb.innerHTML =
         }</span>
     </div>
 
-    <div class="course-meta-inst">
+    <div class="course-meta-inst typewriter">
         🏛 ${highlight(meta.institution)}
     </div>
 
@@ -448,6 +448,43 @@ const easterEggs = {
         "There are always more notes to write."
 
 };
+
+function animateTypewriter(){
+
+    document.querySelectorAll(".typewriter").forEach(el=>{
+
+        const html=el.innerHTML;
+
+        el.style.visibility="visible";
+
+        el.innerHTML="";
+
+        const temp=document.createElement("div");
+        temp.innerHTML=html;
+
+        const text=temp.textContent;
+
+        let i=0;
+
+        function type(){
+
+            el.textContent=text.slice(0,i);
+
+            i++;
+
+            if(i<=text.length){
+
+                setTimeout(type,8);
+
+            }
+
+        }
+
+        type();
+
+    });
+
+}
 function renderTree(data){
 
     const notesContainer =
@@ -462,11 +499,29 @@ function renderTree(data){
     const searching =
         search?.value.trim() !== "";
 
-    notesContainer.innerHTML = "";
+    notesContainer.classList.add("tree-fading");
+
+setTimeout(()=>{
+
+    notesContainer.innerHTML="";
 
     notesContainer.appendChild(
-        generateTree(data, searching)
+        generateTree(data,searching)
     );
+
+    if(!searching){
+
+        animateTypewriter();
+
+    }
+
+    requestAnimationFrame(()=>{
+
+        notesContainer.classList.remove("tree-fading");
+
+    });
+
+},120);
 
     message.innerHTML = "";
 
