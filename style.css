@@ -296,6 +296,8 @@ details[open] > summary .folder-name{
     font-weight:bold;
 
     margin-bottom:14px;
+
+    min-height:1.4em;
 }
 
 .course-body{
@@ -691,6 +693,8 @@ details[open] > summary .folder-name{
     min-height:1.2em;
 
 }
+
+
 
 
 
