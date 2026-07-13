@@ -116,11 +116,41 @@ function generateTree(data, searching = false, path = []) {
                             folder
                         </span>
 
-                        <span class="folder-name">${highlight(key)}</span>
+                        <span
+    class="folder-name"
+
+    data-prof="${meta?.instructor || ""}"
+
+    data-term="${meta?.term || ""}"
+
+    data-inst="${meta?.institution || ""}"
+
+>
+
+${highlight(key)}
+
+</span>
                     </summary>
                 </details>`;
 
             const details = li.querySelector("details");
+            if(meta){
+
+    const preview=document.createElement("div");
+
+    preview.className="folder-preview";
+
+    preview.innerHTML=`
+
+${meta.term} • ${meta.institution}<br>
+
+${meta.instructor}
+
+`;
+
+    details.after(preview);
+
+}
             const icon = li.querySelector(".folder-icon");
             if (searching) {
                 details.open = true;
