@@ -1,5 +1,7 @@
 const myNotes = {
-    "Undergrad": {
+
+    
+"Undergrad": {
         "Sem 1": {},
         "Sem 2": {},
         "Sem 3": {},
@@ -7,7 +9,10 @@ const myNotes = {
         "Sem 5": {},
         "Sem 6": {}
     },
-    "MMath": {
+
+
+    
+"MMath": {
         "Sem 1": {
             
             "Algebra I": {
@@ -20,7 +25,12 @@ const myNotes = {
                     books: []
                             },
 
-                                "Coming soon :)": null
+                                "assignment 1": "mmath/sem 1/algebra i/alg_i_assignment_1.pdf",
+                                "assignment 2": "mmath/sem 1/algebra i/alg_i_assignment_2.pdf",
+                                "assignment on modules": "mmath/sem 1/algebra i/alg_i_holiday_homework_modules.pdf",
+                                "assignment on rings": "mmath/sem 1/algebra i/alg_i_holiday_homework_rings.pdf",
+                                "midsem paper":null,
+                                "endsem paper":null
                     },
             
         
@@ -34,7 +44,17 @@ const myNotes = {
                     books: []
                             },
 
-                                "Coming soon :)": null
+                                "assignment 1":"asv_assignment_1.pdf",
+                                "assignment 2":"asv_assignment_2.pdf",
+                                "assignment 3":"asv_assignment_3.pdf",
+                                "assignment 4":"asv_assignment_4.pdf",
+                                "assignment 5":"asv_assignment_5.pdf",
+                                "assignment 6":"asv_assignment_6.pdf",
+                                "assignment 7":"asv_assignment_7.pdf",
+                                "assignment 8":"asv_assignment_8.pdf",
+                                "practice problems":"asv_practice_problems.pdf",
+                                "midsem paper":null,
+                                "endsem paper":null
                     },
             
             
@@ -48,7 +68,9 @@ const myNotes = {
                     books: []
                             },
 
-                                "No assignments :(": null
+                                "No assignments :(": null,
+                                "midsem paper": null,
+                                "endsem paper": null
                     },
             
             
@@ -63,7 +85,8 @@ const myNotes = {
                     books: []
                             },
 
-                                "Coming soon :)": null
+                                "assignment 1-8": "mmath/sem 1/measure theory/measure_assignment_1_to_8.pdf",
+                                
                     },
             
 
@@ -77,7 +100,12 @@ const myNotes = {
                     books: []
                             },
 
-                                "Coming soon :)": null
+                                "assignment": "mmath/sem 1/topology i/topo_i_assignment.pdf",
+                                "exercise i": "mmath/sem 1/topology i/topo_i_exer1.pdf",
+                                "exercise ii": "mmath/sem 1/topology i/topo_i_exer2.pdf",
+                                "homework": "mmath/sem 1/topology i/topo_i_hw.pdf",
+                                "midsem paper":null,
+                                "endsem paper":null
                     },
             },
             
@@ -94,7 +122,19 @@ const myNotes = {
                     books: []
                             },
 
-                                "Coming soon :)": null
+                                "assignment 1": "mmath/sem 2/algebra ii/alg_ii_assignment_1.pdf",
+                                "assignment 2": "mmath/sem 2/algebra ii/alg_ii_assignment_2.pdf",
+                                "assignment 3": "mmath/sem 2/algebra ii/alg_ii_assignment_3.pdf",
+                                "assignment 4": "mmath/sem 2/algebra ii/alg_ii_assignment_4.pdf",
+                                "assignment 5": "mmath/sem 2/algebra ii/alg_ii_assignment_5.pdf",
+                                "assignment 6": "mmath/sem 2/algebra ii/alg_ii_assignment_6.pdf",
+                                "assignment 7": "mmath/sem 2/algebra ii/alg_ii_assignment_7.pdf",
+                                "assignment 8": "mmath/sem 2/algebra ii/alg_ii_assignment_8.pdf",
+                                "assignment 9": "mmath/sem 2/algebra ii/alg_ii_assignment_9.pdf",
+                                "assignment 10": "mmath/sem 2/algebra ii/alg_ii_assignment_10.pdf",
+                                "assignment 1q": "mmath/sem 2/algebra ii/alg_ii_assignment_11.pdf",
+                                "midsem paper":null,
+                                "endsem paper":null
                     },
             
             
@@ -108,7 +148,9 @@ const myNotes = {
                     books: []
                             },
 
-                                "Coming soon :)": null
+                                "Coming soon :)": null,
+                                "midsem paper":null,
+                                "endsem paper":null
                     },
             
             
@@ -122,7 +164,9 @@ const myNotes = {
                     books: []
                             },
 
-                                "Coming soon :)": null
+                                "Coming soon :)": null,
+                                "midsem paper":null,
+                                "endsem paper":null
                     },
             
     
@@ -136,7 +180,15 @@ const myNotes = {
                     books: []
                             },
 
-                                "Coming soon :)": null
+                                "assignment 1": "mmath/sem 2/number theory/nt_assignment_1.pdf",
+                                "assignment 2": "mmath/sem 2/number theory/nt_assignment_2.pdf",
+                                "assignment 3": "mmath/sem 2/number theory/nt_assignment_3.pdf",
+                                "assignment 4": "mmath/sem 2/number theory/nt_assignment_4.pdf",
+                                "assignment 5": "mmath/sem 2/number theory/nt_assignment_5.pdf",
+                                "assignment 6": "mmath/sem 2/number theory/nt_assignment_6.pdf",
+                                "assignment 7": "mmath/sem 2/number theory/nt_assignment_7.pdf",
+                                "midsem paper":null,
+                                "endsem paper":null
                     },
     
 
@@ -150,7 +202,11 @@ const myNotes = {
                     books: []
                             },
 
-                                "Coming soon :)": null
+                                "assignment 1": "mmath/sem 2/topology ii/topo2_assignment_1.pdf",
+                                "assignment 2": "mmath/sem 2/topology ii/topo2_assignment_2.pdf",
+                                "assignment 3": "mmath/sem 2/topology ii/topo2_assignment_3.pdf",
+                                "midsem paper":null,
+                                "endsem paper":null
                     },
             },
 
@@ -167,7 +223,9 @@ const myNotes = {
                     books: []
                             },
 
-                                "Coming soon :)": null
+                                "Coming soon :)": null,
+                                "midsem paper":null,
+                                "endsem paper":null
                     },
             
 
@@ -181,7 +239,10 @@ const myNotes = {
                     books: []
                             },
 
-                                "Coming soon :)": null
+                                "assignment 1": "mmath/sem 3/differential geometry i/diff_geo_assignment_1.pdf",
+                                "assignment 2": "mmath/sem 3/differential geometry i/diff_geo_assignment_2.pdf",
+                                "midsem paper":null,
+                                "endsem paper":null
                     },
             
 
@@ -195,7 +256,15 @@ const myNotes = {
                     books: []
                             },
 
-                                "Coming soon :)": null
+                                "assignment 1": "mmath/sem 3/probability theory/prob_assignment_1.pdf",
+                                "assignment 2": "mmath/sem 3/probability theory/prob_assignment_2.pdf",
+                                "practice problems set 1": "mmath/sem 3/probability theory/prob_practice_problems_1.pdf",
+                                "practice problems set 2": "mmath/sem 3/probability theory/prob_practice_problems_2.pdf",
+                                "practice problems set 3": "mmath/sem 3/probability theory/prob_practice_problems_3.pdf",
+                                "practice problems set 4": "mmath/sem 3/probability theory/prob_practice_problems_4.pdf",
+                                "practice problems set 5": "mmath/sem 3/probability theory/prob_practice_problems_5.pdf",
+                                "midsem paper":null,
+                                "endsem paper":null
                     },
             
 
@@ -209,7 +278,12 @@ const myNotes = {
                     books: []
                             },
 
-                                "Coming soon :)": null
+                                "assignment 1": "mmath/sem 3/riemann surfaces/riemann_assignment1.pdf",
+                                "assignment 2": "mmath/sem 3/riemann surfaces/riemann_assignment2.pdf",
+                                "assignment 3": "mmath/sem 3/riemann surfaces/riemann_assignment3.pdf",
+                                "assignment 4": "mmath/sem 3/riemann surfaces/riemann_assignment4.pdf",
+                                "midsem paper":null,
+                                "endsem paper":null
                     },
             
 
@@ -223,7 +297,17 @@ const myNotes = {
                     books: []
                             },
 
-                                "Coming soon :)": null
+                                "exercise 1": "mmath/sem 3/topology iii/topo3_exer1.pdf",
+                                "exercise 2": "mmath/sem 3/topology iii/topo3_exer2.pdf",
+                                "exercise 3": "mmath/sem 3/topology iii/topo3_exer3.pdf",
+                                "exercise 4": "mmath/sem 3/topology iii/topo3_exer3.pdf",
+                                "exercise 5": "mmath/sem 3/topology iii/topo3_exer5.pdf",
+                                "homework 1": "mmath/sem 3/topology iii/topo3_graded_hw1.pdf",
+                                "homework 2": "mmath/sem 3/topology iii/topo3_graded_hw2.pdf",
+                                "homework 3": "mmath/sem 3/topology iii/topo3_graded_hw3.pdf",
+                                "homework 4": "mmath/sem 3/topology iii/topo3_graded_hw4.pdf",
+                                "midsem paper":null,
+                                "endsem paper":null
                     },
             },
     
@@ -263,6 +347,8 @@ const myNotes = {
                         "assignment 2": "mmath/sem 4/algebraic geometry/alg_geo_assignment_2.pdf",
                         "assignment 3": "mmath/sem 4/algebraic geometry/alg_geo_assignment_3.pdf",
                         "assignment 4": "mmath/sem 4/algebraic geometry/alg_geo_assignment_4.pdf",
+                        "midsem paper":null,
+                        "endsem paper":null
             },
             
             "Partial Differential Equations": {
@@ -281,7 +367,9 @@ const myNotes = {
                             ]
                             },
 
-                                "No assignments :(": null
+                                "No assignments :(": null,
+                                "midsem paper":null,
+                                "endsem paper":null
                     },
             
             "Rational Homotopy Theory": {
@@ -326,6 +414,8 @@ const myNotes = {
                         "assignment 3": "mmath/sem 4/symplectic geometry/symp_geo_assignment_3.pdf",
                         "assignment 4": "mmath/sem 4/symplectic geometry/symp_geo_assignment_4.pdf",
                         "assignment 5": "mmath/sem 4/symplectic geometry/symp_geo_assignment_5.pdf",
+                        "midsem paper":null,
+                        "endsem paper":null
             },
             
             "Teichmuller Theory": {
@@ -341,9 +431,14 @@ const myNotes = {
                         "assignment 1": "mmath/sem 4/teichmuller theory/teich_assignment_1.pdf",
                         "assignment 2": "mmath/sem 4/teichmuller theory/teich_assignment_2.pdf",
                         "assignment 3": "mmath/sem 4/teichmuller theory/teich_assignment_3.pdf",
+                        "midsem paper":null,
+                        "endsem paper":null
                         
             }
         }
     },
-    "JRF": {}
+
+
+    
+"JRF": {}
 };
