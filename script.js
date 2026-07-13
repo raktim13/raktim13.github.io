@@ -235,7 +235,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Target the NEW notes container only
     const notesContainer = document.getElementById('notes-tree-container');
     if (notesContainer && typeof myNotes !== 'undefined') {
-        notesContainer.appendChild(generateTree(myNotes));
+        const tree = generateTree(myNotes);
+        notesContainer.appendChild(tree);
     }
 });
 
