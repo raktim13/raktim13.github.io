@@ -437,6 +437,38 @@ details[open] > summary .folder-name{
     font-style:italic;
 }
 
+.search-wrapper{
+
+    position:relative;
+}
+
+.search-icon{
+
+    position:absolute;
+
+    right:14px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#888;
+
+    pointer-events:none;
+
+    transition:color 180ms ease;
+}
+
+.search-wrapper:focus-within .search-icon{
+
+    color:var(--link-color);
+}
+
+#notes-search{
+
+    padding-right:48px;
+}
+
 
 
 
