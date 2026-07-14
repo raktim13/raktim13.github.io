@@ -447,7 +447,7 @@ const myNotes = {
                                 "exercise 1": "mmath/sem 3/topology iii/topo3_exer1.pdf",
                                 "exercise 2": "mmath/sem 3/topology iii/topo3_exer2.pdf",
                                 "exercise 3": "mmath/sem 3/topology iii/topo3_exer3.pdf",
-                                "exercise 4": "mmath/sem 3/topology iii/topo3_exer3.pdf",
+                                "exercise 4": "mmath/sem 3/topology iii/topo3_exer4.pdf",
                                 "exercise 5": "mmath/sem 3/topology iii/topo3_exer5.pdf",
                                 "homework 1": "mmath/sem 3/topology iii/topo3_graded_hw1.pdf",
                                 "homework 2": "mmath/sem 3/topology iii/topo3_graded_hw2.pdf",
@@ -572,11 +572,11 @@ const myNotes = {
                                 ]
                             },
 
-                        "assignment 1": "mmath/sem 4/symplectic geometry/symp_geo_assignment_1.pdf",
-                        "assignment 2": "mmath/sem 4/symplectic geometry/symp_geo_assignment_2.pdf",
-                        "assignment 3": "mmath/sem 4/symplectic geometry/symp_geo_assignment_3.pdf",
-                        "assignment 4": "mmath/sem 4/symplectic geometry/symp_geo_assignment_4.pdf",
-                        "assignment 5": "mmath/sem 4/symplectic geometry/symp_geo_assignment_5.pdf",
+                        "assignment 1": "mmath/sem 4/symplectic geometry/symp_assignment_1.pdf",
+                        "assignment 2": "mmath/sem 4/symplectic geometry/symp_assignment_2.pdf",
+                        "assignment 3": "mmath/sem 4/symplectic geometry/symp_assignment_3.pdf",
+                        "assignment 4": "mmath/sem 4/symplectic geometry/symp_assignment_4.pdf",
+                        "assignment 5": "mmath/sem 4/symplectic geometry/symp_assignment_5.pdf",
                         "midsem paper":null,
                         "endsem paper":null
             },
