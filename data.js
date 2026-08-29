@@ -2,12 +2,334 @@ const myNotes = {
 
     
 "Undergrad": {
-        "Sem 1": {},
-        "Sem 2": {},
-        "Sem 3": {},
-        "Sem 4": {},
-        "Sem 5": {},
-        "Sem 6": {}
+        "Sem 1": {
+             
+            "Algebra": {
+                "_meta": {
+                        instructor: "Prof. Shubhabrata Das",
+                        institution: "Presidency University, Kolkata",
+                        term: "Autumn 2021",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "Calculus and Geometry": {
+                "_meta": {
+                        instructor: "Prof. Arnab Mondal",
+                        institution: "Presidency University, Kolkata",
+                        term: "Autumn 2021",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "Space, Time & Universe": {
+                "_meta": {
+                        instructor: "Prof. Suchetana Chaterjee",
+                        institution: "Presidency University, Kolkata",
+                        term: "Autumn 2021",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "Environmental Science": {
+                "_meta": {
+                        instructor: " ",
+                        institution: "Presidency University, Kolkata",
+                        term: "Autumn 2021",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+        },
+        "Sem 2": {
+
+            "Real Analysis I": {
+                "_meta": {
+                        instructor: "Prof. Nasim Akhtar",
+                        institution: "Presidency University, Kolkata",
+                        term: "Spring 2022",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "Groups and Rings I": {
+                "_meta": {
+                        instructor: "Prof. Shubhabrata Das",
+                        institution: "Presidency University, Kolkata",
+                        term: "Spring 2022",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "German Language and Culture I": {
+                "_meta": {
+                        instructor: "Prof. Sunanda Basu and Prof. Raju Raman",
+                        institution: "Presidency University, Kolkata",
+                        term: "Spring 2022",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "English Communication": {
+                "_meta": {
+                        instructor: " ",
+                        institution: "Presidency University, Kolkata",
+                        term: "Autumn 2021",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+        },
+        "Sem 3": {
+
+             "Real Analysis II": {
+                "_meta": {
+                        instructor: "Prof. Nasim Akhtar",
+                        institution: "Presidency University, Kolkata",
+                        term: "Autumn 2022",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "Linear Algebra I": {
+                "_meta": {
+                        instructor: "Prof. Ritu Sen",
+                        institution: "Presidency University, Kolkata",
+                        term: "Autumn 2022",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "Ordinary Differential Equations": {
+                "_meta": {
+                        instructor: "Prof. Subhas Khajanchi and Prof Kuntal Banerjee",
+                        institution: "Presidency University, Kolkata",
+                        term: "Autumn 2022",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "German Language and Culture II": {
+                "_meta": {
+                        instructor: "Prof. Sunanda Basu and Prof. Raju Raman",
+                        institution: "Presidency University, Kolkata",
+                        term: "Autumn 2022",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "Computer Programming": {
+                "_meta": {
+                        instructor: "Prof. Avishek Adhikary",
+                        institution: "Presidency University, Kolkata",
+                        term: "Autumn 2022",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+            
+        },
+        "Sem 4": {
+
+            "Sequence and Series of Functions and Metric Spaces": {
+                "_meta": {
+                        instructor: "Prof. Nasim Akhtar",
+                        institution: "Presidency University, Kolkata",
+                        term: "Spring 2023",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "Multivariate Calculus": {
+                "_meta": {
+                        instructor: "Prof. Kuntal Banerjee",
+                        institution: "Presidency University, Kolkata",
+                        term: "Spring 2023",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "Partial Differential Equations": {
+                "_meta": {
+                        instructor: "Prof. Subhas Khajanchi",
+                        institution: "Presidency University, Kolkata",
+                        term: "Spring 2023",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "Gender and Human Rights": {
+                "_meta": {
+                        instructor: "Prof. Mousumi Mandal",
+                        institution: "Presidency University, Kolkata",
+                        term: "Spring 2023",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "LATEX": {
+                "_meta": {
+                        instructor: "Prof. Balaji Roy",
+                        institution: "Presidency University, Kolkata",
+                        term: "Spring 2023",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+            
+        },
+        "Sem 5": {
+
+            "Numerical Methods": {
+                "_meta": {
+                        instructor: "Prof. Supriyo Pan",
+                        institution: "Presidency University, Kolkata",
+                        term: "Autumn 2023",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "Groups and Rings II": {
+                "_meta": {
+                        instructor: "Prof. Arnab Mondal",
+                        institution: "Presidency University, Kolkata",
+                        term: "Autumn 2023",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "Discrete Mathematics and Number Theory": {
+                "_meta": {
+                        instructor: "Prof. Angshuman Das",
+                        institution: "Presidency University, Kolkata",
+                        term: "Autumn 2023",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "Mathematical Modeling": {
+                "_meta": {
+                        instructor: "Prof. Subhash Khhajanchi",
+                        institution: "Presidency University, Kolkata",
+                        term: "Autumn 2023",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+        },
+        "Sem 6": {
+
+            "Complex Analysis and Fourier Series": {
+                "_meta": {
+                        instructor: "Prof. Ritu Sen",
+                        institution: "Presidency University, Kolkata",
+                        term: "Spring 2024",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "Probability Theory": {
+                "_meta": {
+                        instructor: "Prof. Tapan Saha",
+                        institution: "Presidency University, Kolkata",
+                        term: "Spring 2024",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "Mechanics": {
+                "_meta": {
+                        instructor: "Prof. Supriyo Pan",
+                        institution: "Presidency University, Kolkata",
+                        term: "Spring 2024",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+
+            "Linear Algebra II and Field Theory": {
+                "_meta": {
+                        instructor: "Prof. Shubhabrata Das",
+                        institution: "Presidency University, Kolkata",
+                        term: "Spring 2024",
+                        status: "completed",
+
+                    books: []
+                            },
+                                
+                    },
+        }
     },
 
 
