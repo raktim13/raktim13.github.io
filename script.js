@@ -4,21 +4,34 @@ if (savedTheme === 'light') {
     document.documentElement.setAttribute('data-theme', 'light');
 }
 
+function updateProfilePicture() {
+    const profilePic = document.getElementById('profile-pic');
+
+    if (!profilePic) return;
+
+    if (document.documentElement.getAttribute('data-theme') === 'light') {
+        profilePic.src = 'website_pic_2.jpeg';
+    } else {
+        profilePic.src = 'website_pic_1.jpeg';
+    }
+}
+
 // 1. THEME TOGGLE LOGIC
 function toggleTheme() {
     const body = document.documentElement;
     const themeIcon = document.getElementById('theme-icon');
     
-    // Toggle the theme
     if (body.getAttribute('data-theme') === 'light') {
         body.removeAttribute('data-theme');
-        localStorage.setItem('theme', 'dark'); // Save choice
+        localStorage.setItem('theme', 'dark');
         if (themeIcon) themeIcon.innerText = 'light_mode'; 
     } else {
         body.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light'); // Save choice
+        localStorage.setItem('theme', 'light');
         if (themeIcon) themeIcon.innerText = 'dark_mode'; 
     }
+
+    updateProfilePicture();
 }
 
 // 2. NAVIGATION MENU LOADER
@@ -28,6 +41,8 @@ document.addEventListener("DOMContentLoaded", function() {
     if (themeIcon) {
         themeIcon.innerText = (localStorage.getItem('theme') === 'light') ? 'dark_mode' : 'light_mode';
     }
+
+    updateProfilePicture();
 
     const navPlaceholder = document.getElementById('nav-placeholder');
     if (navPlaceholder) {
