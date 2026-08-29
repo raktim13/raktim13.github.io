@@ -98,24 +98,52 @@
         }
 
 /* Add this to the bottom of your style.css */
-.profile-pic {
-    max-width: 250px !important; 
-    width: 100% !important;      
-    height: auto !important;     
-    border-radius: 4px;
-    border: 2px solid var(--nav-line); 
-    display: block;              
+.profile-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+    position: relative;
 }
 
-.profile-container {
-    display: flex; 
-    align-items: center; 
-    gap: 30px; 
-    margin-top: 20px;
+.profile-pic {
+    max-width: 250px !important;
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 4px;
+    border: 2px solid var(--nav-line);
+    display: block;
+
+    flex-shrink: 0;
+
+    transition:
+        transform 2s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.9s ease;
 }
 
 .profile-text {
-    flex: 1; /* This tells the text block to fill all remaining width */
+    flex: 1;
+
+    transition:
+        transform 1.6s cubic-bezier(0.22, 1, 0.36, 1),
+        opacity 0.8s ease;
+}
+
+/* =========================
+   HOME THEME TRANSITION
+========================= */
+
+/* LIGHT MODE:
+   text slides LEFT
+   photo slides RIGHT
+*/
+
+[data-theme="light"] .profile-pic {
+    transform: translateX(calc(100% + 30px));
+}
+
+[data-theme="light"] .profile-text {
+    transform: translateX(calc(-250px - 30px));
 }
 
 .folder-summary{
