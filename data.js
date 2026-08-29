@@ -933,7 +933,33 @@ const myNotes = {
     
 "JRF": {
 
-    "Sem 1": {},
+    "Sem 1": {
+
+        "Differential Topology": {
+                "_meta": {
+                        instructor: "Prof. Samik Basu",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Autumn 2026",
+                        status: "ongoing",
+
+                    books: []
+                            },
+                                
+                    },
+
+        "Differential Forms in Algebraic Topology": {
+                "_meta": {
+                        instructor: "Prof. Mahuya Datta",
+                        institution: "Indian Statistical Institute, Kolkata",
+                        term: "Autumn 2026",
+                        status: "ongoing",
+
+                    books: []
+                            },
+                                
+                    },
+        
+    },
     "Sem 2": {}
 }
 };
