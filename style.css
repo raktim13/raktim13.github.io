@@ -766,3 +766,119 @@ details[open] > summary .folder-name{
 
 
 
+
+
+
+
+/* =========================================================
+   AUTUMN MAPLE LEAF OVERLAY
+   ========================================================= */
+
+.fall-leaves {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Every individual leaf */
+.fall-leaf {
+    position: absolute;
+    top: -120px;
+    left: 0;
+
+    width: var(--leaf-size);
+    height: var(--leaf-size);
+
+    opacity: var(--leaf-opacity);
+
+    animation:
+        leaf-fall var(--fall-duration) linear var(--fall-delay) infinite;
+
+    will-change: transform;
+}
+
+/* Keep the actual website above the leaves */
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+.fall-leaves {
+    z-index: 0;
+}
+
+#theme-btn {
+    z-index: 10;
+}
+
+
+/* ---------------------------------------------------------
+   Falling motion
+   --------------------------------------------------------- */
+
+@keyframes leaf-fall {
+
+    0% {
+        transform:
+            translate3d(var(--start-x), -120px, 0)
+            rotate(var(--rotation-start));
+    }
+
+    25% {
+        transform:
+            translate3d(
+                calc(var(--start-x) + var(--drift-1)),
+                25vh,
+                0
+            )
+            rotate(var(--rotation-mid-1));
+    }
+
+    50% {
+        transform:
+            translate3d(
+                calc(var(--start-x) + var(--drift-2)),
+                50vh,
+                0
+            )
+            rotate(var(--rotation-mid-2));
+    }
+
+    75% {
+        transform:
+            translate3d(
+                calc(var(--start-x) + var(--drift-3)),
+                75vh,
+                0
+            )
+            rotate(var(--rotation-mid-3));
+    }
+
+    100% {
+        transform:
+            translate3d(
+                calc(var(--start-x) + var(--drift-4)),
+                calc(100vh + 140px),
+                0
+            )
+            rotate(var(--rotation-end));
+    }
+}
+
+
+/* ---------------------------------------------------------
+   Respect users who have reduced motion enabled
+   --------------------------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .fall-leaf {
+        animation: none;
+        top: auto;
+    }
+
+}
