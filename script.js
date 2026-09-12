@@ -1,1036 +1,2474 @@
 // --- 0. THEME MEMORY CHECK (Run immediately when page loads) ---
+
 const savedTheme = localStorage.getItem('theme');
+
 if (savedTheme === 'light') {
+
     document.documentElement.setAttribute('data-theme', 'light');
+
 }
 
+
+
 function updateProfilePicture() {
+
     const profilePic = document.getElementById('profile-pic');
+
+
 
     if (!profilePic) return;
 
+
+
     if (document.documentElement.getAttribute('data-theme') === 'light') {
+
         profilePic.src = 'website_pic_2.jpeg';
+
     } else {
+
         profilePic.src = 'website_pic_1.jpeg';
+
     }
+
 }
+
+
 
 // 1. THEME TOGGLE LOGIC
+
 function toggleTheme() {
+
     const body = document.documentElement;
+
     const themeIcon = document.getElementById('theme-icon');
+
     
+
     if (body.getAttribute('data-theme') === 'light') {
+
         body.removeAttribute('data-theme');
+
         localStorage.setItem('theme', 'dark');
+
         if (themeIcon) themeIcon.innerText = 'light_mode'; 
+
     } else {
+
         body.setAttribute('data-theme', 'light');
+
         localStorage.setItem('theme', 'light');
+
         if (themeIcon) themeIcon.innerText = 'dark_mode'; 
+
     }
 
+
+
     updateProfilePicture();
+
 }
 
 
+
+
+
 // =========================================================
+
 // AUTUMN MAPLE LEAF OVERLAY
+
 // =========================================================
 
-const mapleLeaf = `
-<svg
-    viewBox="0 0 1200 1100"
-    xmlns="http://www.w3.org/2000/svg"
-    class="maple-svg"
-    aria-hidden="true">
 
-    <defs>
-        <linearGradient id="newLeafGradient"
-            x1="0%" y1="0%"
-            x2="0%" y2="100%">
 
-            <!-- Pale, light tips -->
-            <stop offset="0%"
-                stop-color="#FFD18A"/>
+function createFallLeaves() {
 
-            <!-- Richer mid-point color -->
-            <stop offset="50%"
-                stop-color="#E87C2F"/>
 
-            <!-- Deep, warm lower color -->
-            <stop offset="100%"
-                stop-color="#C95A2B"/>
-        </linearGradient>
-    </defs>
 
-    <!-- MAPLE LEAF BODY -->
-    <path
-        d="
-        M 600 1000
+    // Don't create it twice
 
-        C 570 950 515 905 450 900
-        L 300 930
-        L 360 810
-        
-        C 290 825 210 820 180 750
-        L 100 650
-        L 230 680
-        
-        C 180 620 130 540 160 490
-        L 250 450
-        L 310 520
-        
-        C 280 430 250 340 280 280
-        L 420 340
-        L 490 260
-        
-        C 500 180 500 100 600 100
+    if (document.querySelector(".fall-leaves")) return;
 
-        C 700 100 700 180 710 260
-        L 780 340
-        L 920 280
-        
-        C 950 340 920 430 890 520
-        L 950 450
-        L 1040 490
-        
-        C 1070 540 1020 620 970 680
-        L 1100 650
-        L 1020 750
-        
-        C 990 820 910 825 840 810
-        L 900 930
-        L 750 900
-        C 685 905 630 950 600 1000
 
-        Z
-        "
-        fill="url(#newLeafGradient)"
-        stroke="#111111"
-        stroke-width="2.5"
-        stroke-linejoin="round"
-    />
 
-    <!-- VEINS -->
-    <path
-        d="
-        M 600 1000
-        C 595 900 600 700 605 500
-        C 610 300 615 200 600 100
-        "
-        fill="none"
-        stroke="#111111"
-        stroke-width="1.8"
-        stroke-linecap="round"
-    />
+    const container = document.createElement("div");
 
-    <path
-        d="
-        M 600 900 L 450 900
-        M 600 700 L 180 750
-        M 600 500 L 160 490
-        M 600 300 L 280 280
-        M 600 900 L 750 900
-        M 600 700 L 1020 750
-        M 600 500 L 1040 490
-        M 600 300 L 920 280
-        "
-        fill="none"
-        stroke="#111111"
-        stroke-width="1.5"
-        stroke-linecap="round"
-    />
+    container.className = "fall-leaves";
 
-    <path
-        d="
-        M 450 900 L 300 930
-        M 750 900 L 900 930
-        "
-        fill="none"
-        stroke="#111111"
-        stroke-width="1.2"
-        stroke-linecap="round"
-    />
+    container.setAttribute("aria-hidden", "true");
 
-    <!-- STEM -->
-    <path
-        d="
-        M 600 1000
-        C 560 1030 520 1060 450 1080
-        C 400 1095 350 1090 300 1070
-        "
-        fill="none"
-        stroke="#964B00"
-        stroke-width="12"
-        stroke-linecap="round"
-    />
-
-    <path
-        d="
-        M 600 1000
-        C 560 1030 520 1060 450 1080
-        C 400 1095 350 1090 300 1070
-        "
-        fill="none"
-        stroke="#964B00"
-        stroke-width="6"
-        stroke-linecap="round"
-    />
-
-</svg>
-`;
 
 
     /*
+
+       Maple leaf SVG.
+
+
+
+       The SVG is deliberately inline so there is no external
+
+       image, library, CDN, or asset required.
+
+    */
+
+   const mapleLeaf = `
+
+<svg
+
+    viewBox="0 0 1200 1100"
+
+    xmlns="http://www.w3.org/2000/svg"
+
+    class="maple-svg"
+
+    aria-hidden="true">
+
+
+
+    <defs>
+
+        <linearGradient id="leafGradient"
+
+            x1="0%" y1="100%"
+
+            x2="100%" y2="0%">
+
+
+
+            <stop offset="0%"
+
+                stop-color="#ed4b25"/>
+
+
+
+            <stop offset="42%"
+
+                stop-color="#f47b32"/>
+
+
+
+            <stop offset="72%"
+
+                stop-color="#f6a847"/>
+
+
+
+            <stop offset="100%"
+
+                stop-color="#ffc15a"/>
+
+        </linearGradient>
+
+
+
+        <linearGradient id="leafHighlight"
+
+            x1="0%" y1="100%"
+
+            x2="100%" y2="0%">
+
+
+
+            <stop offset="0%"
+
+                stop-color="#ff7040"/>
+
+
+
+            <stop offset="100%"
+
+                stop-color="#ffd477"/>
+
+        </linearGradient>
+
+    </defs>
+
+
+
+
+
+    <!-- =================================================
+
+         MAPLE LEAF BODY
+
+         ================================================= -->
+
+
+
+    <path
+
+        d="
+
+        M 600 760
+
+
+
+        C 570 710 540 665 510 620
+
+
+
+        L 425 705
+
+        L 438 595
+
+
+
+        L 315 655
+
+        L 350 535
+
+
+
+        L 210 550
+
+        L 330 455
+
+
+
+        L 165 390
+
+        L 365 380
+
+
+
+        L 255 265
+
+        L 445 320
+
+
+
+        L 425 105
+
+        L 535 285
+
+
+
+        C 565 325 590 335 600 335
+
+
+
+        C 610 335 635 325 665 285
+
+
+
+        L 775 105
+
+        L 755 320
+
+
+
+        L 945 265
+
+        L 835 380
+
+
+
+        L 1035 390
+
+        L 870 455
+
+
+
+        L 990 550
+
+        L 850 535
+
+
+
+        L 885 655
+
+        L 762 595
+
+        L 775 705
+
+        L 690 620
+
+
+
+        C 660 665 630 710 600 760
+
+
+
+        Z
+
+        "
+
+        fill="url(#leafGradient)"
+
+        stroke="#111111"
+
+        stroke-width="9"
+
+        stroke-linejoin="round"
+
+    />
+
+
+
+
+
+    <!-- =================================================
+
+         LEFT LOWER LOBE
+
+         ================================================= -->
+
+
+
+    <path
+
+        d="
+
+        M 600 760
+
+
+
+        C 530 800 455 835 370 850
+
+
+
+        C 305 860 245 850 180 825
+
+
+
+        C 245 805 300 775 355 735
+
+
+
+        L 425 680
+
+
+
+        L 510 620
+
+
+
+        Z
+
+        "
+
+        fill="#ed5429"
+
+        stroke="#111111"
+
+        stroke-width="9"
+
+        stroke-linejoin="round"
+
+    />
+
+
+
+
+
+    <!-- =================================================
+
+         RIGHT LOWER LOBE
+
+         ================================================= -->
+
+
+
+    <path
+
+        d="
+
+        M 600 760
+
+
+
+        L 690 620
+
+        L 775 680
+
+
+
+        C 835 730 900 765 1015 805
+
+
+
+        C 940 820 865 825 800 805
+
+
+
+        C 730 785 665 765 600 760
+
+
+
+        Z
+
+        "
+
+        fill="#f07832"
+
+        stroke="#111111"
+
+        stroke-width="9"
+
+        stroke-linejoin="round"
+
+    />
+
+
+
+
+
+    <!-- =================================================
+
+         CENTRAL VEIN
+
+         ================================================= -->
+
+
+
+    <path
+
+        d="
+
+        M 600 760
+
+        C 595 680 600 600 605 520
+
+        C 610 430 615 350 620 270
+
+        C 625 205 630 145 645 90
+
+        "
+
+        fill="none"
+
+        stroke="#111111"
+
+        stroke-width="8"
+
+        stroke-linecap="round"
+
+    />
+
+
+
+
+
+    <!-- =================================================
+
+         LEFT PRIMARY VEINS
+
+         ================================================= -->
+
+
+
+    <path
+
+        d="
+
+        M 605 520
+
+        L 445 320
+
+
+
+        M 600 600
+
+        L 350 535
+
+
+
+        M 600 680
+
+        L 425 595
+
+
+
+        M 595 720
+
+        L 355 735
+
+
+
+        M 610 430
+
+        L 365 380
+
+
+
+        M 615 350
+
+        L 535 285
+
+        "
+
+        fill="none"
+
+        stroke="#111111"
+
+        stroke-width="6"
+
+        stroke-linecap="round"
+
+    />
+
+
+
+
+
+    <!-- =================================================
+
+         RIGHT PRIMARY VEINS
+
+         ================================================= -->
+
+
+
+    <path
+
+        d="
+
+        M 610 520
+
+        L 835 380
+
+
+
+        M 605 600
+
+        L 850 535
+
+
+
+        M 600 680
+
+        L 775 595
+
+
+
+        M 595 720
+
+        L 870 735
+
+
+
+        M 615 430
+
+        L 835 380
+
+
+
+        M 620 350
+
+        L 775 285
+
+        "
+
+        fill="none"
+
+        stroke="#111111"
+
+        stroke-width="6"
+
+        stroke-linecap="round"
+
+    />
+
+
+
+
+
+    <!-- =================================================
+
+         SECONDARY VEINS — LEFT
+
+         ================================================= -->
+
+
+
+    <path
+
+        d="
+
+        M 445 320 L 365 380
+
+        M 445 320 L 425 250
+
+
+
+        M 365 380 L 300 330
+
+        M 365 380 L 315 430
+
+
+
+        M 350 535 L 275 480
+
+        M 350 535 L 300 565
+
+
+
+        M 425 595 L 360 550
+
+        M 425 595 L 390 625
+
+
+
+        M 425 680 L 360 650
+
+        M 425 680 L 400 710
+
+        "
+
+        fill="none"
+
+        stroke="#111111"
+
+        stroke-width="4"
+
+        stroke-linecap="round"
+
+    />
+
+
+
+
+
+    <!-- =================================================
+
+         SECONDARY VEINS — RIGHT
+
+         ================================================= -->
+
+
+
+    <path
+
+        d="
+
+        M 835 380 L 900 330
+
+        M 835 380 L 875 430
+
+
+
+        M 850 535 L 925 480
+
+        M 850 535 L 900 565
+
+
+
+        M 775 595 L 840 550
+
+        M 775 595 L 810 625
+
+
+
+        M 775 680 L 840 650
+
+        M 775 680 L 800 710
+
+        "
+
+        fill="none"
+
+        stroke="#111111"
+
+        stroke-width="4"
+
+        stroke-linecap="round"
+
+    />
+
+
+
+
+
+    <!-- =================================================
+
+         LOWER VEINS
+
+         ================================================= -->
+
+
+
+    <path
+
+        d="
+
+        M 600 760 L 510 720
+
+        M 510 720 L 450 690
+
+
+
+        M 600 760 L 505 790
+
+        M 505 790 L 425 805
+
+
+
+        M 600 760 L 690 720
+
+        M 690 720 L 755 690
+
+
+
+        M 600 760 L 705 790
+
+        M 705 790 L 790 805
+
+        "
+
+        fill="none"
+
+        stroke="#111111"
+
+        stroke-width="5"
+
+        stroke-linecap="round"
+
+    />
+
+
+
+
+
+    <!-- =================================================
+
+         STEM
+
+         ================================================= -->
+
+
+
+    <path
+
+        d="
+
+        M 600 755
+
+        C 565 825 520 890 455 950
+
+        C 415 987 375 1015 340 1035
+
+        "
+
+        fill="none"
+
+        stroke="#111111"
+
+        stroke-width="16"
+
+        stroke-linecap="round"
+
+    />
+
+
+
+    <path
+
+        d="
+
+        M 600 755
+
+        C 565 825 520 890 455 950
+
+        C 415 987 375 1015 340 1035
+
+        "
+
+        fill="none"
+
+        stroke="#c94a25"
+
+        stroke-width="9"
+
+        stroke-linecap="round"
+
+    />
+
+
+
+</svg>
+
+`;
+
+
+
+
+
+    /*
+
        Each object controls one leaf.
 
+
+
        x       = horizontal starting position
+
        size    = leaf size
+
        color   = autumn color
+
        opacity = transparency
+
        speed   = falling speed
+
        delay   = when it enters the screen
+
        drift   = sideways movement
+
     */
+
+
 
     const leaves = [
 
+
+
         {
+
             x: "4vw",
+
             size: 82,
+
             color: "#d95f02",
+
             opacity: .72,
+
             speed: 18,
+
             delay: -4,
+
             drift: 80,
+
             rotation: 120
+
         },
 
+
+
         {
+
             x: "13vw",
+
             size: 42,
+
             color: "#b83b12",
+
             opacity: .68,
+
             speed: 14,
+
             delay: -9,
+
             drift: -55,
+
             rotation: -180
+
         },
 
+
+
         {
+
             x: "24vw",
+
             size: 105,
+
             color: "#f29f05",
+
             opacity: .62,
+
             speed: 22,
+
             delay: -15,
+
             drift: 100,
+
             rotation: 240
+
         },
 
+
+
         {
+
             x: "35vw",
+
             size: 48,
+
             color: "#d95f02",
+
             opacity: .58,
+
             speed: 16,
+
             delay: -6,
+
             drift: -80,
+
             rotation: -140
+
         },
 
+
+
         {
+
             x: "47vw",
+
             size: 70,
+
             color: "#e87511",
+
             opacity: .64,
+
             speed: 20,
+
             delay: -12,
+
             drift: 65,
+
             rotation: 200
+
         },
 
+
+
         {
+
             x: "59vw",
+
             size: 38,
+
             color: "#b83b12",
+
             opacity: .55,
+
             speed: 13,
+
             delay: -3,
+
             drift: -65,
+
             rotation: -220
+
         },
 
+
+
         {
+
             x: "68vw",
+
             size: 115,
+
             color: "#f29f05",
+
             opacity: .60,
+
             speed: 24,
+
             delay: -20,
+
             drift: 90,
+
             rotation: 280
+
         },
 
+
+
         {
+
             x: "80vw",
+
             size: 52,
+
             color: "#c94c12",
+
             opacity: .67,
+
             speed: 17,
+
             delay: -8,
+
             drift: -100,
+
             rotation: -170
+
         },
 
+
+
         {
+
             x: "91vw",
+
             size: 75,
+
             color: "#e87511",
+
             opacity: .58,
+
             speed: 21,
+
             delay: -17,
+
             drift: -70,
+
             rotation: 190
+
         },
 
+
+
         {
+
             x: "-2vw",
+
             size: 55,
+
             color: "#f29f05",
+
             opacity: .55,
+
             speed: 15,
+
             delay: -11,
+
             drift: 75,
+
             rotation: 230
+
         },
 
+
+
         {
+
             x: "18vw",
+
             size: 28,
+
             color: "#b83b12",
+
             opacity: .50,
+
             speed: 12,
+
             delay: -2,
+
             drift: 45,
+
             rotation: -150
+
         },
 
+
+
         {
+
             x: "42vw",
+
             size: 32,
+
             color: "#d95f02",
+
             opacity: .48,
+
             speed: 11,
+
             delay: -7,
+
             drift: -50,
+
             rotation: 170
+
         },
 
+
+
         {
+
             x: "73vw",
+
             size: 30,
+
             color: "#b83b12",
+
             opacity: .48,
+
             speed: 14,
+
             delay: -14,
+
             drift: 55,
+
             rotation: -190
+
         },
 
+
+
         {
+
             x: "96vw",
+
             size: 45,
+
             color: "#f29f05",
+
             opacity: .52,
+
             speed: 18,
+
             delay: -5,
+
             drift: -60,
+
             rotation: 210
+
         }
+
+
 
     ];
 
 
+
+
+
     leaves.forEach(leaf => {
+
+
 
         const element = document.createElement("div");
 
+
+
         element.className = "fall-leaf";
+
+
 
         element.innerHTML = mapleLeaf;
 
+
+
         element.style.setProperty("--leaf-size", `${leaf.size}px`);
+
         element.style.setProperty("--leaf-opacity", leaf.opacity);
+
         element.style.setProperty("--fall-duration", `${leaf.speed}s`);
+
         element.style.setProperty("--fall-delay", `${leaf.delay}s`);
+
         element.style.setProperty("--start-x", leaf.x);
 
+
+
         element.style.setProperty(
+
             "--drift-1",
+
             `${leaf.drift * 0.35}px`
+
         );
 
+
+
         element.style.setProperty(
+
             "--drift-2",
+
             `${leaf.drift * -0.20}px`
+
         );
 
+
+
         element.style.setProperty(
+
             "--drift-3",
+
             `${leaf.drift * 0.55}px`
+
         );
 
+
+
         element.style.setProperty(
+
             "--drift-4",
+
             `${leaf.drift}px`
+
         );
 
+
+
         element.style.setProperty(
+
             "--rotation-start",
+
             `${leaf.rotation}deg`
+
         );
 
+
+
         element.style.setProperty(
+
             "--rotation-mid-1",
+
             `${leaf.rotation + 90}deg`
+
         );
 
+
+
         element.style.setProperty(
+
             "--rotation-mid-2",
+
             `${leaf.rotation + 180}deg`
+
         );
 
+
+
         element.style.setProperty(
+
             "--rotation-mid-3",
+
             `${leaf.rotation + 270}deg`
+
         );
 
+
+
         element.style.setProperty(
+
             "--rotation-end",
+
             `${leaf.rotation + 360}deg`
+
         );
+
+
+
 
 
         container.appendChild(element);
+
     });
 
+
+
     document.body.prepend(container);
+
 }
+
+
+
 
 
 // 2. NAVIGATION MENU LOADER
+
 document.addEventListener("DOMContentLoaded", function() {
+
         createFallLeaves();
+
     // Update the icon correctly based on the current theme
+
     const themeIcon = document.getElementById('theme-icon');
+
     if (themeIcon) {
+
         themeIcon.innerText = (localStorage.getItem('theme') === 'light') ? 'dark_mode' : 'light_mode';
+
     }
+
+
 
     updateProfilePicture();
 
+
+
     const navPlaceholder = document.getElementById('nav-placeholder');
+
     if (navPlaceholder) {
+
         fetch('menu.html')
+
             .then(response => response.text())
+
             .then(data => {
+
                 navPlaceholder.innerHTML = data;
+
             })
+
             .catch(error => console.error('Error loading menu:', error));
+
     }
+
 });
+
+
 
 // 3. Daenerys Easter Egg
+
 const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight'];
+
 let konamiIndex = 0;
 
+
+
 document.addEventListener('keydown', (e) => {
+
     if (e.key === konamiCode[konamiIndex]) {
+
         konamiIndex++;
+
         if (konamiIndex === konamiCode.length) {
+
             document.getElementById('daenerys-drogon-easter-egg').style.display = 'flex';
+
             konamiIndex = 0;
+
         }
+
     } else {
+
         konamiIndex = 0;
+
     }
+
 });
 
+
+
 function closeDragon() {
+
     document.getElementById('daenerys-drogon-easter-egg').style.display = 'none';
+
 }
+
+
 
 function highlight(text){
 
+
+
     const query = document.getElementById("notes-search")?.value.trim();
+
+
 
     if(!query) return text;
 
+
+
     const escaped = query.replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
 
+
+
     return text.replace(
+
     new RegExp(`(${escaped})`, "ig"),
+
     `
+
 <span class="search-match">
+
+
 
     <span class="match-text">$1</span>
 
+
+
     <svg
+
         class="marching-border"
+
         preserveAspectRatio="none"
+
         viewBox="0 0 100 100">
 
+
+
         <rect
+
             x="2"
+
             y="2"
+
             width="96"
+
             height="96"
+
             rx="8"
+
             ry="8"/>
+
+
 
     </svg>
 
+
+
 </span>
+
 `
+
 );
+
 }
 
+
+
 // 4. Notes repository 
+
 function generateTree(data, searching = false, path = []) {
+
     const ul = document.createElement('ul');
+
     ul.className = "directory-list"; // Ensures your CSS styles apply
 
+
+
     for (const key in data) {
+
         const li = document.createElement('li');
+
         li.classList.add("tree-item");
+
         const value = data[key];
+
         const meta = value?._meta;
 
+
+
         if (typeof value === 'object' && value !== null) {
+
             const children = {...value};
+
             delete children._meta;
+
             li.innerHTML = `
+
                 <details>
+
                     <summary class="folder-summary">
+
                         <span class="material-symbols-outlined folder-icon">
+
                             folder
+
                         </span>
 
+
+
                         <span
+
     class="folder-name"
+
+
 
     data-prof="${meta?.instructor || ""}"
 
+
+
     data-term="${meta?.term || ""}"
+
+
 
     data-inst="${meta?.institution || ""}"
 
+
+
 >
+
+
 
 ${highlight(key)}
 
+
+
 </span>
+
                     </summary>
+
                 </details>`;
 
+
+
             const details = li.querySelector("details");
+
             let card = null;
+
             if(meta){
+
+
 
     const preview=document.createElement("div");
 
+
+
     preview.className="folder-preview";
+
+
 
     preview.innerHTML = `
 
+
+
 <div><strong>Term:</strong> ${meta.term}</div>
+
+
 
 <div><strong>Institution:</strong> ${meta.institution}</div>
 
+
+
 <div><strong>Instructor:</strong> ${meta.instructor}</div>
 
+
+
 `;
+
+
 
     details.after(preview);
 
+
+
 }
+
             const icon = li.querySelector(".folder-icon");
+
             if (searching) {
+
                 details.open = true;
+
                 icon.textContent = "folder_open";
+
                             }
+
+
 
                 details.addEventListener("toggle", () => {
 
+
+
                     icon.classList.add("clicking");
+
+
 
                     setTimeout(() => {
 
+
+
                     icon.textContent = details.open ? "folder_open" : "folder";
+
                     icon.classList.remove("clicking");
+
+
 
                         const children = details.querySelectorAll(".folder-contents > .tree-item");
 
+
+
                         if(details.open){
+
+
 
                         children.forEach((child,index)=>{
 
+
+
     child.classList.remove("show");
 
+
+
     setTimeout(()=>{
+
         child.classList.add("show");
+
     },85+index*45);
+
+
 
 });
 
+
+
 setTimeout(() => {
 
+
+
     if (details.open && card) {
+
         animateCourseCard(card);
+
     }
 
+
+
 },180);
+
                 }else{
+
+
 
                     [...children].reverse().forEach((child,index)=>{
 
+
+
                     setTimeout(()=>{
+
+
 
                     child.classList.remove("show");
 
+
+
                     },index*45);
+
+
 
                     });
 
+
+
                 }
+
+
 
                 },45);
 
+
+
             });
 
+
+
             
+
             // Show the course card if there's metadata OR child files
+
  
+
                 let subtree = null;
 
+
+
                 if (Object.keys(children).length > 0) {
+
                     subtree = generateTree(
+
                     children,
+
                     searching,
+
                     [...path, key]
+
                 );
+
                 subtree.classList.add("folder-contents");
+
                 }
+
+
 
                 if (meta) {
 
+
+
     card = document.createElement("div");
+
     card.className = "course-meta";
+
     const breadcrumb = document.createElement("div");
+
+
 
 breadcrumb.className = "breadcrumb";
 
+
+
 breadcrumb.innerHTML =
+
     [...path, key]
+
         .map(p => `<span>${highlight(p)}</span>`)
+
         .join(" / ");
+
+
 
     card.innerHTML = `
 
+
+
 <div class="course-header">
 
+
+
     <div
+
     class="course-title typewriter"
+
     data-text="${key}">
+
 </div>
+
+
 
     <div class="course-meta-top">
 
+
+
     <span class="typewriter"
+
           data-text="👤 ${meta.instructor}">
+
     </span>
 
+
+
     <span class="typewriter"
+
          data-text="${meta.term.toLowerCase().includes('autumn') ? '🍂' : '🌸'} ${meta.term}">
+
     </span>
 
+
+
     <span class="typewriter"
+
           data-text="${
+
                 meta.status==="completed"
+
                 ? "🟢 Completed"
+
                 : meta.status==="ongoing"
+
                 ? "🟡 Ongoing"
+
                 : "⚪ Planned"
+
           }">
+
     </span>
+
+
 
 </div>
+
+
 
 <div
+
     class="course-meta-inst typewriter"
+
     data-text="🏛 ${meta.institution}">
-</div>
 
 </div>
+
+
+
+</div>
+
+
 
 <div class="course-body">
 
+
+
 <div class="course-books">
+
+
 
 ${meta.books.map((book,index)=>`
 
+
+
 <div class="book-row">
 
+
+
 ${index===0
+
 ? `<span class="book-prefix">📚</span>`
+
 : `<span class="book-prefix"></span>`}
+
+
 
 <a href="${book.url}" target="_blank">
 
+
+
 ${highlight(book.title)} — ${highlight(book.author)}
+
+
 
 </a>
 
+
+
 </div>
+
+
 
 `).join("")}
 
+
+
 </div>
+
+
 
 <div class="course-divider"></div>
 
+
+
 </div>
+
 `;
+
+
 
     if (subtree) {
 
+
+
         card.querySelector(".course-body").appendChild(subtree);
+
+
 
     } else {
 
+
+
         const empty = document.createElement("div");
+
+
 
         empty.className = "empty-folder";
 
+
+
         empty.innerHTML = `
+
             <div class="empty-symbol">∅</div>
+
             <div class="empty-text">
+
                 The empty set is still a set.
+
             </div>
+
         `;
+
+
 
         card.querySelector(".course-body").appendChild(empty);
 
+
+
     }
+
+
 
     details.appendChild(breadcrumb);
 
+
+
 details.appendChild(card);
 
+
+
 }
+
 else{
+
+
 
     if(subtree){
 
+
+
         details.appendChild(subtree);
 
+
+
     }
+
     else{
+
+
 
         const empty=document.createElement("div");
 
+
+
         empty.className="empty-folder";
 
+
+
         empty.innerHTML=`
+
             <div class="empty-symbol">∅</div>
+
             <div class="empty-text">
+
                 The empty set is still a set.
+
             </div>
+
         `;
+
+
 
         details.appendChild(empty);
 
+
+
     }
 
+
+
 }
+
+
+
 
 
    // closes: if (Object.keys(children).length > 0)
 
+
+
 ul.appendChild(li);
 
+
+
 } else {
+
             li.innerHTML = `
+
                 <a
+
                     href="${value}"
+
                     target="_blank"
+
                     class="file-link">
+
                         <span class="material-symbols-outlined file-icon">
+
                             picture_as_pdf
+
                         </span>
 
+
+
                         <span class="file-name">
+
                             ${highlight(key)}
+
                         </span>
+
                 </a>`;
+
             ul.appendChild(li);
+
         }
+
     }
+
     return ul;
+
 }
+
+
 
 function filterTree(data,query){
 
+
+
     query=query.toLowerCase().trim();
+
+
 
     if(query==="") return data;
 
+
+
     const filtered={};
+
+
 
     for(const key in data){
 
+
+
         const value=data[key];
+
+
 
         if (typeof value !== "object" || value === null) {
 
+
+
     const fileName = key.toLowerCase();
+
     const filePath = String(value).toLowerCase();
 
+
+
     if (
+
         fileName.includes(query) ||
+
         filePath.includes(query)
+
     ) {
+
         filtered[key] = value;
+
     }
 
+
+
     continue;
+
 }
+
+
 
         const meta=value._meta;
 
+
+
         let metadataMatch=false;
+
+
 
         if(meta){
 
+
+
             metadataMatch=
+
                 (meta.instructor||"").toLowerCase().includes(query) ||
+
                 (meta.institution||"").toLowerCase().includes(query) ||
+
                 (meta.term||"").toLowerCase().includes(query) ||
+
                 (meta.status||"").toLowerCase().includes(query) ||
+
+
 
                 (meta.books||[]).some(book=>
 
+
+
                     (book.title||"").toLowerCase().includes(query) ||
+
+
 
                     (book.author||"").toLowerCase().includes(query)
 
+
+
                 );
+
         }
+
+
 
         const children={...value};
 
+
+
         delete children._meta;
+
+
 
         const filteredChildren=filterTree(children,query);
 
+
+
         if(
+
+
 
             key.toLowerCase().includes(query) ||
 
+
+
             metadataMatch ||
+
+
 
             Object.keys(filteredChildren).length
 
+
+
         ){
+
+
 
             filtered[key]={
 
+
+
                 ...(meta?{_meta:meta}:{}),
+
+
 
                 ...filteredChildren
 
+
+
             };
+
+
 
         }
 
+
+
     }
+
+
 
     return filtered;
 
+
+
 }
+
+
 
 const easterEggs = {
 
+
+
     "meaning of life":
+
         "Let's not get ahead of ourselves. I've got five fucking years ahead of me to do philosophy.",
 
+
+
     "epsilon":
+
         "Please specify δ.",
 
+
+
     "axiom of choice":
+
         "Results may be nonconstructive.",
 
+
+
     "azor ahai":
+
         "Did you mean <strong>The Princess That Was Promised</strong> aka Daenerys Stormborn?",
 
+
+
     "dracarys":
+
         "<strong>Dracarys.</strong><br><em>Fire and Blood.</em>",
 
+
+
     "winter":
+
         "Winter is coming.",
 
+
+
     "valar morghulis":
+
         "Valar dohaeris.",
 
+
+
     "undefined":
+
         "Sounds like JavaScript.",
 
+
+
     "404":
+
         "The theorem you're looking for appears to be independent of ZFC.",
 
+
+
     "raktim":
+
         "Archive curator located.",
 
+
+
     "github":
+
         "Please don't look at the commit history.",
 
+
+
     "todo":
+
         "There are always more notes to write."
+
+
 
 };
 
+
+
 function renderTree(data){
 
+
+
     const notesContainer =
+
         document.getElementById("notes-tree-container");
 
+
+
     const search =
+
         document.getElementById("notes-search");
 
+
+
     const message =
+
         document.getElementById("search-message");
 
+
+
     const searching =
+
         search?.value.trim() !== "";
+
+
 
     notesContainer.classList.add("tree-fading");
 
+
+
 setTimeout(()=>{
+
+
 
     notesContainer.innerHTML="";
 
+
+
     notesContainer.appendChild(
+
         generateTree(data,searching)
+
     );
+
+
+
 
 
     requestAnimationFrame(()=>{
 
+
+
         notesContainer.classList.remove("tree-fading");
+
+
 
     });
 
+
+
 },120);
+
+
 
     message.innerHTML = "";
 
+
+
     if(searching){
+
+
 
         if(Object.keys(data).length===0){
 
+
+
             const q=search.value.trim().toLowerCase();
 
+
+
             message.innerHTML=
+
                 easterEggs[q] ??
+
                 "Nothing found.";
+
+
 
         }
 
+
+
     }
 
+
+
 }
+
 // Ensure the page is loaded before running
+
 document.addEventListener("DOMContentLoaded",()=>{
+
+
 
     if(typeof myNotes==="undefined") return;
 
+
+
     renderTree(myNotes);
+
+
 
     const search=document.getElementById("notes-search");
 
+
+
 search.addEventListener("input",()=>{
+
+
 
     renderTree(
 
+
+
         filterTree(
+
+
 
             myNotes,
 
+
+
             search.value
+
+
 
         )
 
+
+
     );
 
-});
+
 
 });
+
+
+
+});
+
+
+
+
 
 
 
 function sleep(ms) {
+
     return new Promise(resolve => setTimeout(resolve, ms));
+
 }
+
+
 
 async function typeElement(element) {
 
+
+
     const text = element.dataset.text;
+
+
 
     element.textContent = "";
 
+
+
     element.classList.add("typing");
+
+
 
     for (const letter of text) {
 
+
+
         element.textContent += letter;
+
+
 
         await sleep(25 + Math.random()*20);
 
+
+
     }
+
+
 
     await sleep(250);
 
+
+
 element.classList.remove("typing");
+
 }
+
+
 
 async function animateCourseCard(card) {
 
+
+
     if(card.dataset.typed){
+
         return;
+
     }
+
+
 
     card.dataset.typed = "true";
 
+
+
     const items = card.querySelectorAll(".typewriter");
+
+
 
     for(const item of items){
 
+
+
         await typeElement(item);
+
+
 
     }
 
-}
 
 
-
-
-
-
-
-
-
-
+} 
 
