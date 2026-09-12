@@ -39,22 +39,7 @@ function toggleTheme() {
 // AUTUMN MAPLE LEAF OVERLAY
 // =========================================================
 
-function createFallLeaves() {
-
-    // Don't create it twice
-    if (document.querySelector(".fall-leaves")) return;
-
-    const container = document.createElement("div");
-    container.className = "fall-leaves";
-    container.setAttribute("aria-hidden", "true");
-
-    /*
-       Maple leaf SVG.
-
-       The SVG is deliberately inline so there is no external
-       image, library, CDN, or asset required.
-    */
-   const mapleLeaf = `
+const mapleLeaf = `
 <svg
     viewBox="0 0 1200 1100"
     xmlns="http://www.w3.org/2000/svg"
@@ -62,332 +47,135 @@ function createFallLeaves() {
     aria-hidden="true">
 
     <defs>
-        <linearGradient id="leafGradient"
-            x1="0%" y1="100%"
-            x2="100%" y2="0%">
+        <linearGradient id="newLeafGradient"
+            x1="0%" y1="0%"
+            x2="0%" y2="100%">
 
+            <!-- Pale, light tips -->
             <stop offset="0%"
-                stop-color="#ed4b25"/>
+                stop-color="#FFD18A"/>
 
-            <stop offset="42%"
-                stop-color="#f47b32"/>
+            <!-- Richer mid-point color -->
+            <stop offset="50%"
+                stop-color="#E87C2F"/>
 
-            <stop offset="72%"
-                stop-color="#f6a847"/>
-
+            <!-- Deep, warm lower color -->
             <stop offset="100%"
-                stop-color="#ffc15a"/>
-        </linearGradient>
-
-        <linearGradient id="leafHighlight"
-            x1="0%" y1="100%"
-            x2="100%" y2="0%">
-
-            <stop offset="0%"
-                stop-color="#ff7040"/>
-
-            <stop offset="100%"
-                stop-color="#ffd477"/>
+                stop-color="#C95A2B"/>
         </linearGradient>
     </defs>
 
-
-    <!-- =================================================
-         MAPLE LEAF BODY
-         ================================================= -->
-
+    <!-- MAPLE LEAF BODY -->
     <path
         d="
-        M 600 760
+        M 600 1000
 
-        C 570 710 540 665 510 620
+        C 570 950 515 905 450 900
+        L 300 930
+        L 360 810
+        
+        C 290 825 210 820 180 750
+        L 100 650
+        L 230 680
+        
+        C 180 620 130 540 160 490
+        L 250 450
+        L 310 520
+        
+        C 280 430 250 340 280 280
+        L 420 340
+        L 490 260
+        
+        C 500 180 500 100 600 100
 
-        L 425 705
-        L 438 595
-
-        L 315 655
-        L 350 535
-
-        L 210 550
-        L 330 455
-
-        L 165 390
-        L 365 380
-
-        L 255 265
-        L 445 320
-
-        L 425 105
-        L 535 285
-
-        C 565 325 590 335 600 335
-
-        C 610 335 635 325 665 285
-
-        L 775 105
-        L 755 320
-
-        L 945 265
-        L 835 380
-
-        L 1035 390
-        L 870 455
-
-        L 990 550
-        L 850 535
-
-        L 885 655
-        L 762 595
-        L 775 705
-        L 690 620
-
-        C 660 665 630 710 600 760
+        C 700 100 700 180 710 260
+        L 780 340
+        L 920 280
+        
+        C 950 340 920 430 890 520
+        L 950 450
+        L 1040 490
+        
+        C 1070 540 1020 620 970 680
+        L 1100 650
+        L 1020 750
+        
+        C 990 820 910 825 840 810
+        L 900 930
+        L 750 900
+        C 685 905 630 950 600 1000
 
         Z
         "
-        fill="url(#leafGradient)"
+        fill="url(#newLeafGradient)"
         stroke="#111111"
-        stroke-width="9"
+        stroke-width="2.5"
         stroke-linejoin="round"
     />
 
-
-    <!-- =================================================
-         LEFT LOWER LOBE
-         ================================================= -->
-
+    <!-- VEINS -->
     <path
         d="
-        M 600 760
-
-        C 530 800 455 835 370 850
-
-        C 305 860 245 850 180 825
-
-        C 245 805 300 775 355 735
-
-        L 425 680
-
-        L 510 620
-
-        Z
-        "
-        fill="#ed5429"
-        stroke="#111111"
-        stroke-width="9"
-        stroke-linejoin="round"
-    />
-
-
-    <!-- =================================================
-         RIGHT LOWER LOBE
-         ================================================= -->
-
-    <path
-        d="
-        M 600 760
-
-        L 690 620
-        L 775 680
-
-        C 835 730 900 765 1015 805
-
-        C 940 820 865 825 800 805
-
-        C 730 785 665 765 600 760
-
-        Z
-        "
-        fill="#f07832"
-        stroke="#111111"
-        stroke-width="9"
-        stroke-linejoin="round"
-    />
-
-
-    <!-- =================================================
-         CENTRAL VEIN
-         ================================================= -->
-
-    <path
-        d="
-        M 600 760
-        C 595 680 600 600 605 520
-        C 610 430 615 350 620 270
-        C 625 205 630 145 645 90
+        M 600 1000
+        C 595 900 600 700 605 500
+        C 610 300 615 200 600 100
         "
         fill="none"
         stroke="#111111"
-        stroke-width="8"
+        stroke-width="1.8"
         stroke-linecap="round"
     />
 
-
-    <!-- =================================================
-         LEFT PRIMARY VEINS
-         ================================================= -->
-
     <path
         d="
-        M 605 520
-        L 445 320
-
-        M 600 600
-        L 350 535
-
-        M 600 680
-        L 425 595
-
-        M 595 720
-        L 355 735
-
-        M 610 430
-        L 365 380
-
-        M 615 350
-        L 535 285
+        M 600 900 L 450 900
+        M 600 700 L 180 750
+        M 600 500 L 160 490
+        M 600 300 L 280 280
+        M 600 900 L 750 900
+        M 600 700 L 1020 750
+        M 600 500 L 1040 490
+        M 600 300 L 920 280
         "
         fill="none"
         stroke="#111111"
+        stroke-width="1.5"
+        stroke-linecap="round"
+    />
+
+    <path
+        d="
+        M 450 900 L 300 930
+        M 750 900 L 900 930
+        "
+        fill="none"
+        stroke="#111111"
+        stroke-width="1.2"
+        stroke-linecap="round"
+    />
+
+    <!-- STEM -->
+    <path
+        d="
+        M 600 1000
+        C 560 1030 520 1060 450 1080
+        C 400 1095 350 1090 300 1070
+        "
+        fill="none"
+        stroke="#964B00"
+        stroke-width="12"
+        stroke-linecap="round"
+    />
+
+    <path
+        d="
+        M 600 1000
+        C 560 1030 520 1060 450 1080
+        C 400 1095 350 1090 300 1070
+        "
+        fill="none"
+        stroke="#964B00"
         stroke-width="6"
-        stroke-linecap="round"
-    />
-
-
-    <!-- =================================================
-         RIGHT PRIMARY VEINS
-         ================================================= -->
-
-    <path
-        d="
-        M 610 520
-        L 835 380
-
-        M 605 600
-        L 850 535
-
-        M 600 680
-        L 775 595
-
-        M 595 720
-        L 870 735
-
-        M 615 430
-        L 835 380
-
-        M 620 350
-        L 775 285
-        "
-        fill="none"
-        stroke="#111111"
-        stroke-width="6"
-        stroke-linecap="round"
-    />
-
-
-    <!-- =================================================
-         SECONDARY VEINS — LEFT
-         ================================================= -->
-
-    <path
-        d="
-        M 445 320 L 365 380
-        M 445 320 L 425 250
-
-        M 365 380 L 300 330
-        M 365 380 L 315 430
-
-        M 350 535 L 275 480
-        M 350 535 L 300 565
-
-        M 425 595 L 360 550
-        M 425 595 L 390 625
-
-        M 425 680 L 360 650
-        M 425 680 L 400 710
-        "
-        fill="none"
-        stroke="#111111"
-        stroke-width="4"
-        stroke-linecap="round"
-    />
-
-
-    <!-- =================================================
-         SECONDARY VEINS — RIGHT
-         ================================================= -->
-
-    <path
-        d="
-        M 835 380 L 900 330
-        M 835 380 L 875 430
-
-        M 850 535 L 925 480
-        M 850 535 L 900 565
-
-        M 775 595 L 840 550
-        M 775 595 L 810 625
-
-        M 775 680 L 840 650
-        M 775 680 L 800 710
-        "
-        fill="none"
-        stroke="#111111"
-        stroke-width="4"
-        stroke-linecap="round"
-    />
-
-
-    <!-- =================================================
-         LOWER VEINS
-         ================================================= -->
-
-    <path
-        d="
-        M 600 760 L 510 720
-        M 510 720 L 450 690
-
-        M 600 760 L 505 790
-        M 505 790 L 425 805
-
-        M 600 760 L 690 720
-        M 690 720 L 755 690
-
-        M 600 760 L 705 790
-        M 705 790 L 790 805
-        "
-        fill="none"
-        stroke="#111111"
-        stroke-width="5"
-        stroke-linecap="round"
-    />
-
-
-    <!-- =================================================
-         STEM
-         ================================================= -->
-
-    <path
-        d="
-        M 600 755
-        C 565 825 520 890 455 950
-        C 415 987 375 1015 340 1035
-        "
-        fill="none"
-        stroke="#111111"
-        stroke-width="16"
-        stroke-linecap="round"
-    />
-
-    <path
-        d="
-        M 600 755
-        C 565 825 520 890 455 950
-        C 415 987 375 1015 340 1035
-        "
-        fill="none"
-        stroke="#c94a25"
-        stroke-width="9"
         stroke-linecap="round"
     />
 
