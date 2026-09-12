@@ -55,86 +55,343 @@ function createFallLeaves() {
        image, library, CDN, or asset required.
     */
    const mapleLeaf = `
-    <svg
-        viewBox="0 0 120 120"
-        xmlns="http://www.w3.org/2000/svg"
-        class="maple-svg"
-        aria-hidden="true">
+<svg
+    viewBox="0 0 1200 1100"
+    xmlns="http://www.w3.org/2000/svg"
+    class="maple-svg"
+    aria-hidden="true">
 
-        <path
-            d="
-            M60 5
+    <defs>
+        <linearGradient id="leafGradient"
+            x1="0%" y1="100%"
+            x2="100%" y2="0%">
 
-            L67 25
-            L82 14
-            L78 34
-            L101 27
-            L87 43
-            L112 45
-            L91 56
+            <stop offset="0%"
+                stop-color="#ed4b25"/>
 
-            L105 72
-            L83 68
-            L87 91
-            L69 76
+            <stop offset="42%"
+                stop-color="#f47b32"/>
 
-            L60 115
-            L51 76
+            <stop offset="72%"
+                stop-color="#f6a847"/>
 
-            L33 91
-            L37 68
-            L15 72
-            L29 56
+            <stop offset="100%"
+                stop-color="#ffc15a"/>
+        </linearGradient>
 
-            L8 45
-            L33 43
-            L19 27
-            L42 34
-            L38 14
-            L53 25
+        <linearGradient id="leafHighlight"
+            x1="0%" y1="100%"
+            x2="100%" y2="0%">
 
-            Z
-            "
-            fill="currentColor"
-        />
+            <stop offset="0%"
+                stop-color="#ff7040"/>
 
-        <!-- central vein -->
-        <path
-            d="M60 15 C59 42 60 72 60 108"
-            stroke="rgba(75,40,10,.38)"
-            stroke-width="1.4"
-            fill="none"
-        />
+            <stop offset="100%"
+                stop-color="#ffd477"/>
+        </linearGradient>
+    </defs>
 
-        <!-- left veins -->
-        <path
-            d="
-            M60 32 L42 23
-            M60 42 L29 35
-            M60 52 L20 48
-            M60 62 L27 63
-            M60 71 L39 80
-            "
-            stroke="rgba(75,40,10,.30)"
-            stroke-width="1"
-            fill="none"
-        />
 
-        <!-- right veins -->
-        <path
-            d="
-            M60 32 L78 23
-            M60 42 L91 35
-            M60 52 L100 48
-            M60 62 L93 63
-            M60 71 L81 80
-            "
-            stroke="rgba(75,40,10,.30)"
-            stroke-width="1"
-            fill="none"
-        />
+    <!-- =================================================
+         MAPLE LEAF BODY
+         ================================================= -->
 
-    </svg>
+    <path
+        d="
+        M 600 760
+
+        C 570 710 540 665 510 620
+
+        L 425 705
+        L 438 595
+
+        L 315 655
+        L 350 535
+
+        L 210 550
+        L 330 455
+
+        L 165 390
+        L 365 380
+
+        L 255 265
+        L 445 320
+
+        L 425 105
+        L 535 285
+
+        C 565 325 590 335 600 335
+
+        C 610 335 635 325 665 285
+
+        L 775 105
+        L 755 320
+
+        L 945 265
+        L 835 380
+
+        L 1035 390
+        L 870 455
+
+        L 990 550
+        L 850 535
+
+        L 885 655
+        L 762 595
+        L 775 705
+        L 690 620
+
+        C 660 665 630 710 600 760
+
+        Z
+        "
+        fill="url(#leafGradient)"
+        stroke="#111111"
+        stroke-width="9"
+        stroke-linejoin="round"
+    />
+
+
+    <!-- =================================================
+         LEFT LOWER LOBE
+         ================================================= -->
+
+    <path
+        d="
+        M 600 760
+
+        C 530 800 455 835 370 850
+
+        C 305 860 245 850 180 825
+
+        C 245 805 300 775 355 735
+
+        L 425 680
+
+        L 510 620
+
+        Z
+        "
+        fill="#ed5429"
+        stroke="#111111"
+        stroke-width="9"
+        stroke-linejoin="round"
+    />
+
+
+    <!-- =================================================
+         RIGHT LOWER LOBE
+         ================================================= -->
+
+    <path
+        d="
+        M 600 760
+
+        L 690 620
+        L 775 680
+
+        C 835 730 900 765 1015 805
+
+        C 940 820 865 825 800 805
+
+        C 730 785 665 765 600 760
+
+        Z
+        "
+        fill="#f07832"
+        stroke="#111111"
+        stroke-width="9"
+        stroke-linejoin="round"
+    />
+
+
+    <!-- =================================================
+         CENTRAL VEIN
+         ================================================= -->
+
+    <path
+        d="
+        M 600 760
+        C 595 680 600 600 605 520
+        C 610 430 615 350 620 270
+        C 625 205 630 145 645 90
+        "
+        fill="none"
+        stroke="#111111"
+        stroke-width="8"
+        stroke-linecap="round"
+    />
+
+
+    <!-- =================================================
+         LEFT PRIMARY VEINS
+         ================================================= -->
+
+    <path
+        d="
+        M 605 520
+        L 445 320
+
+        M 600 600
+        L 350 535
+
+        M 600 680
+        L 425 595
+
+        M 595 720
+        L 355 735
+
+        M 610 430
+        L 365 380
+
+        M 615 350
+        L 535 285
+        "
+        fill="none"
+        stroke="#111111"
+        stroke-width="6"
+        stroke-linecap="round"
+    />
+
+
+    <!-- =================================================
+         RIGHT PRIMARY VEINS
+         ================================================= -->
+
+    <path
+        d="
+        M 610 520
+        L 835 380
+
+        M 605 600
+        L 850 535
+
+        M 600 680
+        L 775 595
+
+        M 595 720
+        L 870 735
+
+        M 615 430
+        L 835 380
+
+        M 620 350
+        L 775 285
+        "
+        fill="none"
+        stroke="#111111"
+        stroke-width="6"
+        stroke-linecap="round"
+    />
+
+
+    <!-- =================================================
+         SECONDARY VEINS — LEFT
+         ================================================= -->
+
+    <path
+        d="
+        M 445 320 L 365 380
+        M 445 320 L 425 250
+
+        M 365 380 L 300 330
+        M 365 380 L 315 430
+
+        M 350 535 L 275 480
+        M 350 535 L 300 565
+
+        M 425 595 L 360 550
+        M 425 595 L 390 625
+
+        M 425 680 L 360 650
+        M 425 680 L 400 710
+        "
+        fill="none"
+        stroke="#111111"
+        stroke-width="4"
+        stroke-linecap="round"
+    />
+
+
+    <!-- =================================================
+         SECONDARY VEINS — RIGHT
+         ================================================= -->
+
+    <path
+        d="
+        M 835 380 L 900 330
+        M 835 380 L 875 430
+
+        M 850 535 L 925 480
+        M 850 535 L 900 565
+
+        M 775 595 L 840 550
+        M 775 595 L 810 625
+
+        M 775 680 L 840 650
+        M 775 680 L 800 710
+        "
+        fill="none"
+        stroke="#111111"
+        stroke-width="4"
+        stroke-linecap="round"
+    />
+
+
+    <!-- =================================================
+         LOWER VEINS
+         ================================================= -->
+
+    <path
+        d="
+        M 600 760 L 510 720
+        M 510 720 L 450 690
+
+        M 600 760 L 505 790
+        M 505 790 L 425 805
+
+        M 600 760 L 690 720
+        M 690 720 L 755 690
+
+        M 600 760 L 705 790
+        M 705 790 L 790 805
+        "
+        fill="none"
+        stroke="#111111"
+        stroke-width="5"
+        stroke-linecap="round"
+    />
+
+
+    <!-- =================================================
+         STEM
+         ================================================= -->
+
+    <path
+        d="
+        M 600 755
+        C 565 825 520 890 455 950
+        C 415 987 375 1015 340 1035
+        "
+        fill="none"
+        stroke="#111111"
+        stroke-width="16"
+        stroke-linecap="round"
+    />
+
+    <path
+        d="
+        M 600 755
+        C 565 825 520 890 455 950
+        C 415 987 375 1015 340 1035
+        "
+        fill="none"
+        stroke="#c94a25"
+        stroke-width="9"
+        stroke-linecap="round"
+    />
+
+</svg>
 `;
 
 
@@ -368,7 +625,6 @@ function createFallLeaves() {
             `${leaf.rotation + 360}deg`
         );
 
-        element.querySelector(".maple-svg").style.color = leaf.color;
 
         container.appendChild(element);
     });
