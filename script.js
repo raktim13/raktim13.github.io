@@ -54,75 +54,88 @@ function createFallLeaves() {
        The SVG is deliberately inline so there is no external
        image, library, CDN, or asset required.
     */
-    const mapleLeaf = `
-        <svg
-            viewBox="0 0 100 100"
-            xmlns="http://www.w3.org/2000/svg"
-            class="maple-svg"
-            aria-hidden="true">
+   const mapleLeaf = `
+    <svg
+        viewBox="0 0 120 120"
+        xmlns="http://www.w3.org/2000/svg"
+        class="maple-svg"
+        aria-hidden="true">
 
-            <path
-                d="
-                M50 4
-                L57 23
-                L70 13
-                L68 31
-                L87 25
-                L78 40
-                L96 43
-                L80 52
-                L92 65
-                L73 62
-                L77 82
-                L61 72
-                L58 94
-                L50 76
-                L42 94
-                L39 72
-                L23 82
-                L27 62
-                L8 65
-                L20 52
-                L4 43
-                L22 40
-                L13 25
-                L32 31
-                L30 13
-                L43 23
-                Z
-                "
-                fill="currentColor"
-            />
+        <path
+            d="
+            M60 5
 
-            <!-- central vein -->
-            <path
-                d="M50 16 L50 82"
-                stroke="rgba(80,35,10,.38)"
-                stroke-width="1.3"
-                fill="none"
-            />
+            L67 25
+            L82 14
+            L78 34
+            L101 27
+            L87 43
+            L112 45
+            L91 56
 
-            <!-- side veins -->
-            <path
-                d="
-                M50 35 L30 25
-                M50 43 L20 37
-                M50 51 L15 50
-                M50 59 L25 65
-                M50 68 L35 76
+            L105 72
+            L83 68
+            L87 91
+            L69 76
 
-                M50 35 L70 25
-                M50 43 L80 37
-                M50 51 L85 50
-                M50 59 L75 65
-                M50 68 L65 76
-                "
-                stroke="rgba(80,35,10,.30)"
-                stroke-width="1"
-                fill="none"
-            />
-        </svg>
-    `;
+            L60 115
+            L51 76
+
+            L33 91
+            L37 68
+            L15 72
+            L29 56
+
+            L8 45
+            L33 43
+            L19 27
+            L42 34
+            L38 14
+            L53 25
+
+            Z
+            "
+            fill="currentColor"
+        />
+
+        <!-- central vein -->
+        <path
+            d="M60 15 C59 42 60 72 60 108"
+            stroke="rgba(75,40,10,.38)"
+            stroke-width="1.4"
+            fill="none"
+        />
+
+        <!-- left veins -->
+        <path
+            d="
+            M60 32 L42 23
+            M60 42 L29 35
+            M60 52 L20 48
+            M60 62 L27 63
+            M60 71 L39 80
+            "
+            stroke="rgba(75,40,10,.30)"
+            stroke-width="1"
+            fill="none"
+        />
+
+        <!-- right veins -->
+        <path
+            d="
+            M60 32 L78 23
+            M60 42 L91 35
+            M60 52 L100 48
+            M60 62 L93 63
+            M60 71 L81 80
+            "
+            stroke="rgba(75,40,10,.30)"
+            stroke-width="1"
+            fill="none"
+        />
+
+    </svg>
+`;
 
 
     /*
