@@ -480,105 +480,32 @@ function createFallLeaves() {
 
 
 
-        element.style.setProperty("--leaf-size", `${leaf.size}px`);
+       element.style.setProperty(
+    "--leaf-size",
+    `${Math.max(12, Math.round(leaf.size * 0.32))}px`
+);
 
-        element.style.setProperty("--leaf-opacity", leaf.opacity);
+element.style.setProperty(
+    "--leaf-opacity",
+    Math.min(leaf.opacity, 0.28)
+);
 
-        element.style.setProperty("--fall-duration", `${leaf.speed}s`);
+element.style.setProperty("--fall-duration", `${leaf.speed}s`);
+element.style.setProperty("--fall-delay", `${leaf.delay}s`);
+element.style.setProperty("--start-x", leaf.x);
 
-        element.style.setProperty("--fall-delay", `${leaf.delay}s`);
+/* No sideways movement: straight downward only */
+element.style.setProperty("--drift-1", "0px");
+element.style.setProperty("--drift-2", "0px");
+element.style.setProperty("--drift-3", "0px");
+element.style.setProperty("--drift-4", "0px");
 
-        element.style.setProperty("--start-x", leaf.x);
-
-
-
-        element.style.setProperty(
-
-            "--drift-1",
-
-            `${leaf.drift * 0.35}px`
-
-        );
-
-
-
-        element.style.setProperty(
-
-            "--drift-2",
-
-            `${leaf.drift * -0.20}px`
-
-        );
-
-
-
-        element.style.setProperty(
-
-            "--drift-3",
-
-            `${leaf.drift * 0.55}px`
-
-        );
-
-
-
-        element.style.setProperty(
-
-            "--drift-4",
-
-            `${leaf.drift}px`
-
-        );
-
-
-
-        element.style.setProperty(
-
-            "--rotation-start",
-
-            `${leaf.rotation}deg`
-
-        );
-
-
-
-        element.style.setProperty(
-
-            "--rotation-mid-1",
-
-            `${leaf.rotation + 90}deg`
-
-        );
-
-
-
-        element.style.setProperty(
-
-            "--rotation-mid-2",
-
-            `${leaf.rotation + 180}deg`
-
-        );
-
-
-
-        element.style.setProperty(
-
-            "--rotation-mid-3",
-
-            `${leaf.rotation + 270}deg`
-
-        );
-
-
-
-        element.style.setProperty(
-
-            "--rotation-end",
-
-            `${leaf.rotation + 360}deg`
-
-        );
+/* Keep each leaf at its random starting angle: no spinning */
+element.style.setProperty("--rotation-start", `${leaf.rotation}deg`);
+element.style.setProperty("--rotation-mid-1", `${leaf.rotation}deg`);
+element.style.setProperty("--rotation-mid-2", `${leaf.rotation}deg`);
+element.style.setProperty("--rotation-mid-3", `${leaf.rotation}deg`);
+element.style.setProperty("--rotation-end", `${leaf.rotation}deg`);
 
 
 
