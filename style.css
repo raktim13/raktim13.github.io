@@ -801,6 +801,15 @@ details[open] > summary .folder-name{
     will-change: transform;
 }
 
+.fall-leaf-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    pointer-events: none;
+    user-select: none;
+}
+
 /* Keep the actual website above the leaves */
 body > * {
     position: relative;
