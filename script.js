@@ -34,6 +34,336 @@ function toggleTheme() {
     updateProfilePicture();
 }
 
+
+// =========================================================
+// AUTUMN MAPLE LEAF OVERLAY
+// =========================================================
+
+function createFallLeaves() {
+
+    // Don't create it twice
+    if (document.querySelector(".fall-leaves")) return;
+
+    const container = document.createElement("div");
+    container.className = "fall-leaves";
+    container.setAttribute("aria-hidden", "true");
+
+    /*
+       Maple leaf SVG.
+
+       The SVG is deliberately inline so there is no external
+       image, library, CDN, or asset required.
+    */
+    const mapleLeaf = `
+        <svg
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+            class="maple-svg"
+            aria-hidden="true">
+
+            <path
+                d="
+                M50 4
+                L57 23
+                L70 13
+                L68 31
+                L87 25
+                L78 40
+                L96 43
+                L80 52
+                L92 65
+                L73 62
+                L77 82
+                L61 72
+                L58 94
+                L50 76
+                L42 94
+                L39 72
+                L23 82
+                L27 62
+                L8 65
+                L20 52
+                L4 43
+                L22 40
+                L13 25
+                L32 31
+                L30 13
+                L43 23
+                Z
+                "
+                fill="currentColor"
+            />
+
+            <!-- central vein -->
+            <path
+                d="M50 16 L50 82"
+                stroke="rgba(80,35,10,.38)"
+                stroke-width="1.3"
+                fill="none"
+            />
+
+            <!-- side veins -->
+            <path
+                d="
+                M50 35 L30 25
+                M50 43 L20 37
+                M50 51 L15 50
+                M50 59 L25 65
+                M50 68 L35 76
+
+                M50 35 L70 25
+                M50 43 L80 37
+                M50 51 L85 50
+                M50 59 L75 65
+                M50 68 L65 76
+                "
+                stroke="rgba(80,35,10,.30)"
+                stroke-width="1"
+                fill="none"
+            />
+        </svg>
+    `;
+
+
+    /*
+       Each object controls one leaf.
+
+       x       = horizontal starting position
+       size    = leaf size
+       color   = autumn color
+       opacity = transparency
+       speed   = falling speed
+       delay   = when it enters the screen
+       drift   = sideways movement
+    */
+
+    const leaves = [
+
+        {
+            x: "4vw",
+            size: 82,
+            color: "#d95f02",
+            opacity: .72,
+            speed: 18,
+            delay: -4,
+            drift: 80,
+            rotation: 120
+        },
+
+        {
+            x: "13vw",
+            size: 42,
+            color: "#b83b12",
+            opacity: .68,
+            speed: 14,
+            delay: -9,
+            drift: -55,
+            rotation: -180
+        },
+
+        {
+            x: "24vw",
+            size: 105,
+            color: "#f29f05",
+            opacity: .62,
+            speed: 22,
+            delay: -15,
+            drift: 100,
+            rotation: 240
+        },
+
+        {
+            x: "35vw",
+            size: 48,
+            color: "#d95f02",
+            opacity: .58,
+            speed: 16,
+            delay: -6,
+            drift: -80,
+            rotation: -140
+        },
+
+        {
+            x: "47vw",
+            size: 70,
+            color: "#e87511",
+            opacity: .64,
+            speed: 20,
+            delay: -12,
+            drift: 65,
+            rotation: 200
+        },
+
+        {
+            x: "59vw",
+            size: 38,
+            color: "#b83b12",
+            opacity: .55,
+            speed: 13,
+            delay: -3,
+            drift: -65,
+            rotation: -220
+        },
+
+        {
+            x: "68vw",
+            size: 115,
+            color: "#f29f05",
+            opacity: .60,
+            speed: 24,
+            delay: -20,
+            drift: 90,
+            rotation: 280
+        },
+
+        {
+            x: "80vw",
+            size: 52,
+            color: "#c94c12",
+            opacity: .67,
+            speed: 17,
+            delay: -8,
+            drift: -100,
+            rotation: -170
+        },
+
+        {
+            x: "91vw",
+            size: 75,
+            color: "#e87511",
+            opacity: .58,
+            speed: 21,
+            delay: -17,
+            drift: -70,
+            rotation: 190
+        },
+
+        {
+            x: "-2vw",
+            size: 55,
+            color: "#f29f05",
+            opacity: .55,
+            speed: 15,
+            delay: -11,
+            drift: 75,
+            rotation: 230
+        },
+
+        {
+            x: "18vw",
+            size: 28,
+            color: "#b83b12",
+            opacity: .50,
+            speed: 12,
+            delay: -2,
+            drift: 45,
+            rotation: -150
+        },
+
+        {
+            x: "42vw",
+            size: 32,
+            color: "#d95f02",
+            opacity: .48,
+            speed: 11,
+            delay: -7,
+            drift: -50,
+            rotation: 170
+        },
+
+        {
+            x: "73vw",
+            size: 30,
+            color: "#b83b12",
+            opacity: .48,
+            speed: 14,
+            delay: -14,
+            drift: 55,
+            rotation: -190
+        },
+
+        {
+            x: "96vw",
+            size: 45,
+            color: "#f29f05",
+            opacity: .52,
+            speed: 18,
+            delay: -5,
+            drift: -60,
+            rotation: 210
+        }
+
+    ];
+
+
+    leaves.forEach(leaf => {
+
+        const element = document.createElement("div");
+
+        element.className = "fall-leaf";
+
+        element.innerHTML = mapleLeaf;
+
+        element.style.setProperty("--leaf-size", `${leaf.size}px`);
+        element.style.setProperty("--leaf-opacity", leaf.opacity);
+        element.style.setProperty("--fall-duration", `${leaf.speed}s`);
+        element.style.setProperty("--fall-delay", `${leaf.delay}s`);
+        element.style.setProperty("--start-x", leaf.x);
+
+        element.style.setProperty(
+            "--drift-1",
+            `${leaf.drift * 0.35}px`
+        );
+
+        element.style.setProperty(
+            "--drift-2",
+            `${leaf.drift * -0.20}px`
+        );
+
+        element.style.setProperty(
+            "--drift-3",
+            `${leaf.drift * 0.55}px`
+        );
+
+        element.style.setProperty(
+            "--drift-4",
+            `${leaf.drift}px`
+        );
+
+        element.style.setProperty(
+            "--rotation-start",
+            `${leaf.rotation}deg`
+        );
+
+        element.style.setProperty(
+            "--rotation-mid-1",
+            `${leaf.rotation + 90}deg`
+        );
+
+        element.style.setProperty(
+            "--rotation-mid-2",
+            `${leaf.rotation + 180}deg`
+        );
+
+        element.style.setProperty(
+            "--rotation-mid-3",
+            `${leaf.rotation + 270}deg`
+        );
+
+        element.style.setProperty(
+            "--rotation-end",
+            `${leaf.rotation + 360}deg`
+        );
+
+        element.querySelector(".maple-svg").style.color = leaf.color;
+
+        container.appendChild(element);
+    });
+
+    document.body.prepend(container);
+}
+
+
 // 2. NAVIGATION MENU LOADER
 document.addEventListener("DOMContentLoaded", function() {
     // Update the icon correctly based on the current theme
