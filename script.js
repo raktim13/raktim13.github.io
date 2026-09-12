@@ -482,12 +482,12 @@ function createFallLeaves() {
 
        element.style.setProperty(
     "--leaf-size",
-    `${Math.max(20, Math.round(leaf.size * 0.50))}px`
+    `${Math.max(20, Math.round(leaf.size * 0.76))}px`
 );
 
 element.style.setProperty(
     "--leaf-opacity",
-    Math.min(leaf.opacity, 0.34)
+    Math.min(leaf.opacity, 0.49)
 );
 
 element.style.setProperty("--fall-duration", `${leaf.speed}s`);
@@ -495,17 +495,17 @@ element.style.setProperty("--fall-delay", `${leaf.delay}s`);
 element.style.setProperty("--start-x", leaf.x);
 
 /* Windy, but still mostly downward */
-element.style.setProperty("--drift-1", `${leaf.drift * 0.18}px`);
-element.style.setProperty("--drift-2", `${leaf.drift * -0.12}px`);
-element.style.setProperty("--drift-3", `${leaf.drift * 0.24}px`);
-element.style.setProperty("--drift-4", `${leaf.drift * 0.08}px`);
+element.style.setProperty("--drift-1", `${leaf.drift * 0.40}px`);
+element.style.setProperty("--drift-2", `${leaf.drift * -0.30}px`);
+element.style.setProperty("--drift-3", `${leaf.drift * 0.55}px`);
+element.style.setProperty("--drift-4", `${leaf.drift * 0.18}px`);
 
 /* Gentle rocking plus a slow overall turn */
-element.style.setProperty("--rotation-start", `${leaf.rotation - 12}deg`);
-element.style.setProperty("--rotation-mid-1", `${leaf.rotation + 8}deg`);
-element.style.setProperty("--rotation-mid-2", `${leaf.rotation - 6}deg`);
-element.style.setProperty("--rotation-mid-3", `${leaf.rotation + 15}deg`);
-element.style.setProperty("--rotation-end", `${leaf.rotation + 35}deg`);
+element.style.setProperty("--rotation-start", `${leaf.rotation - 18}deg`);
+element.style.setProperty("--rotation-mid-1", `${leaf.rotation + 25}deg`);
+element.style.setProperty("--rotation-mid-2", `${leaf.rotation - 12}deg`);
+element.style.setProperty("--rotation-mid-3", `${leaf.rotation + 40}deg`);
+element.style.setProperty("--rotation-end", `${leaf.rotation + 70}deg`);
 
 
 
