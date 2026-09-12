@@ -366,6 +366,7 @@ function createFallLeaves() {
 
 // 2. NAVIGATION MENU LOADER
 document.addEventListener("DOMContentLoaded", function() {
+        createFallLeaves();
     // Update the icon correctly based on the current theme
     const themeIcon = document.getElementById('theme-icon');
     if (themeIcon) {
