@@ -495,17 +495,17 @@ element.style.setProperty("--fall-delay", `${leaf.delay}s`);
 element.style.setProperty("--start-x", leaf.x);
 
 /* Windy, but still mostly downward */
-element.style.setProperty("--drift-1", `${leaf.drift * 0.40}px`);
-element.style.setProperty("--drift-2", `${leaf.drift * -0.30}px`);
-element.style.setProperty("--drift-3", `${leaf.drift * 0.55}px`);
-element.style.setProperty("--drift-4", `${leaf.drift * 0.18}px`);
+element.style.setProperty("--drift-1", `${leaf.drift * 0.65}px`);
+element.style.setProperty("--drift-2", `${leaf.drift * -0.50}px`);
+element.style.setProperty("--drift-3", `${leaf.drift * 0.85}px`);
+element.style.setProperty("--drift-4", `${leaf.drift * 0.30}px`);
 
 /* Gentle rocking plus a slow overall turn */
-element.style.setProperty("--rotation-start", `${leaf.rotation - 18}deg`);
-element.style.setProperty("--rotation-mid-1", `${leaf.rotation + 25}deg`);
-element.style.setProperty("--rotation-mid-2", `${leaf.rotation - 12}deg`);
-element.style.setProperty("--rotation-mid-3", `${leaf.rotation + 40}deg`);
-element.style.setProperty("--rotation-end", `${leaf.rotation + 70}deg`);
+element.style.setProperty("--rotation-start", `${leaf.rotation - 25}deg`);
+element.style.setProperty("--rotation-mid-1", `${leaf.rotation + 42}deg`);
+element.style.setProperty("--rotation-mid-2", `${leaf.rotation - 22}deg`);
+element.style.setProperty("--rotation-mid-3", `${leaf.rotation + 65}deg`);
+element.style.setProperty("--rotation-end", `${leaf.rotation + 105}deg`);
 
 
 
