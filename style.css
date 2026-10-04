@@ -103,54 +103,39 @@
 ========================= */
 
 .profile-container {
-    position: relative;
     margin-top: 20px;
-    min-height: 250px;
     width: 100%;
+    overflow: hidden;
 }
 
 .profile-pic {
-    position: absolute;
-    left: 0;
-    top: 0;
+    float: left;
 
-    width: 250px !important;
-    max-width: 250px !important;
-    height: auto !important;
+    width: 250px;
+    max-width: 250px;
+    height: auto;
+
+    margin: 0 30px 20px 0;
 
     border-radius: 4px;
     border: 2px solid var(--nav-line);
     display: block;
 
     transition:
-        left 1.8s cubic-bezier(0.16, 1, 0.3, 1),
+        float 1.8s ease,
         opacity 0.9s ease;
 }
 
 .profile-text {
-    position: absolute;
-    left: 280px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    width: calc(100% - 280px);
-
-    transition:
-        left 1.8s cubic-bezier(0.16, 1, 0.3, 1),
-        width 1.8s cubic-bezier(0.16, 1, 0.3, 1);
+    width: 100%;
 }
-
 /* =========================
    LIGHT MODE
 ========================= */
 
 [data-theme="light"] .profile-pic {
-    left: calc(100% - 250px);
-}
-
-[data-theme="light"] .profile-text {
-    left: 0;
-    width: calc(100% - 280px);
+    float: right;
+    margin: 0 0 20px 30px;
 }
 
 /* =========================
@@ -158,32 +143,27 @@
 ========================= */
 
 @media (max-width: 700px) {
+
     .profile-container {
-        display: flex;
-        flex-direction: column;
-        min-height: 0;
-        gap: 20px;
+        width: 100%;
     }
 
     .profile-pic,
     [data-theme="light"] .profile-pic {
-        position: relative;
-        left: auto;
-        top: auto;
-        width: 250px !important;
-        max-width: 100% !important;
+        float: left;
+
+        width: 150px;
+        max-width: 150px;
+        height: auto;
+
+        margin: 0 20px 15px 0;
     }
 
     .profile-text,
     [data-theme="light"] .profile-text {
-        position: relative;
-        left: auto;
-        top: auto;
-        transform: none;
         width: 100%;
     }
 }
-
 .folder-summary{
     display:flex;
     align-items:center;
