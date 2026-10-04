@@ -945,19 +945,36 @@ const myNotes = {
                         term: "Autumn 2026",
                         status: "ongoing",
 
-                    books: []
+                    books: [
+                        {
+                                title: "Differential Topology",
+                                author: "Victor Guillemin, Alan Pollack",
+                                url: "https://bookstore.ams.org/chel-370-h"
+                            }
+                    ]
                             },
                                 
                     },
 
-        "Differential Forms in Algebraic Topology": {
+        "Differential Forms and Characteristic Classes": {
                 "_meta": {
                         instructor: "Prof. Mahuya Datta",
                         institution: "Indian Statistical Institute, Kolkata",
                         term: "Autumn 2026",
                         status: "ongoing",
 
-                    books: []
+                    books: [
+                        {
+                                title: "Differential Forms in Algebraic Topology",
+                                author: "Raoul Bott , Loring W. Tu",
+                                url: "https://link.springer.com/book/10.1007/978-1-4757-3951-0"
+                            },
+                        {
+                                title: "Characteristic Classes",
+                                author: "John W. Milnor James D. Stasheff",
+                                url: "https://www.jstor.org/stable/j.ctt1b7x751"
+                            }
+                    ]
                             },
                                 
                     },
