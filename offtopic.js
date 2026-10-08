@@ -29,6 +29,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const folder = document.createElement("details");
     folder.className = "offtopic-folder";
+        folder.addEventListener("toggle", () => {
+    if (folder.open) {
+        const items = folder.querySelectorAll(".offtopic-item");
+
+        items.forEach(item => {
+            item.classList.remove("show");
+        });
+
+        items.forEach((item, index) => {
+            setTimeout(() => {
+                item.classList.add("show");
+            }, 85 + index * 45);
+        });
+    }
+});
 
     const summary = document.createElement("summary");
 
@@ -52,10 +67,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const list = document.createElement("div");
     list.className = "offtopic-list";
 
-    items.forEach(item => {
-        list.appendChild(createOfftopicItem(item, category.key));
-    });
+    items.forEach((item, index) => {
+    const itemElement = createOfftopicItem(item, category.key);
 
+    list.appendChild(itemElement);
+
+    setTimeout(() => {
+        if (folder.open) {
+            itemElement.classList.add("show");
+        }
+    }, 85 + index * 45);
+});
     folder.appendChild(summary);
     folder.appendChild(list);
 
