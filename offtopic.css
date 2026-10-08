@@ -6,14 +6,14 @@
 :root {
     --offtopic-green: #6F7F65;
     --offtopic-beige: #f5efe3;
-    --offtopic-text: #000000;
+    --offtopic-text: #ffffff;
     --offtopic-border: #6F7F65;
 }
 
 [data-theme="light"] {
     --offtopic-green: #3F5B46;
     --offtopic-beige: #f5efe3;
-    --offtopic-text: #000000;
+    --offtopic-text: #111111;
     --offtopic-border: #3F5B46;
 }
 
@@ -43,7 +43,7 @@
 
     padding: 4px 0;
 
-    color: #000000;
+    color: var(--offtopic-text);
 
     cursor: pointer;
     list-style: none;
@@ -152,7 +152,7 @@
     font: inherit;
     text-align: left;
 
-    color: #000000;
+    color: var(--offtopic-text);
     background: transparent;
 
     border: none;
