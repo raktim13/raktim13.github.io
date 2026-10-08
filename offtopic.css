@@ -42,45 +42,64 @@
 
     padding: 4px 0;
 
-    color: var(--text-color);
+    color: #000000;
 
     cursor: pointer;
     list-style: none;
 
     transition:
-        transform 0.2s ease,
-        color 0.2s ease;
+        color 160ms ease,
+        transform 160ms ease;
 }
 
 .offtopic-folder summary::-webkit-details-marker {
     display: none;
 }
 
-.offtopic-folder summary::before {
-    content: "▸";
-
-    display: inline-block;
-
-    font-size: 0.9em;
-
-    transition: transform 0.2s ease;
-}
-
-.offtopic-folder[open] summary::before {
-    transform: rotate(90deg);
-}
-
 .offtopic-folder summary:hover {
-    transform: translateX(3px);
+    color: var(--offtopic-green);
+    transform: translateX(2px);
+}
+
+.offtopic-folder[open] summary {
+    color: var(--offtopic-green);
 }
 
 .offtopic-folder-icon {
     font-size: 1.25rem;
+
+    transition:
+        color 160ms ease,
+        transform 160ms ease;
+}
+
+.offtopic-folder summary:hover .offtopic-folder-icon,
+.offtopic-folder[open] .offtopic-folder-icon {
+    color: var(--offtopic-green);
+    transform: translateX(1px);
 }
 
 .offtopic-folder summary span:last-child {
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    position: relative;
+}
+
+.offtopic-folder summary span:last-child::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+
+    width: 0;
+    height: 1px;
+
+    background: var(--offtopic-green);
+
+    transition: width 180ms ease;
+}
+
+.offtopic-folder summary:hover span:last-child::after {
+    width: 100%;
 }
 
 
@@ -123,9 +142,7 @@
    --------------------------------------------------------- */
 
 .offtopic-item-title {
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    display: block;
 
     width: fit-content;
 
@@ -134,7 +151,7 @@
     font: inherit;
     text-align: left;
 
-    color: var(--text-color);
+    color: #000000;
     background: transparent;
 
     border: none;
@@ -142,30 +159,21 @@
     cursor: pointer;
 
     transition:
-        transform 0.2s ease,
-        color 0.2s ease;
+        color 160ms ease,
+        transform 160ms ease;
 }
 
 .offtopic-item-title::before {
-    content: "▸";
-
-    display: inline-block;
-
-    font-size: 0.85em;
-
-    transition: transform 0.2s ease;
-}
-
-.offtopic-item-title.open::before {
-    transform: rotate(90deg);
+    content: "";
 }
 
 .offtopic-item-title:hover {
-    transform: translateX(3px);
+    color: var(--offtopic-green);
+    transform: translateX(2px);
 }
 
 .offtopic-item-title.open {
-    color: var(--text-color);
+    color: var(--offtopic-green);
 }
 
 /* ---------------------------------------------------------
