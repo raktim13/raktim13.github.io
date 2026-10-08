@@ -97,6 +97,27 @@
     margin-left: 28px;
 }
 
+.offtopic-item {
+    opacity: 0;
+    transform: translateY(-6px);
+}
+
+.offtopic-folder[open] .offtopic-item.show {
+    animation: offtopic-item-show 0.3s ease forwards;
+}
+
+@keyframes offtopic-item-show {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* ---------------------------------------------------------
    ITEMS INSIDE FOLDERS
    --------------------------------------------------------- */
