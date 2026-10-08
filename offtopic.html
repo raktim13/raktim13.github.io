@@ -6,85 +6,38 @@
     <title>Offtopic</title>
 
     <meta name="description"
-          content="Beyond mathematics: films, music, and other interests of Raktim Debnath.">
+          content="Beyond mathematics: films, series, music, and other interests of Raktim Debnath.">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="offtopic.css">
+
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined">
 </head>
 
 <body>
 
+    <button id="theme-btn" onclick="toggleTheme()" title="Switch Theme">
+        <span id="theme-icon" class="material-symbols-outlined">light_mode</span>
+    </button>
+
     <div id="nav-placeholder"></div>
 
     <main class="page-content">
-        <h2>Films</h2>
 
-        <p>  Films I've watched and find interesting.</p>
+        <h1>Offtopic</h1>
 
-        <h2>Music</h2>
+        <p>
+            Films, series, music, and other things I find interesting.
+        </p>
 
-        <p>  Songs and albums I've listened to and find interesting.</p>
-<!-- <div class="music-list">
+        <div id="offtopic-container"></div>
 
-    <iframe
-        allow="autoplay *; encrypted-media *;"
-        frameborder="0"
-        height="175"
-        style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
-        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-        src="https://embed.music.apple.com/us/album/red-taylors-version/1590368448">
-    </iframe>
-
-    <iframe
-        allow="autoplay *; encrypted-media *;"
-        frameborder="0"
-        height="175"
-        style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
-        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-        src="https://embed.music.apple.com/us/album/unreal-unearth/1690513153">
-    </iframe>
-
-    <iframe
-        allow="autoplay *; encrypted-media *;"
-        frameborder="0"
-        height="175"
-        style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
-        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-        src="https://embed.music.apple.com/us/album/harrys-house/1615584999">
-    </iframe>
-
-    <iframe
-        allow="autoplay *; encrypted-media *;"
-        frameborder="0"
-        height="175"
-        style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
-        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-        src="https://embed.music.apple.com/us/album/preachers-daughter/1622421973">
-    </iframe>
-
-    <iframe
-        allow="autoplay *; encrypted-media *;"
-        frameborder="0"
-        height="175"
-        style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
-        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-        src="https://embed.music.apple.com/us/album/norman-fucking-rockwell/1474665738">
-    </iframe>
-
-    <iframe
-        allow="autoplay *; encrypted-media *;"
-        frameborder="0"
-        height="175"
-        style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
-        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
-        src="https://embed.music.apple.com/us/album/folklore/1524801260">
-    </iframe>
-
-</div> -->
     </main>
 
     <script src="script.js"></script>
+    <script src="offtopic_data.js"></script>
+    <script src="offtopic.js"></script>
 
 </body>
 </html>
