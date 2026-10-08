@@ -21,24 +21,46 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     categories.forEach(category => {
-        const items = offTopic[category.key] || [];
 
-        const section = document.createElement("section");
-        section.className = `offtopic-section offtopic-${category.key}`;
+    const items = offTopic[category.key] || [];
 
-        const heading = document.createElement("h2");
-        heading.textContent = category.title;
-        section.appendChild(heading);
+    const section = document.createElement("section");
+    section.className = `offtopic-section offtopic-${category.key}`;
 
-        const list = document.createElement("div");
-        list.className = "offtopic-list";
+    const folder = document.createElement("details");
+    folder.className = "offtopic-folder";
 
-        items.forEach(item => {
-            list.appendChild(createOfftopicItem(item, category.key));
-        });
+    const summary = document.createElement("summary");
 
-        section.appendChild(list);
-        container.appendChild(section);
+    const icon = document.createElement("span");
+    icon.className = "material-symbols-outlined offtopic-folder-icon";
+
+    if (category.key === "movies") {
+        icon.textContent = "movie";
+    } else if (category.key === "series") {
+        icon.textContent = "tv";
+    } else if (category.key === "music") {
+        icon.textContent = "music_note";
+    }
+
+    const title = document.createElement("span");
+    title.textContent = category.title;
+
+    summary.appendChild(icon);
+    summary.appendChild(title);
+
+    const list = document.createElement("div");
+    list.className = "offtopic-list";
+
+    items.forEach(item => {
+        list.appendChild(createOfftopicItem(item, category.key));
+    });
+
+    folder.appendChild(summary);
+    folder.appendChild(list);
+
+    section.appendChild(folder);
+    container.appendChild(section);
     });
 });
 
