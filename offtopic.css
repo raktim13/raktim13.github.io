@@ -5,14 +5,14 @@
 :root {
     --offtopic-green: #6F7F65;
     --offtopic-beige: #f5efe3;
-    --offtopic-text: #1f1a16;
+    --offtopic-text: var(--text-color);
     --offtopic-border: #6F7F65;
 }
 
 [data-theme="light"] {
     --offtopic-green: #3F5B46;
     --offtopic-beige: #f5efe3;
-    --offtopic-text: #1f1a16;
+    --offtopic-text: var(--text-color);
     --offtopic-border: #3F5B46;
 }
 
