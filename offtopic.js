@@ -113,9 +113,11 @@ function createOfftopicItem(item, category) {
         });
 
         if (!currentlyOpen) {
-            card.hidden = false;
-            button.classList.add("open");
-        }
+    card.hidden = false;
+    button.classList.add("open");
+
+    animateOfftopicCard(card);
+        }    
     });
 
 
@@ -136,13 +138,14 @@ function createOfftopicItem(item, category) {
     info.className = "offtopic-info-panel";
 
     const title = document.createElement("h3");
-    title.textContent = item.title;
-    info.appendChild(title);
+title.className = "offtopic-typewriter";
+title.dataset.text = item.title;
+info.appendChild(title);
 
     if (item.year) {
         const year = document.createElement("div");
-        year.className = "offtopic-year";
-        year.textContent = item.year;
+        year.className = "offtopic-year offtopic-typewriter";
+        year.dataset.text = item.year;
         info.appendChild(year);
     }
 
@@ -217,8 +220,8 @@ function createMetadataRow(label, value) {
     labelElement.textContent = `${label}:`;
 
     const valueElement = document.createElement("span");
-    valueElement.className = "offtopic-metadata-value";
-    valueElement.textContent = value;
+    valueElement.className = "offtopic-metadata-value offtopic-typewriter";
+    valueElement.dataset.text = value;
 
     row.appendChild(labelElement);
     row.appendChild(valueElement);
@@ -231,9 +234,48 @@ function createExternalLink(label, url) {
     const link = document.createElement("a");
 
     link.href = url;
-    link.textContent = label;
+    link.className = "offtopic-typewriter";
+    link.dataset.text = label;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
 
     return link;
+}
+
+
+function offtopicSleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
+async function typeOfftopicElement(element) {
+    const text = element.dataset.text;
+
+    element.textContent = "";
+    element.classList.add("typing");
+
+    for (const letter of text) {
+        element.textContent += letter;
+        await offtopicSleep(25 + Math.random() * 20);
+    }
+
+    await offtopicSleep(250);
+
+    element.classList.remove("typing");
+}
+
+
+async function animateOfftopicCard(card) {
+
+    if (card.dataset.typed) {
+        return;
+    }
+
+    card.dataset.typed = "true";
+
+    const items = card.querySelectorAll(".offtopic-typewriter");
+
+    for (const item of items) {
+        await typeOfftopicElement(item);
+    }
 }
