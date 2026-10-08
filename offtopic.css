@@ -171,7 +171,9 @@
 /* ---------------------------------------------------------
    CARD
    --------------------------------------------------------- */
-
+.offtopic-card[hidden] {
+    display: none;
+}
 .offtopic-card {
     display: grid;
     grid-template-columns: 240px 1fr;
