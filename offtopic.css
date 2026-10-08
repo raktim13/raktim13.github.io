@@ -4,17 +4,17 @@
 
 
 :root {
-    --offtopic-green: #6F7F65;
+    --offtopic-green: #3F5B46;
     --offtopic-beige: #f5efe3;
     --offtopic-text: #ffffff;
-    --offtopic-border: #6F7F65;
+    --offtopic-border: #3F5B46;
 }
 
 [data-theme="light"] {
-    --offtopic-green: #3F5B46;
+    --offtopic-green: #6F7F65;
     --offtopic-beige: #f5efe3;
     --offtopic-text: #111111;
-    --offtopic-border: #3F5B46;
+    --offtopic-border: #6F7F65;
 }
 
 
