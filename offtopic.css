@@ -242,14 +242,14 @@
 .offtopic-info-panel {
     padding: 24px;
 
-    color: var(--offtopic-text);
+    color: var(--offtopic-green);
 }
 
 .offtopic-info-panel h3 {
     margin-top: 0;
     margin-bottom: 4px;
 
-    color: var(--offtopic-text);
+    color: var(--offtopic-green);
 }
 
 .offtopic-year {
