@@ -1,0 +1,73 @@
+name: Update page timestamps
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '*.html'
+      - '.github/workflows/update-timestamps.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-timestamps:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update page timestamps
+        run: |
+          python3 <<'PY'
+          import subprocess
+          from datetime import datetime, timezone
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          import re
+
+          pages = ["index.html", "archive.html", "contact.html", "offtopic.html"]
+          ist = ZoneInfo("Asia/Kolkata")
+          changed = False
+
+          for page in pages:
+              path = Path(page)
+              if not path.exists():
+                  continue
+
+              result = subprocess.run(
+                  ["git", "log", "-1", "--format=%cI", "--", page],
+                  capture_output=True, text=True, check=True
+              )
+              if not result.stdout.strip():
+                  continue
+
+              timestamp = datetime.fromisoformat(result.stdout.strip())
+              timestamp = timestamp.astimezone(ist)
+              display = timestamp.strftime("%d %b %Y, %H:%M") + " IST (UTC+05:30)"
+              iso = timestamp.isoformat(timespec="minutes")
+
+              html = path.read_text(encoding="utf-8")
+              pattern = r'(<time class="last-updated"[^>]*>).*?(</time>)'
+              replacement = rf'\g<1>{display}\g<2>'
+              updated = re.sub(pattern, replacement, html, count=1, flags=re.S)
+
+              if updated != html:
+                  path.write_text(updated, encoding="utf-8")
+                  changed = True
+
+          if changed:
+              subprocess.run(["git", "config", "user.name", "github-actions[bot]"], check=True)
+              subprocess.run(["git", "config", "user.email", "41898282+github-actions[bot]@users.noreply.github.com"], check=True)
+              subprocess.run(["git", "add", *pages], check=True)
+              subprocess.run(
+                  ["git", "commit", "-m", "Update page timestamps"],
+                  check=False
+              )
+              subprocess.run(["git", "push"], check=True)
+          PY
