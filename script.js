@@ -9,7 +9,6 @@ if (savedTheme === 'light') {
 }
 
 
-
 function updateProfilePicture() {
 
     const profilePic = document.getElementById('profile-pic');
