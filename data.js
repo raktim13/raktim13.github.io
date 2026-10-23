@@ -47,8 +47,7 @@ const myNotes = {
                         term: "Autumn 2021",
                         status: "completed",
 
-                    books: [],
-                    topics: [
+                    books: [
                         {
                         title: "The Elements of Coordinate Geometry",
                         author: "S. L. Loney",
@@ -59,7 +58,8 @@ const myNotes = {
                         author: "Tom M. Apostol",
                         url: "https://www.wiley.com/en-in/calculus-volume-1-2nd-edition-p-9781119496731"
                         }
-                    ]
+                    ],
+                    topics: []
                             },
                            "Coming soon :)": null     
                     },
