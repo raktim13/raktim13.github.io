@@ -1085,6 +1085,12 @@ ${highlight(book.title)} — ${highlight(book.author)}
 
 <div class="course-divider"></div>
 
+${meta.topics?.length ? `
+    <div class="course-topics">
+        <h3>Course content</h3>
+        <p>${meta.topics.map(topic => highlight(topic)).join(", ")}.</p>
+    </div>
+` : ""}
 
 
 </div>
