@@ -741,7 +741,22 @@ details[open] > summary .folder-name{
 }
 
 
+.course-topics {
+    margin: 18px 0;
+    color: var(--course-body-text);
+}
 
+.course-topics h3 {
+    margin: 0 0 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.course-topics p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
 
 
 
