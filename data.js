@@ -16,7 +16,7 @@ const myNotes = {
                         "Cardano and Ferrari's methods in solving cubic and quartic equations, partial order and Zorn's Lemma, groups, subgroups, Lagrange's theorem, first isomorphism theorem, System of linear equations, row reduced Echelon form, matrix algebra."
                     ]
                             },
-                                
+                         "Coming soon :)": null,       
                     },
 
             "Calculus and Geometry": {
@@ -29,7 +29,7 @@ const myNotes = {
                     books: [],
                     topics; []
                             },
-                                
+                           "Coming soon :)": null,     
                     },
 
             "Space, Time & Universe": {
@@ -42,7 +42,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                         "Coming soon :)": null,       
                     },
 
             "Environmental Science": {
@@ -55,7 +55,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                           "Coming soon :)": null,     
                     },
 
         },
@@ -71,7 +71,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                              "Coming soon :)": null,  
                     },
 
             "Groups and Rings I": {
@@ -84,7 +84,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                           "Coming soon :)": null,     
                     },
 
             "German Language and Culture I": {
@@ -97,7 +97,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                             "Coming soon :)": null,   
                     },
 
             "English Communication": {
@@ -110,7 +110,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                            "Coming soon :)": null,    
                     },
 
         },
@@ -126,7 +126,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                            "Coming soon :)": null,    
                     },
 
             "Linear Algebra I": {
@@ -139,7 +139,7 @@ const myNotes = {
                     books: [],
                     topics; []
                             },
-                                
+                            "Coming soon :)": null,    
                     },
 
             "Ordinary Differential Equations": {
@@ -152,7 +152,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                            "Coming soon :)": null,    
                     },
 
             "German Language and Culture II": {
@@ -165,7 +165,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                           "Coming soon :)": null,     
                     },
 
             "Computer Programming": {
@@ -178,7 +178,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                           "Coming soon :)": null,     
                     },
             
         },
@@ -194,7 +194,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                           "Coming soon :)": null,     
                     },
 
             "Multivariate Calculus": {
@@ -207,7 +207,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                           "Coming soon :)": null,     
                     },
 
             "Partial Differential Equations": {
@@ -220,7 +220,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                           "Coming soon :)": null,     
                     },
 
             "Gender and Human Rights": {
@@ -233,7 +233,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                          "Coming soon :)": null,      
                     },
 
             "LATEX": {
@@ -246,7 +246,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                          "Coming soon :)": null,      
                     },
             
         },
@@ -262,7 +262,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                      "Coming soon :)": null,          
                     },
 
             "Groups and Rings II": {
@@ -275,7 +275,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                           "Coming soon :)": null,     
                     },
 
             "Discrete Mathematics and Number Theory": {
@@ -288,7 +288,7 @@ const myNotes = {
                     books: [],
                     topics; []
                             },
-                                
+                           "Coming soon :)": null,     
                     },
 
             "Mathematical Modeling": {
@@ -301,7 +301,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                           "Coming soon :)": null,     
                     },
         },
         "Sem 6": {
@@ -316,7 +316,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                            "Coming soon :)": null,    
                     },
 
             "Probability Theory": {
@@ -329,7 +329,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                           "Coming soon :)": null,     
                     },
 
             "Mechanics": {
@@ -342,7 +342,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                           "Coming soon :)": null,     
                     },
 
             "Linear Algebra II and Field Theory": {
@@ -355,7 +355,7 @@ const myNotes = {
                     books: [],
                     topics: []
                             },
-                                
+                           "Coming soon :)": null,     
                     },
         }
     },
