@@ -11,7 +11,10 @@ const myNotes = {
                         term: "Autumn 2021",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: [
+                        "Cardano and Ferrari's methods in solving cubic and quartic equations, partial order and Zorn's Lemma, groups, subgroups, Lagrange's theorem, first isomorphism theorem, System of linear equations, row reduced Echelon form, matrix algebra."
+                    ]
                             },
                                 
                     },
