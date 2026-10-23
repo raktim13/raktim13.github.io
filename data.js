@@ -666,7 +666,13 @@ const myNotes = {
                         term: "Autumn 2024",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                        {
+                        title: "Calculus on Manifolds: A Modern Approach to Classical Theorems of Advanced Calculus",
+                        author: "Michael Spivak",
+                        url: "https://www.routledge.com/Calculus-on-Manifolds-A-Modern-Approach-to-Classical-Theorems-of-Advanced/Spivak/p/book/9780805390216"
+                    }
+                    ],
                     topics: []
                             },
 
@@ -715,7 +721,18 @@ const myNotes = {
                         term: "Autumn 2024",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                        {
+                        title: "Real Analysis",
+                        author: "H. L. Royden and Patrick M. Fitzpatrick",
+                        url: "https://books.google.com/books/about/Real_Analysis.html?id=0Y5fAAAACAAJ"
+                    },
+                    {
+                        title: "Probability and Measure Theory",
+                        author: "Robert B. Ash and Catherine A. Doléans-Dade",
+                        url: "https://shop.elsevier.com/books/probability-and-measure-theory/ash/978-0-08-051487-1"
+                    }
+                    ],
                     topics: []
                             },
 
@@ -737,7 +754,12 @@ const myNotes = {
                             title: "Topology",
                             author: "James R. Munkres",
                             url: "https://www.pearson.com/en-us/subject-catalog/p/topology/P200000003607"
-                        }
+                        },
+                        {
+                        title: "Basic Topology",
+                        author: "M. A. Armstrong",
+                        url: "https://link.springer.com/book/10.1007/978-1-4757-1790-0"
+                    }
                     ],
                     topics:[]
                             },
@@ -761,7 +783,18 @@ const myNotes = {
                         term: "Spring 2025",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                        {
+                        title: "Galois Theory",
+                        author: "M. Pavaman Murthy, K. G. Ramanathan, C. S. Seshadri, U. Shukla, and R. Sridharan",
+                        url: "https://mathweb.tifr.res.in/sites/default/files/publications/pamphlets/galoistheory.pdf"
+                    },
+                    {
+                        title: "On the Algebraic Theory of Fields",
+                        author: "K. G. Ramanathan",
+                        url: "https://www.math.tifr.res.in/lectures.html"
+                    }
+                    ],
                     topics: []
                             },
 
@@ -956,6 +989,16 @@ const myNotes = {
 
                     books: [
                         {
+                        title: "Elementary Topics in Differential Geometry",
+                        author: "John A. Thorpe",
+                        url: "https://link.springer.com/book/10.1007/978-1-4612-6153-7"
+                    },
+                    {
+                        title: "An Introduction to Manifolds",
+                        author: "Loring W. Tu",
+                        url: "https://link.springer.com/book/10.1007/978-1-4419-7400-6"
+                    },
+                        {
                             title: "Differential Geometry of Curves and Surfaces",
                             author: "Manfredo P. do Carmo",
                             url: "https://store.doverpublications.com/products/9780486806990"
@@ -1063,6 +1106,11 @@ const myNotes = {
                             title: "Algebraic Topology",
                             author: "Allen Hatcher",
                             url: "https://pi.math.cornell.edu/~hatcher/AT/ATpage.html"
+                        },
+                        {
+                        title: "A Concise Course in Algebraic Topology",
+                        author: "J. P. May",
+                        url: "https://www.math.uchicago.edu/~may/CONCISE/ConciseRevised.pdf"
                         },
                         {
                             title: "Characteristic Classes",
