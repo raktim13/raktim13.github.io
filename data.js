@@ -11,7 +11,28 @@ const myNotes = {
                         term: "Autumn 2021",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                        {
+                        title: "Topics in Algebra",
+                        author: "I. N. Herstein",
+                        url: "https://www.wiley.com/en-us/topics-in-algebra-2nd-edition-p-9780471010906"
+                        },
+                        {
+                        title: "Algebra",
+                        author: "Thomas W. Hungerford",
+                        url: "https://link.springer.com/book/10.1007/978-1-4612-6101-8"
+                        },
+                        {
+                        title: "Contemporary Abstract Algebra",
+                        author: "Joseph A. Gallian",
+                        url: "https://www.cengage.co.in/category/higher-education/print/mathematics-statistics/mathematics/algebra"
+                        },
+                        {
+                        title: "Algebra",
+                        author: "Michael Artin",
+                        url: "https://www.pearson.com/en-us/subject-catalog/p/algebra-classic-version-/P200000006078/9780134689609"
+                        }
+                    ],
                     topics: [
                         "Cardano and Ferrari's methods in solving cubic and quartic equations, partial order and Zorn's Lemma, groups, subgroups, Lagrange's theorem, first isomorphism theorem, System of linear equations, row reduced Echelon form, matrix algebra."
                     ]
@@ -27,7 +48,18 @@ const myNotes = {
                         status: "completed",
 
                     books: [],
-                    topics: []
+                    topics: [
+                        {
+                        title: "The Elements of Coordinate Geometry",
+                        author: "S. L. Loney",
+                        url: "https://books.google.com/books/about/The_elements_of_coordinate_geometry.html?id=xX8k0gEACAAJ"
+                        },
+                        {
+                        title: "Calculus, Volume 1: One-Variable Calculus, with an Introduction to Linear Algebra",
+                        author: "Tom M. Apostol",
+                        url: "https://www.wiley.com/en-in/calculus-volume-1-2nd-edition-p-9781119496731"
+                        }
+                    ]
                             },
                            "Coming soon :)": null     
                     },
@@ -68,7 +100,23 @@ const myNotes = {
                         term: "Spring 2022",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                        {
+                        title: "Introduction to Real Analysis",
+                        author: "Robert G. Bartle and Donald R. Sherbert",
+                        url: "https://www.wiley-vch.de/en/areas-interest/mathematics-statistics/introduction-to-real-analysis-978-0-471-43331-6"
+                        },
+                        {
+                        title: "Analysis I",
+                        author: "Terence Tao",
+                        url: "https://link.springer.com/book/10.1007/978-981-19-7261-4"
+                        },
+                        {
+                        title: "Basic Course in Real Analysis",
+                        author: "A. Kumar and S. Kumaresan",
+                        url: "https://www.routledge.com/"
+                        }
+                    ],
                     topics: []
                             },
                               "Coming soon :)": null  
@@ -81,7 +129,38 @@ const myNotes = {
                         term: "Spring 2022",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                        {
+                        title: "Basic Abstract Algebra",
+                        author: "P. B. Bhattacharya, S. K. Jain, and S. R. Nagpaul",
+                        url: "https://vufind.juniv.edu/Record/86009"
+                        },
+                        {
+                        title: "Abstract Algebra",
+                        author: "David S. Dummit and Richard M. Foote",
+                        url: "https://www.wiley.com/en-us/abstract-algebra-3rd-edition-p-9780471433347"
+                        },
+                        {
+                        title: "Topics in Algebra",
+                        author: "I. N. Herstein",
+                        url: "https://www.wiley.com/en-us/topics-in-algebra-2nd-edition-p-9780471010906"
+                        },
+                        {
+                        title: "Algebra",
+                        author: "Thomas W. Hungerford",
+                        url: "https://link.springer.com/book/10.1007/978-1-4612-6101-8"
+                        },
+                        {
+                        title: "Contemporary Abstract Algebra",
+                        author: "Joseph A. Gallian",
+                        url: "https://www.cengage.co.in/category/higher-education/print/mathematics-statistics/mathematics/algebra"
+                        },
+                        {
+                        title: "Algebra",
+                        author: "Michael Artin",
+                        url: "https://www.pearson.com/en-us/subject-catalog/p/algebra-classic-version-/P200000006078/9780134689609"
+                        }
+                    ],
                     topics: []
                             },
                            "Coming soon :)": null     
@@ -123,7 +202,28 @@ const myNotes = {
                         term: "Autumn 2022",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                                                {
+                        title: "Introduction to Real Analysis",
+                        author: "Robert G. Bartle and Donald R. Sherbert",
+                        url: "https://www.wiley-vch.de/en/areas-interest/mathematics-statistics/introduction-to-real-analysis-978-0-471-43331-6"
+                        },
+                        {
+                        title: "Analysis II",
+                        author: "Terence Tao",
+                        url: "https://link.springer.com/book/10.1007/978-981-19-7284-3"
+                        },
+                        {
+                        title: "Mathematical Analysis",
+                        author: "Tom M. Apostol",
+                        url: "https://www.narosa.com/books_display.asp?catgcode=978-81-85015-66-8"
+                        },
+                        {
+                        title: "Principles of Mathematical Analysis",
+                        author: "Walter Rudin",
+                        url: "https://www.mheducation.co.in/principles-of-mathematical-analysis-9789355325969-india"
+                        }
+                    ],
                     topics: []
                             },
                             "Coming soon :)": null    
@@ -136,7 +236,23 @@ const myNotes = {
                         term: "Autumn 2022",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                        {
+                        title: "Linear Algebra",
+                        author: "Stephen H. Friedberg, Arnold J. Insel, and Lawrence E. Spence",
+                        url: "https://www.pearson.com/en-us/subject-catalog/p/linear-algebra/P200000006185/9780134876979"
+                        },
+                        {
+                        title: "Linear Algebra",
+                        author: "Kenneth Hoffman and Ray Kunze",
+                        url: "https://books.google.com/books/about/Linear_Algebra.html?id=Jk7MtwEACAAJ"
+                        },
+                        {
+                        title: "Introduction to Linear Algebra",
+                        author: "Gilbert Strang",
+                        url: "https://wellesleycambridge.com/books/introduction-to-linear-algebra-6th-edition"
+                        }
+                    ],
                     topics: []
                             },
                             "Coming soon :)": null   
@@ -149,7 +265,18 @@ const myNotes = {
                         term: "Autumn 2022",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                        {
+                        title: "Differential Equations with Applications and Historical Notes",
+                        author: "George F. Simmons",
+                        url: "https://www.routledge.com/Differential-Equations-with-Applications-and-Historical-Notes/Simmons/p/book/9781498702591"
+                        },
+                        {
+                        title: "Introduction to Ordinary Differential Equations",
+                        author: "Shepley L. Ross",
+                        url: "https://www.wiley-vch.de/en/areas-interest/mathematics-statistics/introduction-to-ordinary-differential-equations-978-0-471-09881-2"
+                        }
+                    ],
                     topics: []
                             },
                             "Coming soon :)": null
