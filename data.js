@@ -941,7 +941,9 @@ const myNotes = {
                                 url: "https://www.cambridge.org/core/books/an-introduction-to-contact-topology/7D70AFC55E756D779C5C1E817E8B9425"
                             },
                             ],
-                        topics: []
+                        topics: [
+                            "Symplectic and Contact manifolds, Lagrangian and Legendrian submanifolds, Derboux theorem, symplectomorphisms and contactomorphisms, Hamiltonian vector fields, Symplectic structure on the cotangent bundle, Gromov's theorem on existence of symplectic forms, tubular neighborhood theorem, Moser's trick, Gromov's non-squeezing theorem, Weinstein neighborhood theorems, Symplectization, Arnold's Conjecture, Gray's stability theorem, Group of Hamiltonian diffeomorphisms, almost complex structures, compatible triples, J holomorphic functions, Kähler manifolds, Dolbeault cohomology, Kähler potentials and Kähler forms,Pluri subharmonic functions and Stein manifolds, Fubini Studi and Kähler on complex projective spaces, Lie groups and Lie algebras, exponential map, adjoint and co--adjoint representations, Lie groups acting on Symplectic manifolds, Hamiltonian actions, Marsden--Weinstein--Mayer symplectic reduction theorem."
+                        ]
                             },
 
                         "assignment 1": "mmath/sem 4/symplectic geometry/symp_assignment_1.pdf",
@@ -1020,7 +1022,7 @@ const myNotes = {
                             },
                         {
                                 title: "Characteristic Classes",
-                                author: "John W. Milnor James D. Stasheff",
+                                author: "John W. Milnor, James D. Stasheff",
                                 url: "https://www.jstor.org/stable/j.ctt1b7x751"
                             }
                     ],
