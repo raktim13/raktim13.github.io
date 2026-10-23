@@ -302,7 +302,13 @@ const myNotes = {
                         term: "Autumn 2022",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                        {
+                        title: "Let Us C",
+                        author: "Yashavant P. Kanetkar",
+                        url: "https://www.bpbonline.com/"
+                        }
+                    ],
                     topics: []
                             },
                            "Coming soon :)": null     
@@ -318,7 +324,23 @@ const myNotes = {
                         term: "Spring 2023",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                    {
+                        title: "Analysis II",
+                        author: "Terence Tao",
+                        url: "https://link.springer.com/book/10.1007/978-981-19-7284-3"
+                    },
+                    {
+                        title: "Topology of Metric Spaces",
+                        author: "S. Kumaresan",
+                        url: "https://www.narosa.com/books_display.asp?catgcode=978-81-8487-058-9"
+                    },
+                    {
+                        title: "Topology",
+                        author: "James R. Munkres",
+                        url: "https://www.pearson.com/en-us/subject-catalog/p/topology-classic-version/P200000006299/9780134689517"
+                    }
+                    ],
                     topics: []
                             },
                            "Coming soon :)": null   
@@ -344,7 +366,13 @@ const myNotes = {
                         term: "Spring 2023",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                        {
+                        title: "Ordinary and Partial Differential Equations",
+                        author: "M. D. Raisinghania",
+                        url: "https://www.schandpublishing.com/books/higher-education/mathematics/ordinary-partial-differential-equations/9789352836109/"
+                        }
+                    ],
                     topics: []
                             },
                            "Coming soon :)": null     
@@ -386,7 +414,13 @@ const myNotes = {
                         term: "Autumn 2023",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                    {
+                        title: "An Introduction to Numerical Analysis",
+                        author: "Kendall E. Atkinson",
+                        url: "https://www.wiley.com/en-gb/an-introduction-to-numerical-analysis-2nd-edition-p-9780471624899"
+                    }
+                    ],
                     topics: []
                             },
                       "Coming soon :)": null          
@@ -399,7 +433,13 @@ const myNotes = {
                         term: "Autumn 2023",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                    {
+                        title: "Abstract Algebra",
+                        author: "David S. Dummit and Richard M. Foote",
+                        url: "https://www.wiley.com/en-us/abstract-algebra-3rd-edition-p-9780471433347"
+                    }
+                    ],
                     topics: []
                             },
                            "Coming soon :)": null    
@@ -412,7 +452,23 @@ const myNotes = {
                         term: "Autumn 2023",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                        {
+                        title: "Elementary Number Theory",
+                        author: "David M. Burton",
+                        url: "https://www.mheducation.co.in/elementary-number-theory-9789355325129-india"
+                    },
+                    {
+                        title: "An Introduction to the Theory of Numbers",
+                        author: "Ivan Niven, Herbert S. Zuckerman, and Hugh L. Montgomery",
+                        url: "https://www.wiley-vch.de/en/areas-interest/mathematics-statistics/mathematics-16ma/number-theory-16mac/an-introduction-to-the-theory-of-numbers-978-0-471-62546-9"
+                    },
+                    {
+                        title: "Graphs and Matrices",
+                        author: "Ravindra B. Bapat",
+                        url: "https://link.springer.com/book/10.1007/978-1-4471-6569-9"
+                    }
+                    ],
                     topics: []
                             },
                            "Coming soon :)": null    
@@ -425,7 +481,13 @@ const myNotes = {
                         term: "Autumn 2023",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                        {
+                        title: "Mathematical Modeling",
+                        author: "M. D. Raisinghania",
+                        url: "https://www.schandpublishing.com/"
+                    }
+                    ],
                     topics: []
                             },
                            "Coming soon :)": null  
@@ -440,7 +502,23 @@ const myNotes = {
                         term: "Spring 2024",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                        {
+                        title: "Complex Analysis",
+                        author: "Elias M. Stein and Rami Shakarchi",
+                        url: "https://ingramacademic.com/products/complex-analysis-9780691113852"
+                    },
+                    {
+                        title: "Complex Variables and Applications",
+                        author: "James Ward Brown and Ruel V. Churchill",
+                        url: "https://www.mheducation.co.in/complex-variables-and-applications-9789354600364-india"
+                    },
+                    {
+                        title: "Functions of One Complex Variable I",
+                        author: "John B. Conway",
+                        url: "https://link.springer.com/book/10.1007/978-1-4612-6313-5"
+                    }
+                    ],
                     topics: []
                             },
                             "Coming soon :)": null  
@@ -453,7 +531,23 @@ const myNotes = {
                         term: "Spring 2024",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                        {
+                        title: "Probability and Random Processes",
+                        author: "Geoffrey R. Grimmett and David R. Stirzaker",
+                        url: "https://india.oup.com/product/probability-and-random-processes-9780198847595"
+                    },
+                    {
+                        title: "An Introduction to Probability and Statistics",
+                        author: "Vijay K. Rohatgi and A. K. Md. Ehsanes Saleh",
+                        url: "https://onlinelibrary.wiley.com/book/10.1002/9781118799635"
+                    },
+                    {
+                        title: "Probability: Theory and Examples",
+                        author: "Rick Durrett",
+                        url: "https://www.cambridge.org/core/books/probability-theory-and-examples/5E4D2B6F6E3D0D4C4A8B5A7D7B0B7E12"
+                    }
+                    ],
                     topics: []
                             },
                            "Coming soon :)": null     
@@ -466,7 +560,28 @@ const myNotes = {
                         term: "Spring 2024",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                        {
+                        title: "An Elementary Treatise on Statics",
+                        author: "S. L. Loney",
+                        url: "https://gkpublications.com/products/gkp-an-elementary-treatise-on-statics"
+                    },
+                    {
+                        title: "The Elements of Statics and Dynamics, Part I: Statics",
+                        author: "S. L. Loney",
+                        url: "https://onlinebooks.library.upenn.edu/webbin/book/lookupname?key=Loney%2C+S.+L.+%28Sidney+Luxton%29%2C+1860-1939"
+                    },
+                    {
+                        title: "The Elements of Statics and Dynamics, Part II: Dynamics",
+                        author: "S. L. Loney",
+                        url: "https://www.bookswagon.com/author/s-l-loney"
+                    },
+                    {
+                        title: "An Elementary Treatise on the Dynamics of a Particle and of Rigid Bodies",
+                        author: "S. L. Loney",
+                        url: "https://openlibrary.org/authors/OL11232914A/S._L._Loney"
+                    }
+                    ],
                     topics: []
                             },
                            "Coming soon :)": null    
@@ -479,7 +594,28 @@ const myNotes = {
                         term: "Spring 2024",
                         status: "completed",
 
-                    books: [],
+                    books: [
+                        {
+                        title: "Abstract Algebra",
+                        author: "David S. Dummit and Richard M. Foote",
+                        url: "https://www.wiley-vch.de/en/areas-interest/mathematics-statistics/abstract-algebra-978-0-471-43334-7"
+                    },
+                    {
+                        title: "Linear Algebra",
+                        author: "Kenneth Hoffman and Ray Kunze",
+                        url: "https://books.google.com/books/about/Linear_Algebra.html?id=Jk7MtwEACAAJ"
+                    },
+                    {
+                        title: "Basic Abstract Algebra",
+                        author: "P. B. Bhattacharya, S. K. Jain, and S. R. Nagpaul",
+                        url: "https://www.cambridge.org/core/books/basic-abstract-algebra/frontmatter/45E4F18CB3E6962E8B47426431CB1D88"
+                    },
+                    {
+                        title: "Introduction to Linear Algebra",
+                        author: "Gilbert Strang",
+                        url: "https://wellesleycambridge.com/books/introduction-to-linear-algebra-6th-edition"
+                    }
+                    ],
                     topics: []
                             },
                            "Coming soon :)": null   
