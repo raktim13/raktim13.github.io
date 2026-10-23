@@ -1095,6 +1095,20 @@ ${meta.topics?.length ? `
 
 </div>
 
+<div class="course-chalk" aria-hidden="true">
+    <svg viewBox="0 0 32 32" fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 24L21 10L26 15L12 29L5 30Z"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linejoin="round"/>
+        <path d="M21 10L24 7L29 12L26 15"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linejoin="round"/>
+    </svg>
+</div>
+
 `;
 
 
