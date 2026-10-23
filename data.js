@@ -59,7 +59,9 @@ const myNotes = {
                         url: "https://www.wiley.com/en-in/calculus-volume-1-2nd-edition-p-9781119496731"
                         }
                     ],
-                    topics: []
+                    topics: [
+                        "Hyperbolic functions, Reduction formulae and integration of trigonometric and logarithmic powers, vector valued functions, coordinate geometry, conic sections, lines and planes in Euclidean 3D geometry, parallelism and perpendiculars, rigid surfaces, spherical surfaces and ellipsoids. "
+                    ]
                             },
                            "Coming soon :)": null     
                     },
@@ -117,7 +119,9 @@ const myNotes = {
                         url: "https://www.routledge.com/"
                         }
                     ],
-                    topics: []
+                    topics: [
+                        "construction of rational numbers from Peano's axioms, sequence and series, convergence theorems, Bolzano--Weierstrass theorem, topological properties of the rational numbers, construction of real numbers using rational sequences, convergence tests for series. Continuous functions, uniform and non--uniform continuity."
+                    ]
                             },
                               "Coming soon :)": null  
                     },
@@ -161,7 +165,9 @@ const myNotes = {
                         url: "https://www.pearson.com/en-us/subject-catalog/p/algebra-classic-version-/P200000006078/9780134689609"
                         }
                     ],
-                    topics: []
+                    topics: [
+                        "Groups, subgroups, Lagrange's theorem, isomorphism theorems, centralizer, normalizer, Cayley's theorem, Cauchy's theorem. Rings, ideals, ring homomorphisms, fields, fileds of fractions of a ring."
+                    ]
                             },
                            "Coming soon :)": null     
                     },
@@ -224,7 +230,9 @@ const myNotes = {
                         url: "https://www.mheducation.co.in/principles-of-mathematical-analysis-9789355325969-india"
                         }
                     ],
-                    topics: []
+                    topics: [
+                        "Differentiability and derivatives, chain rule, Rolle's theorem, Mean value properties, approximation by polynomials, L'H^opital's rule. Lagrange's polynomial, Taylor series, Maclaurin series. Darboux and Riemann sum and Riemann integrations. Fundamental theorem of calculus. Improper integrals. "
+                    ]
                             },
                             "Coming soon :)": null    
                     },
@@ -253,7 +261,10 @@ const myNotes = {
                         url: "https://wellesleycambridge.com/books/introduction-to-linear-algebra-6th-edition"
                         }
                     ],
-                    topics: []
+                    topics: [
+                        "Vector Spaces, subspaces, linear maps, isomorphisms, quotient spaces, rank--nullity theorem. Linear maps as matrices and vice versa, row and column rank. Dual spaces, annihilators, double duals and transpose. Characteristic polynomials, eigen values, invariant subspaces, Cayley--Hamilton theorem, diagonalizability, Jordan and Rational Canonical forms. Inner product spaces, orgonal projections, orthogonal complements, Gram--Scmidt orthogonalisation, orthogonal decompositions.",
+                        "Directed reading projects on real symmetric, orthogonal, Hermitian, normal and unitary matrices and spectral theoremsfor real symmetric matrices."
+                    ]
                             },
                             "Coming soon :)": null   
                     },
