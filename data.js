@@ -26,7 +26,8 @@ const myNotes = {
                         term: "Autumn 2021",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics; []
                             },
                                 
                     },
@@ -38,7 +39,8 @@ const myNotes = {
                         term: "Autumn 2021",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -50,7 +52,8 @@ const myNotes = {
                         term: "Autumn 2021",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -65,7 +68,8 @@ const myNotes = {
                         term: "Spring 2022",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -77,7 +81,8 @@ const myNotes = {
                         term: "Spring 2022",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -89,7 +94,8 @@ const myNotes = {
                         term: "Spring 2022",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -101,7 +107,8 @@ const myNotes = {
                         term: "Autumn 2021",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -116,7 +123,8 @@ const myNotes = {
                         term: "Autumn 2022",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -128,7 +136,8 @@ const myNotes = {
                         term: "Autumn 2022",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics; []
                             },
                                 
                     },
@@ -140,7 +149,8 @@ const myNotes = {
                         term: "Autumn 2022",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -152,7 +162,8 @@ const myNotes = {
                         term: "Autumn 2022",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -164,7 +175,8 @@ const myNotes = {
                         term: "Autumn 2022",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -179,7 +191,8 @@ const myNotes = {
                         term: "Spring 2023",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -191,7 +204,8 @@ const myNotes = {
                         term: "Spring 2023",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -203,7 +217,8 @@ const myNotes = {
                         term: "Spring 2023",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -215,7 +230,8 @@ const myNotes = {
                         term: "Spring 2023",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -227,7 +243,8 @@ const myNotes = {
                         term: "Spring 2023",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -242,7 +259,8 @@ const myNotes = {
                         term: "Autumn 2023",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -254,7 +272,8 @@ const myNotes = {
                         term: "Autumn 2023",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -266,7 +285,8 @@ const myNotes = {
                         term: "Autumn 2023",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics; []
                             },
                                 
                     },
@@ -278,7 +298,8 @@ const myNotes = {
                         term: "Autumn 2023",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -292,7 +313,8 @@ const myNotes = {
                         term: "Spring 2024",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -304,7 +326,8 @@ const myNotes = {
                         term: "Spring 2024",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -316,7 +339,8 @@ const myNotes = {
                         term: "Spring 2024",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -328,7 +352,8 @@ const myNotes = {
                         term: "Spring 2024",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
                                 
                     },
@@ -358,7 +383,8 @@ const myNotes = {
                             author: "Michael Artin",
                             url: "https://www.pearson.com/en-us/subject-catalog/p/algebra/P200000003085"
                         }
-                    ]
+                    ],
+                    topics: []
                             },
 
                                 "assignment 1": "mmath/sem 1/algebra i/alg_i_assignment_1.pdf",
@@ -377,7 +403,8 @@ const myNotes = {
                         term: "Autumn 2024",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
 
                                 "assignment 1":"mmath/sem 1/analysis of several variables/asv_assignment_1.pdf",
@@ -407,7 +434,8 @@ const myNotes = {
                             author: "Kenneth Hoffman and Ray Kunze",
                             url: "https://www.pearson.com/en-us/subject-catalog/p/linear-algebra/P200000003388"
                         }
-                    ]
+                    ],
+                    topics: []
                             },
 
                                 "No assignments :(": null,
@@ -424,7 +452,8 @@ const myNotes = {
                         term: "Autumn 2024",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
 
                                 "assignment 1-8": "mmath/sem 1/measure theory/measure_assignment_1_to_8.pdf",
@@ -446,7 +475,8 @@ const myNotes = {
                             author: "James R. Munkres",
                             url: "https://www.pearson.com/en-us/subject-catalog/p/topology/P200000003607"
                         }
-                    ]
+                    ],
+                    topics:[]
                             },
 
                                 "assignment": "mmath/sem 1/topology i/topo_i_assignment.pdf",
@@ -468,7 +498,8 @@ const myNotes = {
                         term: "Spring 2025",
                         status: "completed",
 
-                    books: []
+                    books: [],
+                    topics: []
                             },
 
                                 "assignment 1": "mmath/sem 2/algebra ii/alg_ii_assignment_1.pdf",
@@ -505,7 +536,8 @@ const myNotes = {
                             author: "Elias M. Stein and Rami Shakarchi",
                             url: "https://press.princeton.edu/books/hardcover/9780691113852/complex-analysis"
                         }
-                    ]
+                    ],
+                    topics: []
                             },
 
                                 "Coming soon :)": null,
@@ -527,7 +559,8 @@ const myNotes = {
                             author: "Walter Rudin",
                             url: "https://www.mheducation.com/highered/product/functional-analysis-rudin/M9780070542365.html"
                         }
-                    ]
+                    ],
+                    topics: []
                             },
 
                                 "Coming soon :)": null,
@@ -559,7 +592,8 @@ const myNotes = {
                             author: "Tom M. Apostol",
                             url: "https://link.springer.com/book/10.1007/978-1-4757-5579-4"
                         }
-                    ]
+                    ],
+                    topics: []
                             },
 
                                 "assignment 1": "mmath/sem 2/number theory/nt_assignment_1.pdf",
@@ -602,7 +636,8 @@ const myNotes = {
                             author: "J. P. May",
                             url: "https://press.uchicago.edu/ucp/books/book/chicago/C/bo3639842.html"
                         }
-                    ]
+                    ],
+                    topics: []
                             },
 
                                 "assignment 1": "mmath/sem 2/topology ii/topo2_assignment_1.pdf",
@@ -639,7 +674,8 @@ const myNotes = {
                             author: "Hideyuki Matsumura",
                             url: "https://www.cambridge.org/core/books/commutative-ring-theory/947561E5E852E09920C46B6A3F0A35A1"
                         }
-                    ]
+                    ],
+                    topics: []
                             },
 
                                 "Coming soon :)": null,
@@ -676,7 +712,8 @@ const myNotes = {
                             author: "John M. Lee",
                             url: "https://link.springer.com/book/10.1007/978-1-4419-7399-3"
                         }
-                ]
+                    ],
+                    topics: []
                             },
 
                                 "assignment 1": "mmath/sem 3/differential geometry i/diff_geo_assignment_1.pdf",
@@ -699,7 +736,8 @@ const myNotes = {
                             author: "Rick Durrett",
                             url: "https://services.math.duke.edu/~rtd/PTE/PTE5_011119.pdf"
                         }
-                    ]
+                    ],
+                    topics: []
                             },
 
                                 "assignment 1": "mmath/sem 3/probability theory/prob_assignment_1.pdf",
@@ -737,7 +775,8 @@ const myNotes = {
                             author: "Otto Forster",
                             url: "https://link.springer.com/book/10.1007/978-1-4612-5963-4"
                         }
-                    ]
+                    ],
+                    topics: []
                             },
 
                                 "assignment 1": "mmath/sem 3/riemann surfaces/riemann_assignment1.pdf",
@@ -767,7 +806,8 @@ const myNotes = {
                             author: "John Milnor and James D. Stasheff",
                             url: "https://bookstore.ams.org/chel-76"
                         }
-                    ]
+                    ],
+                    topics: []
                             },
 
                                 "exercise 1": "mmath/sem 3/topology iii/topo3_exer1.pdf",
@@ -818,7 +858,8 @@ const myNotes = {
                                 author: "Joe Harris",
                                 url: "https://link.springer.com/book/10.1007/978-1-4757-2189-8"
                             }
-                                ]
+                        ],
+                    topics: []
                             },
 
                         "assignment 1": "mmath/sem 4/algebraic geometry/alg_geo_assignment_1.pdf",
@@ -842,7 +883,8 @@ const myNotes = {
                                 author: "Lawrence C. Evans",
                                 url: "https://bookstore.ams.org/gsm-19/"
                             }
-                            ]
+                            ],
+                    topics; []
                             },
 
                                 "No assignments :(": null,
@@ -867,7 +909,8 @@ const myNotes = {
                             author: "Phillip Griffiths and John Morgan",
                             url: "https://link.springer.com/book/10.1007/978-1-4613-8130-3"
                         }
-                    ]
+                    ],
+                    topics: []
                         
                             },
 
@@ -897,7 +940,8 @@ const myNotes = {
                                 author: "Hansjörg Geiges",
                                 url: "https://www.cambridge.org/core/books/an-introduction-to-contact-topology/7D70AFC55E756D779C5C1E817E8B9425"
                             },
-                                ]
+                            ],
+                        topics: []
                             },
 
                         "assignment 1": "mmath/sem 4/symplectic geometry/symp_assignment_1.pdf",
@@ -921,7 +965,8 @@ const myNotes = {
                             author: "Lars V. Ahlfors",
                             url: "https://bookstore.ams.org/ulect-38"
                         }
-                    ]
+                    ],
+                    topics: []
                         
                             },
 
@@ -954,7 +999,8 @@ const myNotes = {
                                 author: "Victor Guillemin, Alan Pollack",
                                 url: "https://bookstore.ams.org/chel-370-h"
                             }
-                    ]
+                    ],
+                    topics: []
                             },
                                 
                     },
@@ -977,7 +1023,8 @@ const myNotes = {
                                 author: "John W. Milnor James D. Stasheff",
                                 url: "https://www.jstor.org/stable/j.ctt1b7x751"
                             }
-                    ]
+                    ],
+                    topics: []
                             },
                                 
                     },
