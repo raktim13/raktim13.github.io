@@ -1735,3 +1735,24 @@ async function animateCourseCard(card) {
 
 } 
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const timestamp = document.body.dataset.lastUpdated;
+    const timeElement = document.querySelector(".last-updated");
+
+    if (!timestamp || !timeElement) return;
+
+    const date = new Date(timestamp);
+
+    timeElement.dateTime = timestamp;
+    timeElement.textContent =
+        date.toLocaleString("en-IN", {
+            day: "2-digit",
+            month: "short",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: false,
+            timeZone: "Asia/Kolkata"
+        }) + " IST (UTC+05:30)";
+});
