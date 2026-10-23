@@ -27,7 +27,7 @@ const myNotes = {
                         status: "completed",
 
                     books: [],
-                    topics; []
+                    topics: []
                             },
                            "Coming soon :)": null     
                     },
@@ -137,7 +137,7 @@ const myNotes = {
                         status: "completed",
 
                     books: [],
-                    topics; []
+                    topics: []
                             },
                             "Coming soon :)": null   
                     },
@@ -286,7 +286,7 @@ const myNotes = {
                         status: "completed",
 
                     books: [],
-                    topics; []
+                    topics: []
                             },
                            "Coming soon :)": null    
                     },
@@ -884,7 +884,7 @@ const myNotes = {
                                 url: "https://bookstore.ams.org/gsm-19/"
                             }
                             ],
-                    topics; []
+                    topics: []
                             },
 
                                 "No assignments :(": null,
