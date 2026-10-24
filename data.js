@@ -74,7 +74,7 @@ const myNotes = {
                         status: "completed",
 
                     books: [],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                          "Coming soon :)": null       
                     },
@@ -87,7 +87,7 @@ const myNotes = {
                         status: "completed",
 
                     books: [],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                            "Coming soon :)": null    
                     },
@@ -180,7 +180,7 @@ const myNotes = {
                         status: "completed",
 
                     books: [],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                              "Coming soon :)": null   
                     },
@@ -193,7 +193,7 @@ const myNotes = {
                         status: "completed",
 
                     books: [],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                             "Coming soon :)": null   
                     },
@@ -288,7 +288,7 @@ const myNotes = {
                         url: "https://www.wiley-vch.de/en/areas-interest/mathematics-statistics/introduction-to-ordinary-differential-equations-978-0-471-09881-2"
                         }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                             "Coming soon :)": null
                     },
@@ -301,7 +301,7 @@ const myNotes = {
                         status: "completed",
 
                     books: [],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                            "Coming soon :)": null     
                     },
@@ -320,7 +320,7 @@ const myNotes = {
                         url: "https://www.bpbonline.com/"
                         }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                            "Coming soon :)": null     
                     },
@@ -394,7 +394,7 @@ const myNotes = {
                         url: "https://www.schandpublishing.com/books/higher-education/mathematics/ordinary-partial-differential-equations/9789352836109/"
                         }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                            "Coming soon :)": null     
                     },
@@ -407,7 +407,7 @@ const myNotes = {
                         status: "completed",
 
                     books: [],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                           "Coming soon :)": null     
                     },
@@ -420,7 +420,7 @@ const myNotes = {
                         status: "completed",
 
                     books: [],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                           "Coming soon :)": null    
                     },
@@ -442,7 +442,7 @@ const myNotes = {
                         url: "https://www.wiley.com/en-gb/an-introduction-to-numerical-analysis-2nd-edition-p-9780471624899"
                     }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                       "Coming soon :)": null          
                     },
@@ -492,7 +492,7 @@ const myNotes = {
                         url: "https://link.springer.com/book/10.1007/978-1-4471-6569-9"
                     }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                            "Coming soon :)": null    
                     },
@@ -511,7 +511,7 @@ const myNotes = {
                         url: "https://www.schandpublishing.com/"
                     }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                            "Coming soon :)": null  
                     },
@@ -542,7 +542,7 @@ const myNotes = {
                         url: "https://link.springer.com/book/10.1007/978-1-4612-6313-5"
                     }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                             "Coming soon :)": null  
                     },
@@ -571,7 +571,7 @@ const myNotes = {
                         url: "https://www.cambridge.org/core/books/probability-theory-and-examples/5E4D2B6F6E3D0D4C4A8B5A7D7B0B7E12"
                     }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                            "Coming soon :)": null     
                     },
@@ -605,7 +605,7 @@ const myNotes = {
                         url: "https://openlibrary.org/authors/OL11232914A/S._L._Loney"
                     }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                            "Coming soon :)": null    
                     },
@@ -639,7 +639,7 @@ const myNotes = {
                         url: "https://wellesleycambridge.com/books/introduction-to-linear-algebra-6th-edition"
                     }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                            "Coming soon :)": null   
                     },
@@ -670,7 +670,7 @@ const myNotes = {
                             url: "https://www.pearson.com/en-us/subject-catalog/p/algebra/P200000003085"
                         }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
 
                                 "assignment 1": "mmath/sem 1/algebra i/alg_i_assignment_1.pdf",
@@ -696,7 +696,7 @@ const myNotes = {
                         url: "https://www.routledge.com/Calculus-on-Manifolds-A-Modern-Approach-to-Classical-Theorems-of-Advanced/Spivak/p/book/9780805390216"
                     }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
 
                                 "assignment 1":"mmath/sem 1/analysis of several variables/asv_assignment_1.pdf",
@@ -727,7 +727,7 @@ const myNotes = {
                             url: "https://www.pearson.com/en-us/subject-catalog/p/linear-algebra/P200000003388"
                         }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
 
                                 "No assignments :(": null,
@@ -756,7 +756,7 @@ const myNotes = {
                         url: "https://shop.elsevier.com/books/probability-and-measure-theory/ash/978-0-08-051487-1"
                     }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
 
                                 "assignment 1-8": "mmath/sem 1/measure theory/measure_assignment_1_to_8.pdf",
@@ -818,7 +818,7 @@ const myNotes = {
                         url: "https://www.math.tifr.res.in/lectures.html"
                     }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
 
                                 "assignment 1": "mmath/sem 2/algebra ii/alg_ii_assignment_1.pdf",
@@ -856,7 +856,7 @@ const myNotes = {
                             url: "https://press.princeton.edu/books/hardcover/9780691113852/complex-analysis"
                         }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
 
                                 "Coming soon :)": null,
@@ -879,7 +879,7 @@ const myNotes = {
                             url: "https://www.mheducation.com/highered/product/functional-analysis-rudin/M9780070542365.html"
                         }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
 
                                 "Coming soon :)": null,
@@ -912,7 +912,7 @@ const myNotes = {
                             url: "https://link.springer.com/book/10.1007/978-1-4757-5579-4"
                         }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
 
                                 "assignment 1": "mmath/sem 2/number theory/nt_assignment_1.pdf",
@@ -956,7 +956,7 @@ const myNotes = {
                             url: "https://press.uchicago.edu/ucp/books/book/chicago/C/bo3639842.html"
                         }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
 
                                 "assignment 1": "mmath/sem 2/topology ii/topo2_assignment_1.pdf",
@@ -994,7 +994,7 @@ const myNotes = {
                             url: "https://www.cambridge.org/core/books/commutative-ring-theory/947561E5E852E09920C46B6A3F0A35A1"
                         }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
 
                                 "Coming soon :)": null,
@@ -1068,7 +1068,7 @@ const myNotes = {
                             url: "https://services.math.duke.edu/~rtd/PTE/PTE5_011119.pdf"
                         }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
 
                                 "assignment 1": "mmath/sem 3/probability theory/prob_assignment_1.pdf",
@@ -1107,7 +1107,7 @@ const myNotes = {
                             url: "https://link.springer.com/book/10.1007/978-1-4612-5963-4"
                         }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
 
                                 "assignment 1": "mmath/sem 3/riemann surfaces/riemann_assignment1.pdf",
@@ -1143,7 +1143,7 @@ const myNotes = {
                             url: "https://bookstore.ams.org/chel-76"
                         }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
 
                                 "exercise 1": "mmath/sem 3/topology iii/topo3_exer1.pdf",
@@ -1222,7 +1222,7 @@ const myNotes = {
                                 url: "https://bookstore.ams.org/gsm-19/"
                             }
                             ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
 
                                 "No assignments :(": null,
@@ -1308,7 +1308,7 @@ const myNotes = {
                             url: "https://bookstore.ams.org/ulect-38"
                         }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                         
                             },
 
@@ -1342,7 +1342,7 @@ const myNotes = {
                                 url: "https://bookstore.ams.org/chel-370-h"
                             }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                             "Coming soon :)": null    
                     },
@@ -1366,7 +1366,7 @@ const myNotes = {
                                 url: "https://www.jstor.org/stable/j.ctt1b7x751"
                             }
                     ],
-                    topics: []
+                    topics: ["working on it ;)"]
                             },
                         "Coming soon :)": null        
                     },
