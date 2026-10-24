@@ -461,7 +461,9 @@ const myNotes = {
                         url: "https://www.wiley.com/en-us/abstract-algebra-3rd-edition-p-9780471433347"
                     }
                     ],
-                    topics: []
+                    topics: [
+                        "Group actions, stabilisers and kernels, orbit-stabiliser theorem and applications, permutation representation associated to a group action, Cayley's theorem, conjugation actions, class equation and applications, conjugacy in Sn, p-groups, Cauchy's theorem, Sylow's theorems and applications. Automorphisms of a group, inner automorphisms, group of automorphisms and their computations (in particular for finite and infinite cyclic groups), characteristic subgroups, commutator subgroup and its properties. Direct product of groups, properties of external direct products, Z/nZ as external direct product, internal direct products, structure theorem of finite and finitely generated abelian groups and its applications. Rings: Polynomial rings over commutative rings, division algorithm and consequences, factorisation of polynomials, reducibility tests, irreducibility tests, Eisenstein's criterion. PIDs, unique factorisation in Z[x], divisibility in integral domains, irreducibles and primes, UFDs, Euclidean Domains ."
+                    ]
                             },
                            "Coming soon :)": null    
                     },
