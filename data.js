@@ -1030,7 +1030,9 @@ const myNotes = {
                             url: "https://link.springer.com/book/10.1007/978-1-4419-7399-3"
                         }
                     ],
-                    topics: []
+                    topics: [
+                        "Curves and surfaces in Euclidean space, smooth and piecewise smooth curves. Tangent and normal spaces, vector fields, integral curves on a smooth surface in Euclidean spaces. Differentiating vector fields with respect to each others, covariant derivatives and connections, the Weingarten map, Gauss--Kronecker curvature, principal and mean curvature, formulas for calculating curvature. Parallel transport, geodesics, geodesics as integral curves, flows, geodesically completeness. Abstract smooth manifolds, tangent and cotangent spaces, integral curves and differential forms on a smooth manifold. Manifolds with boundaries, immersion, submersions, embeddings, Stoke's theorem. Orientation in terms of non vanishing top forms and integration of compactly supported forms on a smooth oriented manifold. Intrinsic definition of the exterior derivative of forms. Distributions, involutive and integrable distributions, Frobenius' theorem and applications. Orientation preserving and reversing maps, orientation in terrms of orientation preserving atlases, equivalence of the two definitions of orientation. Hopf's Umlaufsatz, vertex of a smooth curve, four vertex theorem. Riemannian metrics and Riemannian manifolds. Existence and uniqueness of the Levi--Civita Connection. The Gauss--Bonet theorems and applications."
+                    ]
                             },
 
                                 "assignment 1": "mmath/sem 3/differential geometry i/diff_geo_assignment_1.pdf",
@@ -1181,7 +1183,9 @@ const myNotes = {
                                 url: "https://link.springer.com/book/10.1007/978-1-4757-2189-8"
                             }
                         ],
-                    topics: []
+                    topics: [
+                        "Affine, quasi--affine, projective and quasi-projective varieties, the Zariski topology, Hilbert's Nullstellensatz, Noetherian and Krull dimensions, regular functions, germs of regular functions and the local ring at a point, coordinate ring of a variety and the function field. Morphism of varieties and induced maps. Zariski tangent spaces, singularities, non-singular varieties. Ringed spaces, rational maps and rational varieties, dominant rational maps, birational maps. Blowing up and resolution of singularities. Pre--sheaves and Sheaves, sheafification. Divisors on a variety, principal divisors, class group, the Riemann--Roch theorem. Sheaf and Cech cohomology, Serre's and Grothendieck's vanishing theorems, fundamental theorem of Cech cohomology. The cohomology of the the circle and the punctured plane."
+                    ]
                             },
 
                         "assignment 1": "mmath/sem 4/algebraic geometry/alg_geo_assignment_1.pdf",
