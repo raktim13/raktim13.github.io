@@ -352,7 +352,9 @@ const myNotes = {
                         url: "https://www.pearson.com/en-us/subject-catalog/p/topology-classic-version/P200000006299/9780134689517"
                     }
                     ],
-                    topics: []
+                    topics: [
+                        "Pointwise and uniform convergence of a sequence of functions, continuity, differentiability and integrability of the limit function, tests for uniform converegence. Convergence of series of functions, continuity and differentiability of the sum function. Cauchy's criterion for uniform convergence, Weierstrass M-test, construction of nowhere differentiable continuous functions on R. Power series, radius of convergence, Cauchy-Hadamard theorem, differentiation and integration of power series, Abel's theorem, Weierstrass' approximation theorem. Metric spaces, open, closed, compact and dense sets, continuous functions, sequences, Cauchy sequences and convergence, sequential compactness, completeness, sequential continuity, homeomorphisms, Bolzano-Weierstrass theorem. Introduction to topological spaces."
+                    ]
                             },
                            "Coming soon :)": null   
                     },
@@ -364,8 +366,16 @@ const myNotes = {
                         term: "Spring 2023",
                         status: "completed",
 
-                    books: [],
-                    topics: []
+                    books: [
+                        {
+                        title: "Calculus on Manifolds: A Modern Approach to Classical Theorems of Advanced Calculus",
+                        author: "Michael Spivak",
+                        url: "https://www.routledge.com/Calculus-on-Manifolds-A-Modern-Approach-to-Classical-Theorems-of-Advanced/Spivak/p/book/9780805390216"
+                        }
+                    ],
+                    topics: [
+                        "Functions of several variables, limit and continuity, partial derivatives, differentiability and total derivatives as matrices, chain rule, gradient vector, directional derivatives, the Jacobian theorem. Inverse and Implicit function theorems, higher derivatives and Taylor's theorem. Maxima and minima, constrained optimisation problems, Lagrange's multipliers. Tangent spaces, vector fields, divergence and curl of a vector field, identities involving gradient, curl and divergence. Double integrals over rectangular regions, over non-rectangular regions, in polar co-ordinates. Triple integrals over parallelepipeds, solid regions computing volume by triple integrals, in cylindrical and spherical co-ordinates. Change of variables in double integrals and triple integrals. Line integrals, fundamental theorem for line integrals, conservative vector elds, independence of path. Green's theorem, Surface integrals, Stoke's theorem, The Divergence theorem."
+                    ]
                             },
                            "Coming soon :)": null     
                     },
