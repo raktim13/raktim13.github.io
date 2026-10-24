@@ -1086,8 +1086,19 @@ ${highlight(book.title)} — ${highlight(book.author)}
 
 ${meta.topics?.length ? `
     <div class="course-topics">
-        <h3>Course content:</h3>
-        <p>${meta.topics.map(topic => highlight(topic)).join(", ")}.</p>
+        <button
+            type="button"
+            class="course-topics-toggle"
+            aria-expanded="false"
+        >
+            <span>Course content</span>
+            <span class="course-topics-arrow">+</span>
+        </button>
+
+        <div class="course-topics-panel" hidden>
+            <p class="course-topics-text"></p>
+            <div class="course-divider course-topics-divider"></div>
+        </div>
     </div>
 ` : ""}
 
@@ -1097,11 +1108,49 @@ ${meta.topics?.length ? `
 `;
 
 
+                    const topicsToggle = card.querySelector(".course-topics-toggle");
+
+if (topicsToggle) {
+    const topicsPanel = card.querySelector(".course-topics-panel");
+    const topicsText = card.querySelector(".course-topics-text");
+    const topicsArrow = card.querySelector(".course-topics-arrow");
+
+    const fullText = meta.topics.join(", ") + ".";
+
+    topicsToggle.addEventListener("click", async () => {
+        const isExpanded =
+            topicsToggle.getAttribute("aria-expanded") === "true";
+
+        if (isExpanded) {
+            topicsToggle.setAttribute("aria-expanded", "false");
+            topicsPanel.hidden = true;
+            topicsArrow.textContent = "+";
+            return;
+        }
+
+        topicsToggle.setAttribute("aria-expanded", "true");
+        topicsPanel.hidden = false;
+        topicsArrow.textContent = "−";
+
+        // Reset the text so the animation runs on every expansion.
+        topicsText.textContent = "";
+
+        for (const character of fullText) {
+            // Stop if the panel was collapsed while typing.
+            if (
+                topicsToggle.getAttribute("aria-expanded") !== "true"
+            ) {
+                return;
+            }
+
+            topicsText.textContent += character;
+
+            await sleep(15);
+        }
+    });
+}
 
     if (subtree) {
-
-
-
         card.querySelector(".course-body").appendChild(subtree);
 
 
