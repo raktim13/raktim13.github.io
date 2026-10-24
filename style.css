@@ -746,16 +746,57 @@ details[open] > summary .folder-name{
     color: var(--course-body-text);
 }
 
-.course-topics h3 {
-    margin: 0 0 8px;
+.course-topics-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 0;
+    border: none;
+    background: transparent;
+
+    color: var(--link-color);
+    font: inherit;
     font-size: 0.9rem;
     font-weight: 600;
+
+    cursor: pointer;
+    text-align: left;
 }
 
-.course-topics p {
+.course-topics-toggle:hover {
+    text-decoration: underline;
+}
+
+.course-topics-arrow {
+    display: inline-block;
+    font-size: 1.1rem;
+    line-height: 1;
+    transition: transform 160ms ease;
+}
+
+.course-topics-toggle[aria-expanded="true"]
+.course-topics-arrow {
+    transform: rotate(180deg);
+}
+
+.course-topics-panel {
+    margin-top: 10px;
+}
+
+.course-topics-panel[hidden] {
+    display: none;
+}
+
+.course-topics-text {
     margin: 0;
     font-size: 0.9rem;
     line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.course-topics-divider {
+    margin: 18px 0;
 }
 
 
