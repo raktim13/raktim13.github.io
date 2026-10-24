@@ -1236,7 +1236,9 @@ const myNotes = {
                             url: "https://link.springer.com/book/10.1007/978-1-4613-8130-3"
                         }
                     ],
-                    topics: []
+                    topics: [
+                        "Revision of algebraic topology -- homotopy lifting and extension properties, obstruction theorem for fibrations and cofibrations, Hurewicz's theorem, Whitehead's theorem, fibrations and long exact sequences on homotopy. Lerray-Serre spectral sequences, Zeemann comparison theorem for homology spectral sequence, computing cohomology of spaces using fibrations. Q--local spaces, mapping telescopic construction fo K(Q,1). Rational homotopy groups, rational homotopy equivalence and homological contractibility, Q--localisation and its existence and properties. DGAs and CDGAs, homotopy, cohomology, morphisms and quasi-isomorphisms, minimal CDGAs, models and minimal models, Hirsch extensions and  their correspondence with principal fibrations, existence of minimal models. Lifting lemmas for CDGAs and uniqueness of minimal models. Piecewise--Linear forms and de Rham's theorem, the PL algebras of a space. Bridge between minimal models and rational homotopy groups. Weak equivalences, formal DGAs and formal spaces, equivalent definitions of formality, formality of products and wedges of formal spaces. Ways to check formality, triple Massey products, informality of the Heisenberg manifold. whitehead product of homotopy classes, Whitehaed product as the dual of the differential d_1 of the minimal model. Commutative model of a pushout using the fibre product of the minimal models of the other spaces involved."
+                    ]
                         
                             },
 
