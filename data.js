@@ -786,7 +786,6 @@ const myNotes = {
                     ],
                     topics: ["working on it ;)"]
                             },
-                            },
 
                                 "assignment": "mmath/sem 1/topology i/topo_i_assignment.pdf",
                                 "exercise i": "mmath/sem 1/topology i/topo_i_exer1.pdf",
