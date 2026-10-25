@@ -784,7 +784,8 @@ const myNotes = {
                         url: "https://link.springer.com/book/10.1007/978-1-4757-1790-0"
                     }
                     ],
-                    topics:[]
+                    topics: ["working on it ;)"]
+                            },
                             },
 
                                 "assignment": "mmath/sem 1/topology i/topo_i_assignment.pdf",
